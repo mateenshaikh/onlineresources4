@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.96.0" />
+    <meta name="generator" content="Relearn 3.4.1&#43;tip">
+    <meta name="description" content="Documentation for Hugo Relearn Theme">
+    <meta name="author" content="Sören Weber">
+    <title>Markdown syntax :: Mateen Shaikh</title>
+    <link rel="canonical" type="text/html" href="/themeinfo/cont/markdown/" title="Mateen Shaikh" />
+    <link rel="alternate" type="application/rss&#43;xml" href="/themeinfo/cont/markdown/index.xml" title="Mateen Shaikh" />
+    <link rel="icon" href="/images/favicon.png?1649526298" type="image/png">
+    <link href="/css/nucleus.css?1649526298" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1649526298" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1649526298" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1649526298" rel="stylesheet">
+    <link href="/css/auto-complete.css?1649526298" rel="stylesheet">
+    <link href="/css/theme.css?1649526298" rel="stylesheet">
+    <link href="/css/theme-relearn-light.css?1649526298" rel="stylesheet" id="variant-style">
+    <link href="/css/variant.css?1649526298" rel="stylesheet">
+    <link href="/css/print.css?1649526298" rel="stylesheet">
+    <script src="/js/variant.js?1649526298"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      var index_url="/index.json";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      // some further base stuff
+      var baseUriFull='https:\/\/mateenshaikh.ca/';
+      variants.init( [ 'relearn-light', 'relearn-dark', 'learn', 'neon', 'blue', 'green', 'red' ] );
+    </script>
+    <script src="/js/jquery.min.js?1649526298"></script>
+  </head>
+  <body class="mobile-support print" data-url="/themeinfo/cont/markdown/">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable">
+        <div>
+          <div class="navigation">
+             <a class="nav nav-next" href="/themeinfo/cont/syntaxhighlight/" title="Code highlighting"><i class="fas fa-chevron-right fa-fw"></i></a>
+          </div>
+          <div class="navigation">
+             <a class="nav nav-prev" href="/themeinfo/cont/archetypes/" title="Archetypes"><i class="fas fa-chevron-left fa-fw"></i></a>
+          </div>
+          <div id="top-print-link">
+            <a class="print-link" title='Print whole chapter' href="/_print/themeinfo/cont/markdown/">
+              <i class="fas fa-print fa-fw"></i>
+            </a>
+          </div>
+          <div id="top-github-link">
+            <a class="github-link" title='Edit' href="https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/themeinfo/cont/markdown.en.md" target="blank">
+              <i class="fas fa-pen fa-fw"></i>
+            </a>
+          </div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <span id="toc-menu" title='Table of Contents'><i class="fas fa-list-alt fa-fw"></i></span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <meta itemprop="itemListOrder" content="Descending" />
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="4" /><a itemprop="item" href="/"><span itemprop="name">MS</span></a> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="3" /><a itemprop="item" href="/themeinfo/"><span itemprop="name">Page Theme</span></a> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="2" /><a itemprop="item" href="/themeinfo/cont/"><span itemprop="name">Content</span></a> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="1" /><a itemprop="item" href="/themeinfo/cont/markdown/" aria-disabled="true"><span itemprop="name">Markdown syntax</span></a></li>
+            </ol>
+          </div>
+          <div class="default-animation progress">
+            <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#headings">Headings</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#h2-heading">h2 Heading</a>
+      <ul>
+        <li><a href="#h3-heading">h3 Heading</a></li>
+      </ul>
+    </li>
+    <li><a href="#comments">Comments</a></li>
+    <li><a href="#horizontal-rules">Horizontal Rules</a></li>
+    <li><a href="#paragraphs">Paragraphs</a></li>
+    <li><a href="#text-markers">Text Markers</a>
+      <ul>
+        <li><a href="#bold">Bold</a></li>
+        <li><a href="#italics">Italics</a></li>
+        <li><a href="#strikethrough">Strikethrough</a></li>
+      </ul>
+    </li>
+    <li><a href="#blockquotes">Blockquotes</a></li>
+    <li><a href="#lists">Lists</a>
+      <ul>
+        <li><a href="#unordered">Unordered</a></li>
+        <li><a href="#ordered">Ordered</a></li>
+      </ul>
+    </li>
+    <li><a href="#code">Code</a>
+      <ul>
+        <li><a href="#inline-code">Inline code</a></li>
+        <li><a href="#indented-code">Indented code</a></li>
+        <li><a href="#block-code-fences">Block code &ldquo;fences&rdquo;</a></li>
+        <li><a href="#syntax-highlighting">Syntax highlighting</a></li>
+      </ul>
+    </li>
+    <li><a href="#tables">Tables</a>
+      <ul>
+        <li><a href="#right-aligned-text">Right aligned text</a></li>
+        <li><a href="#two-tables-adjacent">Two tables adjacent</a></li>
+      </ul>
+    </li>
+    <li><a href="#links">Links</a>
+      <ul>
+        <li><a href="#basic-link">Basic link</a></li>
+        <li><a href="#add-a-tooltip">Add a tooltip</a></li>
+        <li><a href="#named-anchors">Named Anchors</a></li>
+      </ul>
+    </li>
+    <li><a href="#images">Images</a>
+      <ul>
+        <li><a href="#alternative-usage--note-images">Alternative usage : note images</a></li>
+        <li><a href="#further-image-formatting">Further image formatting</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+    
+          <article>
+
+<h1>Markdown syntax</h1>
+<p>Let&rsquo;s face it: Writing content for the Web is tiresome. WYSIWYG editors help alleviate this task, but they generally result in horrible code, or worse yet, ugly web pages.</p>
+<p><strong>Markdown</strong> is a better way to write <strong>HTML</strong>, without all the complexities and ugliness that usually accompanies it.</p>
+<p>Some of the key benefits are:</p>
+<ol>
+<li>Markdown is simple to learn, with minimal extra characters so it&rsquo;s also quicker to write content.</li>
+<li>Less chance of errors when writing in Markdown.</li>
+<li>Produces valid XHTML output.</li>
+<li>Keeps the content and the visual display separate, so you cannot mess up the look of your site.</li>
+<li>Write in any text editor or Markdown application you like.</li>
+<li>Markdown is a joy to use!</li>
+</ol>
+<p>John Gruber, the author of Markdown, puts it like this:</p>
+<blockquote>
+<p>The overriding design goal for Markdown’s formatting syntax is to make it as readable as possible. The idea is that a Markdown-formatted document should be publishable as-is, as plain text, without looking like it’s been marked up with tags or formatting instructions. While Markdown’s syntax has been influenced by several existing text-to-HTML filters, the single biggest source of inspiration for Markdown’s syntax is the format of plain text email.
+<cite>John Gruber</cite></p>
+</blockquote>
+<p>Without further delay, let us go over the main elements of Markdown and what the resulting HTML looks like:</p>
+
+<div class="box notices info">
+    <div class="box-label"><i class="fas fa-info-circle fa-fw"></i> Info</div>
+    <div class="box-content">
+<p><i class="fas fa-bookmark"></i> Bookmark this page and the <a href="https://commonmark.org/help/">official Commonmark reference</a> for easy future reference!</p>
+
+    </div>
+</div>
+<h2 id="headings">Headings</h2>
+<p>Headings from <code>h1</code> through <code>h6</code> are constructed with a <code>#</code> for each level:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="gh"># h1 Heading
+</span></span></span><span class="line"><span class="cl"><span class="gh"></span><span class="gu">## h2 Heading
+</span></span></span><span class="line"><span class="cl"><span class="gu">### h3 Heading
+</span></span></span><span class="line"><span class="cl"><span class="gu">#### h4 Heading
+</span></span></span><span class="line"><span class="cl"><span class="gu">##### h5 Heading
+</span></span></span><span class="line"><span class="cl"><span class="gu">###### h6 Heading
+</span></span></span></code></pre></div><p>Renders to:</p>
+<!-- markdownlint-disable MD025 -->
+<h1 id="h1-heading">h1 Heading</h1>
+<!-- markdownlint-enable MD025 -->
+<h2 id="h2-heading">h2 Heading</h2>
+<h3 id="h3-heading">h3 Heading</h3>
+<h4 id="h4-heading">h4 Heading</h4>
+<h5 id="h5-heading">h5 Heading</h5>
+<h6 id="h6-heading">h6 Heading</h6>
+<p>HTML:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>h1 Heading<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>h2 Heading<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>h3 Heading<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>h4 Heading<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">h5</span><span class="p">&gt;</span>h5 Heading<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">h6</span><span class="p">&gt;</span>h6 Heading<span class="p">&lt;/</span><span class="nt">h6</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h2 id="comments">Comments</h2>
+<p>Comments should be HTML compatible</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!--
+</span></span></span><span class="line"><span class="cl"><span class="c">This is a comment
+</span></span></span><span class="line"><span class="cl"><span class="c">--&gt;</span>
+</span></span></code></pre></div><p>Comment below should <strong>NOT</strong> be seen:</p>
+<!--
+This is a comment
+-->
+<h2 id="horizontal-rules">Horizontal Rules</h2>
+<p>The HTML <code>&lt;hr&gt;</code> element is for creating a &ldquo;thematic break&rdquo; between paragraph-level elements. In Markdown, you can create a <code>&lt;hr&gt;</code> with <code>---</code> - three consecutive dashes</p>
+<p>renders to:</p>
+<hr>
+<h2 id="paragraphs">Paragraphs</h2>
+<p>Any text not starting with a special sign is written as normal, plain text and will be wrapped within <code>&lt;p&gt;&lt;/p&gt;</code> tags in the rendered HTML.</p>
+<p>So this body copy:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus. Et legere ocurreret pri, animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his ex, soluta officiis concludaturque ei qui, vide sensibus vim ad.
+</span></span></code></pre></div><p>renders to this HTML:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus. Et legere ocurreret pri, animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his ex, soluta officiis concludaturque ei qui, vide sensibus vim ad.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h2 id="text-markers">Text Markers</h2>
+<h3 id="bold">Bold</h3>
+<p>For emphasizing a snippet of text with a heavier font-weight.</p>
+<p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">**rendered as bold text**
+</span></span></code></pre></div><p>renders to:</p>
+<!-- markdownlint-disable MD036 -->
+<p><strong>rendered as bold text</strong></p>
+<!-- markdownlint-enable MD036 -->
+<p>and this HTML</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>rendered as bold text<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h3 id="italics">Italics</h3>
+<p>For emphasizing a snippet of text with italics.</p>
+<p>The following snippet of text is <em>rendered as italicized text</em>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">_rendered as italicized text_
+</span></span></code></pre></div><p>renders to:</p>
+<!-- markdownlint-disable MD036 -->
+<p><em>rendered as italicized text</em></p>
+<!-- markdownlint-enable MD036 -->
+<p>and this HTML:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>rendered as italicized text<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h3 id="strikethrough">Strikethrough</h3>
+<p>In GFM (GitHub flavored Markdown) you can do strikethroughs.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">~~Strike through this text.~~
+</span></span></code></pre></div><p>Which renders to:</p>
+<p><del>Strike through this text.</del></p>
+<p>HTML:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">del</span><span class="p">&gt;</span>Strike through this text.<span class="p">&lt;/</span><span class="nt">del</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h2 id="blockquotes">Blockquotes</h2>
+<p>For quoting blocks of content from another source within your document.</p>
+<p>Add <code>&gt;</code> before any text you want to quote.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="k">&gt; </span><span class="ge">**Fusion Drive** combines a hard drive with a flash storage (solid-state drive) and presents it as a single logical volume with the space of both drives combined.
+</span></span></span></code></pre></div><p>Renders to:</p>
+<blockquote>
+<p><strong>Fusion Drive</strong> combines a hard drive with a flash storage (solid-state drive) and presents it as a single logical volume with the space of both drives combined.</p>
+</blockquote>
+<p>and this HTML:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">blockquote</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Fusion Drive<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> combines a hard drive with a flash storage (solid-state drive) and presents it as a single logical volume with the space of both drives combined.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">blockquote</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>Blockquotes can also be nested:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="k">&gt; </span><span class="ge">Donec massa lacus, ultricies a ullamcorper in, fermentum sed augue. Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.
+</span></span></span><span class="line"><span class="cl"><span class="ge"></span><span class="k">&gt;
+</span></span></span><span class="line"><span class="cl"><span class="k"></span><span class="ge">&gt; &gt; Sed adipiscing elit vitae augue consectetur a gravida nunc vehicula. Donec auctor odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac eu diam.
+</span></span></span><span class="line"><span class="cl"><span class="ge"></span><span class="k">&gt;
+</span></span></span><span class="line"><span class="cl"><span class="k"></span><span class="ge">&gt; Mauris sit amet ligula egestas, feugiat metus tincidunt, luctus libero. Donec congue finibus tempor. Vestibulum aliquet sollicitudin erat, ut aliquet purus posuere luctus.
+</span></span></span></code></pre></div><p>Renders to:</p>
+<blockquote>
+<p>Donec massa lacus, ultricies a ullamcorper in, fermentum sed augue. Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.</p>
+<blockquote>
+<p>Sed adipiscing elit vitae augue consectetur a gravida nunc vehicula. Donec auctor odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac eu diam.</p>
+</blockquote>
+<p>Mauris sit amet ligula egestas, feugiat metus tincidunt, luctus libero. Donec congue finibus tempor. Vestibulum aliquet sollicitudin erat, ut aliquet purus posuere luctus.</p>
+</blockquote>
+<h2 id="lists">Lists</h2>
+<h3 id="unordered">Unordered</h3>
+<p>A list of items in which the order of the items does not explicitly matter.</p>
+<p>You may use any of the following symbols to denote bullets for each list item:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="k">*</span> valid bullet
+</span></span><span class="line"><span class="cl"><span class="k">-</span> valid bullet
+</span></span><span class="line"><span class="cl">+ valid bullet
+</span></span></code></pre></div><p>For example</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">+ Lorem ipsum dolor sit amet
+</span></span><span class="line"><span class="cl">+ Consectetur adipiscing elit
+</span></span><span class="line"><span class="cl">+ Integer molestie lorem at massa
+</span></span><span class="line"><span class="cl">+ Facilisis in pretium nisl aliquet
+</span></span><span class="line"><span class="cl">+ Nulla volutpat aliquam velit
+</span></span><span class="line"><span class="cl">  <span class="k">-</span> Phasellus iaculis neque
+</span></span><span class="line"><span class="cl">  <span class="k">-</span> Purus sodales ultricies
+</span></span><span class="line"><span class="cl">  <span class="k">-</span> Vestibulum laoreet porttitor sem
+</span></span><span class="line"><span class="cl">  <span class="k">-</span> Ac tristique libero volutpat at
+</span></span><span class="line"><span class="cl">+ Faucibus porta lacus fringilla vel
+</span></span><span class="line"><span class="cl">+ Aenean sit amet erat nunc
+</span></span><span class="line"><span class="cl">+ Eget porttitor lorem
+</span></span></code></pre></div><p>Renders to:</p>
+<!-- markdownlint-disable MD004 -->
+<ul>
+<li>Lorem ipsum dolor sit amet</li>
+<li>Consectetur adipiscing elit</li>
+<li>Integer molestie lorem at massa</li>
+<li>Facilisis in pretium nisl aliquet</li>
+<li>Nulla volutpat aliquam velit
+<ul>
+<li>Phasellus iaculis neque</li>
+<li>Purus sodales ultricies</li>
+<li>Vestibulum laoreet porttitor sem</li>
+<li>Ac tristique libero volutpat at</li>
+</ul>
+</li>
+<li>Faucibus porta lacus fringilla vel</li>
+<li>Aenean sit amet erat nunc</li>
+<li>Eget porttitor lorem</li>
+</ul>
+<!-- markdownlint-enable MD004 -->
+<p>And this HTML</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Consectetur adipiscing elit<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Integer molestie lorem at massa<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Facilisis in pretium nisl aliquet<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Nulla volutpat aliquam velit
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Phasellus iaculis neque<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Purus sodales ultricies<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Vestibulum laoreet porttitor sem<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Ac tristique libero volutpat at<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Faucibus porta lacus fringilla vel<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Aenean sit amet erat nunc<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Eget porttitor lorem<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h3 id="ordered">Ordered</h3>
+<p>A list of items in which the order of items does explicitly matter.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="k">1.</span> Lorem ipsum dolor sit amet
+</span></span><span class="line"><span class="cl"><span class="k">4.</span> Consectetur adipiscing elit
+</span></span><span class="line"><span class="cl"><span class="k">2.</span> Integer molestie lorem at massa
+</span></span><span class="line"><span class="cl"><span class="k">8.</span> Facilisis in pretium nisl aliquet
+</span></span><span class="line"><span class="cl"><span class="k">4.</span> Nulla volutpat aliquam velit
+</span></span><span class="line"><span class="cl"><span class="k">99.</span> Faucibus porta lacus fringilla vel
+</span></span><span class="line"><span class="cl"><span class="k">21.</span> Aenean sit amet erat nunc
+</span></span><span class="line"><span class="cl"><span class="k">6.</span> Eget porttitor lorem
+</span></span></code></pre></div><p>Renders to:</p>
+<ol>
+<li>Lorem ipsum dolor sit amet</li>
+<li>Consectetur adipiscing elit</li>
+<li>Integer molestie lorem at massa</li>
+<li>Facilisis in pretium nisl aliquet</li>
+<li>Nulla volutpat aliquam velit</li>
+<li>Faucibus porta lacus fringilla vel</li>
+<li>Aenean sit amet erat nunc</li>
+<li>Eget porttitor lorem</li>
+</ol>
+<p>And this HTML:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">ol</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Consectetur adipiscing elit<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Integer molestie lorem at massa<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Facilisis in pretium nisl aliquet<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Nulla volutpat aliquam velit<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Faucibus porta lacus fringilla vel<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Aenean sit amet erat nunc<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Eget porttitor lorem<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
+</span></span></code></pre></div>
+<div class="box notices tip">
+    <div class="box-label"><i class="fas fa-lightbulb fa-fw"></i> Tip</div>
+    <div class="box-content">
+<p>If you just use <code>1.</code> for each number, Markdown will automatically number each item. For example:</p>
+
+    </div>
+</div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="k">1.</span> Lorem ipsum dolor sit amet
+</span></span><span class="line"><span class="cl"><span class="k">1.</span> Consectetur adipiscing elit
+</span></span><span class="line"><span class="cl"><span class="k">1.</span> Integer molestie lorem at massa
+</span></span><span class="line"><span class="cl"><span class="k">1.</span> Facilisis in pretium nisl aliquet
+</span></span><span class="line"><span class="cl"><span class="k">1.</span> Nulla volutpat aliquam velit
+</span></span><span class="line"><span class="cl"><span class="k">1.</span> Faucibus porta lacus fringilla vel
+</span></span><span class="line"><span class="cl"><span class="k">1.</span> Aenean sit amet erat nunc
+</span></span><span class="line"><span class="cl"><span class="k">1.</span> Eget porttitor lorem
+</span></span></code></pre></div><p>Renders to:</p>
+<ol>
+<li>Lorem ipsum dolor sit amet</li>
+<li>Consectetur adipiscing elit</li>
+<li>Integer molestie lorem at massa</li>
+<li>Facilisis in pretium nisl aliquet</li>
+<li>Nulla volutpat aliquam velit</li>
+<li>Faucibus porta lacus fringilla vel</li>
+<li>Aenean sit amet erat nunc</li>
+<li>Eget porttitor lorem</li>
+</ol>
+<h2 id="code">Code</h2>
+<h3 id="inline-code">Inline code</h3>
+<p>Wrap inline snippets of code with <code>`</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">In this example, <span class="sb">`&lt;div&gt;&lt;/div&gt;`</span> should be wrapped as <span class="gs">**code**</span>.
+</span></span></code></pre></div><p>Renders to:</p>
+<p>In this example, <code>&lt;div&gt;&lt;/div&gt;</code> should be wrapped as <strong>code</strong>.</p>
+<p>HTML:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>In this example, <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span><span class="ni">&amp;lt;</span>div<span class="ni">&amp;gt;&amp;lt;</span>/div<span class="ni">&amp;gt;</span><span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span> should be wrapped as <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>code<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h3 id="indented-code">Indented code</h3>
+<p>Or indent several lines of code by at least two spaces, as in:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">    // Some comments
+</span></span><span class="line"><span class="cl">    line 1 of code
+</span></span><span class="line"><span class="cl">    line 2 of code
+</span></span><span class="line"><span class="cl">    line 3 of code
+</span></span></code></pre></div><p>Renders to:</p>
+<!-- markdownlint-disable MD046 -->
+<pre><code>// Some comments
+line 1 of code
+line 2 of code
+line 3 of code
+</code></pre>
+<!-- markdownlint-enable MD046 -->
+<p>HTML:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">pre</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    // Some comments
+</span></span><span class="line"><span class="cl">    line 1 of code
+</span></span><span class="line"><span class="cl">    line 2 of code
+</span></span><span class="line"><span class="cl">    line 3 of code
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h3 id="block-code-fences">Block code &ldquo;fences&rdquo;</h3>
+<p>Use &ldquo;fences&rdquo;  <code>```</code> to block in multiple lines of code.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">```
+</span></span><span class="line"><span class="cl">Sample text here...
+</span></span><span class="line"><span class="cl">```
+</span></span></code></pre></div><p>HTML:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">pre</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>Sample text here...<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h3 id="syntax-highlighting">Syntax highlighting</h3>
+<p>GFM, or &ldquo;GitHub Flavored Markdown&rdquo; also supports syntax highlighting. To activate it, usually you simply add the file extension of the language you want to use directly after the first code &ldquo;fence&rdquo;, <code>```js</code>, and syntax highlighting will automatically be applied in the rendered HTML.</p>
+<p>See <a href="/themeinfo/cont/syntaxhighlight/">Code Highlighting</a> for additional documentation.</p>
+<p>For example, to apply syntax highlighting to JavaScript code:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">```js
+</span></span><span class="line"><span class="cl">grunt.initConfig({
+</span></span><span class="line"><span class="cl">  assemble: {
+</span></span><span class="line"><span class="cl">    options: {
+</span></span><span class="line"><span class="cl">      assets: &#39;docs/assets&#39;,
+</span></span><span class="line"><span class="cl">      data: &#39;src/data/*.{json,yml}&#39;,
+</span></span><span class="line"><span class="cl">      helpers: &#39;src/custom-helpers.js&#39;,
+</span></span><span class="line"><span class="cl">      partials: [&#39;src/partials/**/*.{hbs,md}&#39;]
+</span></span><span class="line"><span class="cl">    },
+</span></span><span class="line"><span class="cl">    pages: {
+</span></span><span class="line"><span class="cl">      options: {
+</span></span><span class="line"><span class="cl">        layout: &#39;default.hbs&#39;
+</span></span><span class="line"><span class="cl">      },
+</span></span><span class="line"><span class="cl">      files: {
+</span></span><span class="line"><span class="cl">        &#39;./&#39;: [&#39;src/templates/pages/index.hbs&#39;]
+</span></span><span class="line"><span class="cl">      }
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">  }
+</span></span><span class="line"><span class="cl">};
+</span></span><span class="line"><span class="cl">```
+</span></span></code></pre></div><p>Renders to:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">grunt</span><span class="p">.</span><span class="nx">initConfig</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">assemble</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">assets</span><span class="o">:</span> <span class="s1">&#39;docs/assets&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">data</span><span class="o">:</span> <span class="s1">&#39;src/data/*.{json,yml}&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">helpers</span><span class="o">:</span> <span class="s1">&#39;src/custom-helpers.js&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">partials</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;src/partials/**/*.{hbs,md}&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">pages</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">layout</span><span class="o">:</span> <span class="s1">&#39;default.hbs&#39;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">files</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;./&#39;</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;src/templates/pages/index.hbs&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div><h2 id="tables">Tables</h2>
+<p>Tables are created by adding pipes as dividers between each cell, and by adding a line of dashes (also separated by bars) beneath the header. Note that the pipes do not need to be vertically aligned.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">| Option | Description |
+</span></span><span class="line"><span class="cl">| ------ | ----------- |
+</span></span><span class="line"><span class="cl">| data   | path to data files to supply the data that will be passed into templates. |
+</span></span><span class="line"><span class="cl">| engine | engine to be used for processing templates. Handlebars is the default. |
+</span></span><span class="line"><span class="cl">| ext    | extension to be used for dest files. |
+</span></span></code></pre></div><p>Renders to:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td>path to data files to supply the data that will be passed into templates.</td>
+</tr>
+<tr>
+<td>engine</td>
+<td>engine to be used for processing templates. Handlebars is the default.</td>
+</tr>
+<tr>
+<td>ext</td>
+<td>extension to be used for dest files.</td>
+</tr>
+</tbody>
+</table>
+<p>And this HTML:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Option<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Description<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>data<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>path to data files to supply the data that will be passed into templates.<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>engine<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>engine to be used for processing templates. Handlebars is the default.<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>ext<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>extension to be used for dest files.<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h3 id="right-aligned-text">Right aligned text</h3>
+<p>Adding a colon on the right side of the dashes below any heading will right align text for that column.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">| Option | Description |
+</span></span><span class="line"><span class="cl">| ------:| -----------:|
+</span></span><span class="line"><span class="cl">| data   | path to data files to supply the data that will be passed into templates. |
+</span></span><span class="line"><span class="cl">| engine | engine to be used for processing templates. Handlebars is the default. |
+</span></span><span class="line"><span class="cl">| ext    | extension to be used for dest files. |
+</span></span></code></pre></div><table>
+<thead>
+<tr>
+<th style="text-align:right">Option</th>
+<th style="text-align:right">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">data</td>
+<td style="text-align:right">path to data files to supply the data that will be passed into templates.</td>
+</tr>
+<tr>
+<td style="text-align:right">engine</td>
+<td style="text-align:right">engine to be used for processing templates. Handlebars is the default.</td>
+</tr>
+<tr>
+<td style="text-align:right">ext</td>
+<td style="text-align:right">extension to be used for dest files.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="two-tables-adjacent">Two tables adjacent</h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ext</td>
+<td>extension to be used for dest files.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ext</td>
+<td>extension to be used for dest files.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="links">Links</h2>
+<h3 id="basic-link">Basic link</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">[<span class="nt">Assemble</span>](<span class="na">http://assemble.io</span>)
+</span></span></code></pre></div><p>Renders to (hover over the link, there is no tooltip):</p>
+<p><a href="http://assemble.io">Assemble</a></p>
+<p>HTML:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;http://assemble.io&#34;</span><span class="p">&gt;</span>Assemble<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h3 id="add-a-tooltip">Add a tooltip</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">[<span class="nt">Upstage</span>](<span class="na">https://github.com/upstage/ &#34;Visit Upstage!&#34;</span>)
+</span></span></code></pre></div><p>Renders to (hover over the link, there should be a tooltip):</p>
+<p><a href="https://github.com/upstage/" title="Visit Upstage!">Upstage</a></p>
+<p>HTML:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://github.com/upstage/&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Visit Upstage!&#34;</span><span class="p">&gt;</span>Upstage<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h3 id="named-anchors">Named Anchors</h3>
+<p>Named anchors enable you to jump to the specified anchor point on the same page. For example, each of these chapters:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="gh"># Table of Contents
+</span></span></span><span class="line"><span class="cl"><span class="gh"></span>  <span class="k">*</span> [<span class="nt">Chapter 1</span>](<span class="na">#chapter-1</span>)
+</span></span><span class="line"><span class="cl">  <span class="k">*</span> [<span class="nt">Chapter 2</span>](<span class="na">#chapter-2</span>)
+</span></span><span class="line"><span class="cl">  <span class="k">*</span> [<span class="nt">Chapter 3</span>](<span class="na">#chapter-3</span>)
+</span></span></code></pre></div><p>will jump to these sections:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="gu">## Chapter 1 &lt;a id=&#34;chapter-1&#34;&gt;&lt;/a&gt;
+</span></span></span><span class="line"><span class="cl"><span class="gu"></span>Content for chapter one.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gu">## Chapter 2 &lt;a id=&#34;chapter-2&#34;&gt;&lt;/a&gt;
+</span></span></span><span class="line"><span class="cl"><span class="gu"></span>Content for chapter one.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gu">## Chapter 3 &lt;a id=&#34;chapter-3&#34;&gt;&lt;/a&gt;
+</span></span></span><span class="line"><span class="cl"><span class="gu"></span>Content for chapter one.
+</span></span></code></pre></div><p><strong>NOTE</strong> that specific placement of the anchor tag seems to be arbitrary. They are placed inline here since it seems to be unobtrusive, and it works.</p>
+<h2 id="images">Images</h2>
+<p>Images have a similar syntax to links but include a preceding exclamation point.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">![<span class="nt">Minion</span>](<span class="na">https://octodex.github.com/images/minion.png</span>)
+</span></span></code></pre></div><p><img src="https://octodex.github.com/images/minion.png" alt="Minion"></p>
+<p>or</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">![<span class="nt">Alt text</span>](<span class="na">https://octodex.github.com/images/stormtroopocat.jpg &#34;The Stormtroopocat&#34;</span>)
+</span></span></code></pre></div><p><img src="https://octodex.github.com/images/stormtroopocat.jpg" alt="Alt text" title="The Stormtroopocat"></p>
+<p>Like links, Images also have a footnote style syntax</p>
+<h3 id="alternative-usage--note-images">Alternative usage : note images</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">![Alt text][id]
+</span></span></code></pre></div><p><img src="https://octodex.github.com/images/dojocat.jpg" alt="Alt text" title="The Dojocat"></p>
+<p>With a reference later in the document defining the URL location:</p>
+<pre><code>[id]: https://octodex.github.com/images/dojocat.jpg  &quot;The Dojocat&quot;
+</code></pre>
+<h3 id="further-image-formatting">Further image formatting</h3>
+<p>The Hugo Markdown parser supports additional non-standard functionality.</p>
+<h4 id="resizing-image">Resizing image</h4>
+<p>Add HTTP parameters <code>width</code> and/or <code>height</code> to the link image to resize the image. Values are CSS values (default is <code>auto</code>).</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">![<span class="nt">Minion</span>](<span class="na">https://octodex.github.com/images/minion.png?width=20pc</span>)
+</span></span></code></pre></div><p><img src="https://octodex.github.com/images/minion.png?width=20pc" alt="Minion"></p>
+<p><img src="https://octodex.github.com/images/stormtroopocat.png?width=20pc" alt="stormtroopocat"></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">![<span class="nt">Minion</span>](<span class="na">https://octodex.github.com/images/minion.png?height=50px</span>)
+</span></span></code></pre></div><p><img src="https://octodex.github.com/images/minion.png?height=50px" alt="Minion"></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">![<span class="nt">Minion</span>](<span class="na">https://octodex.github.com/images/minion.png?height=50px&amp;width=300px</span>)
+</span></span></code></pre></div><p><img src="https://octodex.github.com/images/minion.png?height=50px&amp;width=300px" alt="Minion"></p>
+<h4 id="add-css-classes">Add CSS classes</h4>
+<p>Add a HTTP <code>classes</code> parameter to the link image to add CSS classes. <code>shadow</code>and <code>border</code> are available but you could define other ones.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">![<span class="nt">stormtroopocat</span>](<span class="na">https://octodex.github.com/images/stormtroopocat.jpg?classes=shadow</span>)
+</span></span></code></pre></div><p><img src="https://octodex.github.com/images/stormtroopocat.jpg?width=40pc&amp;classes=shadow" alt="stormtroopocat"></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">![<span class="nt">stormtroopocat</span>](<span class="na">https://octodex.github.com/images/stormtroopocat.jpg?classes=border</span>)
+</span></span></code></pre></div><p><img src="https://octodex.github.com/images/stormtroopocat.jpg?width=40pc&amp;classes=border" alt="stormtroopocat"></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">![<span class="nt">stormtroopocat</span>](<span class="na">https://octodex.github.com/images/stormtroopocat.jpg?classes=border,shadow</span>)
+</span></span></code></pre></div><p><img src="https://octodex.github.com/images/stormtroopocat.jpg?width=40pc&amp;classes=border,shadow" alt="stormtroopocat"></p>
+<h4 id="lightbox">Lightbox</h4>
+<p>Add a HTTP <code>featherlight</code> parameter to the link image to disable lightbox. By default lightbox is enabled using the featherlight.js plugin. You can disable this by defining <code>featherlight</code> to <code>false</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">![<span class="nt">Minion</span>](<span class="na">https://octodex.github.com/images/minion.png?featherlight=false</span>)
+</span></span></code></pre></div><p><img src="https://octodex.github.com/images/minion.png?featherlight=false" alt="Minion"></p>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="sidebar" class="default-animation showVisitedLinks">
+      <div id="header-wrapper" class="default-animation">
+        <div id="header" class="default-animation">
+          <style>
+            #logo svg,
+            #logo svg * {
+              color: #282828;
+              color: var(--MENU-SECTIONS-BG-color);
+              fill: #282828 !important;
+              fill: var(--MENU-SECTIONS-BG-color) !important;
+              opacity: .945;
+            }
+            a#logo {
+              color: #282828;
+              color: var(--MENU-SECTIONS-BG-color);
+              font-family: 'Work Sans', 'Helvetica', 'Tahoma', 'Geneva', 'Arial', sans-serif;
+              font-size: 30px;
+              font-weight: 300;
+              margin-top: -13px;
+              max-width: 60%;
+              text-transform: uppercase;
+              width: 226px;
+              white-space: nowrap;
+            }
+            a#logo:hover {
+              color: #282828;
+              color: var(--MENU-SECTIONS-BG-color);
+            }
+            #logo svg {
+              margin-bottom: -20px;
+              margin-left: -23.5px;
+              width: 40.5%;
+            }
+            @media only all and (max-width: 59.938em) {
+              a#logo {
+                font-size: 25px;
+                margin-top: -3px;
+              }
+              #logo svg {
+                margin-bottom: -12px;
+                margin-left: -23px;
+              }
+            }
+            @media all and (-ms-high-contrast:none) {
+              /* IE11s understanding of positioning is weird at best */
+              a#logo {
+                margin-top: -58px;
+              }
+              #logo svg {
+                margin-bottom: -62px;
+              }
+            }
+          </style>
+          <a id="logo" href="/">
+            
+            <img src="customlogo_resize.png" width=40%>ms
+          </a>
+        </div>
+        <div class="searchbox default-animation">
+          <label for="search-by"><i class="fas fa-search"></i></label>
+          <input data-search-input id="search-by" type="search" placeholder="Search...">
+          <span data-search-clear=""><i class="fas fa-times"></i></span>
+        </div>
+        <script src="/js/lunr.min.js?1649526298"></script>
+        <script src="/js/auto-complete.js?1649526298"></script>
+        <script src="/js/search.js?1649526298"></script>
+      </div>
+      <div id="content-wrapper" class="highlightable">
+        <ul class="topics collapsible-menu">
+          <li data-nav-id="/post/" title="Posts" class="dd-item"><input type="checkbox" id="section-1551eb054d26fb2c8c41239224ca8616" class="toggle"/><label for="section-1551eb054d26fb2c8c41239224ca8616" ></label><a href="/post/">Posts<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/post/2022-04-09-acknowledgement/" title="acknowledgement" class="dd-item"><a href="/post/2022-04-09-acknowledgement/">acknowledgement<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/post/2022-04-08-juliatimings/" title="juliatimings" class="dd-item"><a href="/post/2022-04-08-juliatimings/">juliatimings<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/post/2020-12-01-r-rmarkdown/" title="Hello R Markdown" class="dd-item"><a href="/post/2020-12-01-r-rmarkdown/">Hello R Markdown<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/themechanges/" title="Theme Changes" class="dd-item"><input type="checkbox" id="section-aece8d214b1d123d0baee3d16b5da943" class="toggle"/><label for="section-aece8d214b1d123d0baee3d16b5da943" ></label><a href="/themechanges/">Theme Changes<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themechanges/2022-04-08-fix-mathjax/" title="Mathjax" class="dd-item"><a href="/themechanges/2022-04-08-fix-mathjax/">Mathjax<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themechanges/2022-04-08-changemenus/" title="Remove old menus" class="dd-item"><a href="/themechanges/2022-04-08-changemenus/">Remove old menus<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/themeinfo/" title="Page Theme" class="dd-item parent"><input type="checkbox" id="section-c98299165197569a7dbb7c16c879ec94" class="toggle" checked/><label for="section-c98299165197569a7dbb7c16c879ec94" ></label><a href="/themeinfo/">Page Theme<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themeinfo/basics/" title="Basics" class="dd-item alwaysopen"><input type="checkbox" id="section-d1c5e3c5791323678e3ad8e1c500f13c" class="toggle" checked/><label for="section-d1c5e3c5791323678e3ad8e1c500f13c" ></label><a href="/themeinfo/basics/"><b>1.</b> Basics<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themeinfo/basics/migration/" title="What&#39;s new" class="dd-item"><a href="/themeinfo/basics/migration/">What&#39;s new<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/basics/requirements/" title="Requirements" class="dd-item"><a href="/themeinfo/basics/requirements/">Requirements<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/basics/installation/" title="Installation" class="dd-item"><a href="/themeinfo/basics/installation/">Installation<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/basics/configuration/" title="Configuration" class="dd-item"><a href="/themeinfo/basics/configuration/">Configuration<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/basics/customization/" title="Customization" class="dd-item"><a href="/themeinfo/basics/customization/">Customization<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/basics/generator/" title="Stylesheet generator" class="dd-item"><a href="/themeinfo/basics/generator/">Stylesheet generator<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/basics/history/" title="History" class="dd-item"><a href="/themeinfo/basics/history/">History<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/themeinfo/cont/" title="Content" class="dd-item parent alwaysopen"><input type="checkbox" id="section-6a723ced917e39b993d27cbc25abafab" class="toggle" checked/><label for="section-6a723ced917e39b993d27cbc25abafab" ></label><a href="/themeinfo/cont/"><b>2.</b> Content<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themeinfo/cont/pages/" title="Pages organization" class="dd-item"><a href="/themeinfo/cont/pages/">Pages organization<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/cont/archetypes/" title="Archetypes" class="dd-item"><a href="/themeinfo/cont/archetypes/">Archetypes<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/cont/markdown/" title="Markdown syntax" class="dd-item active"><a href="/themeinfo/cont/markdown/">Markdown syntax<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/cont/syntaxhighlight/" title="Code highlighting" class="dd-item"><a href="/themeinfo/cont/syntaxhighlight/">Code highlighting<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/cont/menushortcuts/" title="Menu extra shortcuts" class="dd-item"><a href="/themeinfo/cont/menushortcuts/">Menu extra shortcuts<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/cont/icons/" title="Icons and logos" class="dd-item"><a href="/themeinfo/cont/icons/">Icons and logos<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/cont/i18n/" title="Multilingual and i18n" class="dd-item"><a href="/themeinfo/cont/i18n/">Multilingual and i18n<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/cont/tags/" title="Tags" class="dd-item"><a href="/themeinfo/cont/tags/">Tags<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/themeinfo/shortcodes/" title="Shortcodes" class="dd-item alwaysopen"><input type="checkbox" id="section-52d5db2ef975f3fd0dba8d661a91fd38" class="toggle" checked/><label for="section-52d5db2ef975f3fd0dba8d661a91fd38" ></label><a href="/themeinfo/shortcodes/"><b>3.</b> Shortcodes<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themeinfo/shortcodes/attachments/" title="Attachments" class="dd-item"><a href="/themeinfo/shortcodes/attachments/">Attachments<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/button/" title="Button" class="dd-item"><a href="/themeinfo/shortcodes/button/">Button<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/children/" title="Children" class="dd-item"><input type="checkbox" id="section-ff454e2d1a76e72579a3eb4047153271" class="toggle"/><label for="section-ff454e2d1a76e72579a3eb4047153271" ></label><a href="/themeinfo/shortcodes/children/">Children<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themeinfo/shortcodes/children/test/" title="page X" class="dd-item"><a href="/themeinfo/shortcodes/children/test/">page X<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/children/children-1/" title="page 1" class="dd-item"><input type="checkbox" id="section-71b703f727a5a1fd0923b542d7953e0c" class="toggle"/><label for="section-71b703f727a5a1fd0923b542d7953e0c" ></label><a href="/themeinfo/shortcodes/children/children-1/">page 1<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themeinfo/shortcodes/children/children-1/children-1-1/" title="page 1-1" class="dd-item alwaysopen"><input type="checkbox" id="section-db4a2653fc99b551cad0351d97b47a4f" class="toggle" checked/><label for="section-db4a2653fc99b551cad0351d97b47a4f" ></label><a href="/themeinfo/shortcodes/children/children-1/children-1-1/">page 1-1<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-2/" title="page 1-1-2" class="dd-item alwaysopen"><input type="checkbox" id="section-26971ac834b91a594c74aae81a42e063" class="toggle" checked/><label for="section-26971ac834b91a594c74aae81a42e063" ></label><a href="/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-2/">page 1-1-2<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-1/" title="page 1-1-2-1" class="dd-item"><a href="/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-1/">page 1-1-2-1<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-2/" title="page 1-1-2-2" class="dd-item"><a href="/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-2/">page 1-1-2-2<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-3/" title="page 1-1-3" class="dd-item"><a href="/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-3/">page 1-1-3<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/themeinfo/shortcodes/children/children-2/" title="page 2" class="dd-item"><a href="/themeinfo/shortcodes/children/children-2/">page 2<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/children/children-3/" title="page 3" class="dd-item"><input type="checkbox" id="section-290d79cee905a3070eb690186d121cd1" class="toggle"/><label for="section-290d79cee905a3070eb690186d121cd1" ></label><a href="/themeinfo/shortcodes/children/children-3/">page 3<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themeinfo/shortcodes/children/children-3/test3/" title="page 3-1" class="dd-item"><a href="/themeinfo/shortcodes/children/children-3/test3/">page 3-1<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/themeinfo/shortcodes/expand/" title="Expand" class="dd-item"><a href="/themeinfo/shortcodes/expand/">Expand<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/include/" title="Include" class="dd-item"><a href="/themeinfo/shortcodes/include/">Include<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/mermaid/" title="Mermaid" class="dd-item"><a href="/themeinfo/shortcodes/mermaid/">Mermaid<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/notice/" title="Notice" class="dd-item"><a href="/themeinfo/shortcodes/notice/">Notice<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/siteparam/" title="Site param" class="dd-item"><a href="/themeinfo/shortcodes/siteparam/">Site param<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/swagger/" title="Swagger" class="dd-item"><a href="/themeinfo/shortcodes/swagger/">Swagger<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/tabs/" title="Tabbed views" class="dd-item"><a href="/themeinfo/shortcodes/tabs/">Tabbed views<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+        </ul>
+        <div id="shortcuts">
+          <div class="nav-title">More</div>
+          <ul>
+            <li><a class="padding" href="https://github.com/mateenshaikh/"><i class='fab fa-fw fa-github'></i> GitHub repo</a></li>
+            <li><a class="padding" href="/tags/"><i class='fas fa-fw fa-tags'></i> Tags</a></li>
+          </ul>
+        </div>
+        <div class="footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showLangSwitch showVariantSwitch showVisitedLinks showFooter"></div>
+        <hr class="default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showLangSwitch showVariantSwitch showVisitedLinks showFooter"/>
+        <div id="prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showLangSwitch showVariantSwitch showVisitedLinks">
+          <ul>
+            <li id="select-language-container" class="footerLangSwitch showLangSwitch">
+              <a class="padding select-container">
+                <i class="fas fa-language fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <select id="select-language" onchange="location = baseUri + this.value;">
+                    <option id="en" value="/themeinfo/cont/markdown/" selected>English</option>
+                    <option id="pir" value="/pir/themeinfo/cont/markdown/">Arrr! ☠ Pirrrates ☠</option>
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </a>
+            </li>
+            <li id="select-variant-container" class="footerVariantSwitch showVariantSwitch">
+              <a class="padding select-container">
+                <i class="fas fa-paint-brush fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <select id="select-variant" onchange="variants.changeVariant( this.value );">
+                    <option id="relearn-light" value="relearn-light" selected>Relearn Light</option>
+                    <option id="relearn-dark" value="relearn-dark">Relearn Dark</option>
+                    <option id="learn" value="learn">Learn</option>
+                    <option id="neon" value="neon">Neon</option>
+                    <option id="blue" value="blue">Blue</option>
+                    <option id="green" value="green">Green</option>
+                    <option id="red" value="red">Red</option>
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </a>
+              <script>variants.markSelectedVariant();</script>
+            </li>
+            <li class="footerVisitedLinks showVisitedLinks"><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+          </ul>
+        </div>
+        <div id="footer" class="footerFooter showFooter"><script src="//yihui.org/js/math-code.js"></script>
+<script async
+src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<style>
+            #footer {
+              font-size: 13px;
+              height: 100px;
+              margin-left: auto;
+              margin-right: auto;
+              padding: 2rem 1rem;
+              text-align: center;
+              min-width: 230px;
+              max-width: 300px;
+            }
+            #footer p {
+              margin: 0;
+            }
+          </style>
+
+          <a class="github-button" href="https://github.com/mateenshaikh/onlineresources4" data-icon="octicon-cloud-download" aria-label="Download McShelby/hugo-theme-relearn on GitHub">Site</a>
+          <a class="github-button" href="https://github.com/McShelby/hugo-theme-relearn" data-icon="octicon-repo-template" data-show-count="true" aria-label="Star McShelby/hugo-theme-relearn on GitHub">Theme</a>
+          
+
+          
+          <script async defer src="/js/buttons.js?1649526298"></script>
+        </div>
+      </div>
+    </aside>
+    <script src="/js/clipboard.min.js?1649526298"></script>
+    <script src="/js/perfect-scrollbar.min.js?1649526298"></script>
+    <script src="/js/featherlight.min.js?1649526298"></script>
+    <script src="/js/theme.js?1649526298"></script>
+  </body>
+</html>

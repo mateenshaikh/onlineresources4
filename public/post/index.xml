@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Mateen Shaikh</title>
+    <link>https://mateenshaikh.ca/post/</link>
+    <description>Recent content in Posts on Mateen Shaikh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 09 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mateenshaikh.ca/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>acknowledgement</title>
+      <link>https://mateenshaikh.ca/post/2022-04-09-acknowledgement/</link>
+      <pubDate>Sat, 09 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://mateenshaikh.ca/post/2022-04-09-acknowledgement/</guid>
+      <description>Born, raised, educated, trained and work on lands of the Neutral, Anishinaabeg, Haudenosaunee, Mississaugas, and Secwépemc. Benefits and achievements from time spent on treaty lands including Haldimand Tract of the Six Nations, the Dish with One Spoon Covenant, and unceded lands of Tk’emlúps.</description>
+    </item>
+    <item>
+      <title>juliatimings</title>
+      <link>https://mateenshaikh.ca/post/2022-04-08-juliatimings/</link>
+      <pubDate>Fri, 08 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://mateenshaikh.ca/post/2022-04-08-juliatimings/</guid>
+      <description>This documents the timings of a simple newton method in R, C (technically cpp but it&amp;rsquo;s all just C code), and julia.
+The function is \(f_0(x)=e^x+\sin(x)\) so the newton update would be $$x\leftarrow x-\frac{f_0(x)}{f_1(x)}=x-\frac{e^x+sin(x)}{e^x+cos(x)}$$
+applied repeatedly. A graph of the curve is shown below. It&amp;rsquo;s already fairly linear so the function will hit the root very quickly but that&amp;rsquo;s ok.
+curve(exp(x)+sin(x),-1,0) We&#39;ll run the code a fixed number of iterations. I don&#39;t know if hitting 0 in the numerator does any short-cutting in any language but thats ok for now.</description>
+    </item>
+    <item>
+      <title>Hello R Markdown</title>
+      <link>https://mateenshaikh.ca/post/2020-12-01-r-rmarkdown/</link>
+      <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
+      <guid>https://mateenshaikh.ca/post/2020-12-01-r-rmarkdown/</guid>
+      <description>R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+You can embed an R code chunk like this:
+summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.</description>
+    </item>
+  </channel>
+</rss>

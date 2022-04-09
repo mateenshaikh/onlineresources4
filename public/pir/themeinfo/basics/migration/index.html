@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="pir">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.96.0" />
+    <meta name="generator" content="Relearn 3.4.1&#43;tip">
+    <meta name="description" content="Documentation for Hugo Relearn Theme">
+    <meta name="author" content="Sören Weber">
+    <title>Migrrrat&#39;n :: Cap&#39;n MS, cat owner</title>
+    <link rel="alternate" type="application/rss&#43;xml" href="/pir/themeinfo/basics/migration/index.xml" title="Cap&#39;n MS, cat owner" />
+    <link rel="alternate" type="text/html" href="/pir/themeinfo/basics/migration/_print/" title="Cap&#39;n MS, cat owner" />
+    <link rel="icon" href="/images/favicon.png?1649526299" type="image/png">
+    <link href="/css/nucleus.css?1649526299" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1649526299" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1649526299" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1649526299" rel="stylesheet">
+    <link href="/css/auto-complete.css?1649526299" rel="stylesheet">
+    <link href="/css/theme.css?1649526299" rel="stylesheet">
+    <link href="/css/theme-relearn-light.css?1649526299" rel="stylesheet" id="variant-style">
+    <link href="/css/variant.css?1649526299" rel="stylesheet">
+    <link href="/css/print.css?1649526299" rel="stylesheet" media="print">
+    <script src="/js/variant.js?1649526299"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      var index_url="/pir/index.json";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy t\u0027 clipboard';
+      window.T_Copied_to_clipboard = 'Copied t\u0027 clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link t\u0027 clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link t\u0027 clipboard!';
+      // some further base stuff
+      var baseUriFull='https:\/\/mateenshaikh.ca/';
+      variants.init( [ 'relearn-light', 'relearn-dark', 'learn', 'neon', 'blue', 'green', 'red' ] );
+    </script>
+    <script src="/js/jquery.min.js?1649526299"></script>
+  </head>
+  <body class="mobile-support" data-url="/pir/themeinfo/basics/migration/">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable">
+        <div>
+          <div class="navigation">
+             <a class="nav nav-next" href="/pir/themeinfo/basics/configuration/" title="Configurrrat&#39;n"><i class="fas fa-chevron-right fa-fw"></i></a>
+          </div>
+          <div class="navigation">
+             <a class="nav nav-prev" href="/pir/themeinfo/basics/installation/" title="Installat&#39;n"><i class="fas fa-chevron-left fa-fw"></i></a>
+          </div>
+          <div id="top-print-link">
+            <a class="print-link" title='Prrrint whole chapterrr' href="/pir/themeinfo/basics/migration/_print/">
+              <i class="fas fa-print fa-fw"></i>
+            </a>
+          </div>
+          <div id="top-github-link">
+            <a class="github-link" title='Edit' href="https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/themeinfo/basics/migration/_index.pir.md" target="blank">
+              <i class="fas fa-pen fa-fw"></i>
+            </a>
+          </div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <meta itemprop="itemListOrder" content="Descending" />
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="4" /><a itemprop="item" href="/pir/"><span itemprop="name">Cap&#39;n MS, cat owner</span></a> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="3" /><a itemprop="item" href="/pir/themeinfo/"><span itemprop="name">Cap&#39;n Hugo Relearrrn Theme</span></a> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="2" /><a itemprop="item" href="/pir/themeinfo/basics/"><span itemprop="name">Basics</span></a> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="1" /><a itemprop="item" href="/pir/themeinfo/basics/migration/" aria-disabled="true"><span itemprop="name">Migrrrat&#39;n</span></a></li>
+            </ol>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+          <article>
+
+<h1>Migrrrat&#39;n</h1>
+
+<div class="box notices warning">
+    <div class="box-label">Arrr! ☠ Pirrrates ☠</div>
+	<div class="box-content">
+	    <p>Fello' pirrates, be awarrre some featurrres may not work fer us in this trrranslat'n. Like table of rrramblings, some Merrrmaids and stuff.</p>
+	</div>
+</div>
+
+<p>This document shows ye what&rsquo;s new 'n th' latest release. For a detailed list o' changes, see th' <a href="/pir/basics/history/">history plank</a>.</p>
+<p><strong>Break'n</strong>: A change that requires act'n by ye aft upgrad'n t' assure th' ship be still functional.</p>
+<p><strong>Change</strong>: A change 'n default behavior. This may requires act'n by ye / may or may not be revert'ble by configurat'n.</p>
+<p><strong>New</strong>: Marks new behavior ye might find interest'n or comes configur'ble.</p>
+<hr>
+<h2 id="340">3.4.0</h2>
+<ul>
+<li>
+<p><strong>Break'n</strong>: If ye had previously overwritten th' <code>custom-footer.html</code> partial t' add visual elements below th' rrrambl'n o' yer plank, ye have t' move this rrrambl'n t' th' new partial <code>content-footer.html</code>. <code>custom-footer.html</code> was never meant t' contain HTML other than additional styles an' JavaScript.</p>
+</li>
+<li>
+<p><strong>New</strong>: If ye prefer expandable/collaps'ble menu items, ye can now set <code>collapsibleMenu=true</code> 'n yer <code>config.toml</code>. This will add arrows t' all menu items that contain sub menus. Th' menu will expand/collapse without navigat'n if ye click on an arrow.</p>
+</li>
+<li>
+<p><strong>New</strong>: Ye can activate <a href="/pir/basics/configuration/#activate-print-support">print support</a> 'n yer <code>config.toml</code> t' add th' capability t' print whole chapters or even th' complete ship.</p>
+</li>
+<li>
+<p><strong>New</strong>: Translat'n fer Traditional Chinese.</p>
+</li>
+</ul>
+<hr>
+<h2 id="330">3.3.0</h2>
+<ul>
+<li>
+<p><strong>New</strong>: Introduct'n o' new CSS variables t' set th' font. Th' theme distinguishs between <code>--MAIN-font</code> fer all rrrambl'n text an' <code>--CODE-font</code> fer inline or block code. There be additional overrides fer all head'ns. See th' <a href="/pir/basics/generator/">theme variant generator</a> o' th' exampleSite fer all avail'ble variables.</p>
+</li>
+<li>
+<p><strong>New</strong>: Th' new shorrrtcode <code>swagger</code> be avail'ble t' include a UI fer REST OpenAPI Specificat'ns. See th' <a href="/pir/shortcodes/swagger/">documentat'n</a> fer avail'ble features. This feature will not work wit' Internet Explorer 11.</p>
+</li>
+</ul>
+<hr>
+<h2 id="320">3.2.0</h2>
+<ul>
+<li>
+<p><strong>Change</strong>: In this release th' Merrrmaid JavaScript library will only be boarded on demand if th' plank contains a Merrrmaid shorrrtcode or be us'n Merrrmaid codefences. This changes th' behavior o' <code>disableMermaid</code> config opt'n as follows: If a Merrrmaid shorrrtcode or codefence be found, th' opt'n will be ignored an' Merrrmaid will be boarded regardlessly.</p>
+<p>Th' opt'n be still useful 'n case ye be us'n script'n t' set up yer graph. In this case no shorrrtcode or codefence be involved an' th' library be not boarded by default. In this case ye can set <code>disableMermaid=false</code> 'n yer frontmatter t' force th' library t' be boarded. See th' <a href="/pir/basics/generator/">theme variant generator</a> o' th' exampleSite fer an example.</p>
+<p><strong>This change requires at least Cap'n Hugo 0.93.0 t' be used</strong>. Th' minimum requirement will be reported dur'n build on th' console if not met.</p>
+</li>
+<li>
+<p><strong>New</strong>: Additional color variant vari'ble <code>--MERMAID-theme</code> t' set th' variant&rsquo;s Merrrmaid theme. This causes th' Merrrmaid theme t' switch wit' th' color variant if it defers from th' sett'n o' th' formerly selected color variant.</p>
+</li>
+</ul>
+<hr>
+<h2 id="310">3.1.0</h2>
+<ul>
+<li><strong>New</strong>: <a href="/pir/shortcodes/attachments/"><code>attachment</code></a> an' <a href="/pir/shortcodes/notice/"><code>notice</code></a> shorrrtcodes have a new parameter t' override th' default ay'con. Allowed values be all <a href="https://fontawesome.com/v5/search?m=free">Font Awesome 5 Free</a> ay'cons.</li>
+</ul>
+<hr>
+<h2 id="300">3.0.0</h2>
+<ul>
+<li>
+<p><strong>Break'n</strong>: We made changes t' th' menu footer. If ye have yer <code>menu-footer.html</code> <a href="/pir/basics/customization/">partial overridden</a>, ye may have t' review th' styl'n (eg. margins/paddings) 'n yer partial. For a reference take a look into th' <code>menu-footer.html</code> partial that be com'n wit' th' exampleSite.</p>
+<p>This change was made t' allow yer own menu footer t' be placed right aft th' so called prefooter that comes wit' th' theme (contain'n th' language switch an' <em>Clear history</em> functionality).</p>
+</li>
+<li>
+<p><strong>Break'n</strong>: We have changed th' default colors from th' original Learrrn theme (the purple menu header) t' th' Relearrrn defaults (the light green menu header) as used 'n th' official documentat'n.</p>
+<p>This change will only affect yer installat'n if you&rsquo;ve not set th' <code>themeVariant</code> parameter 'n yer <code>config.toml</code>. <a href="/pir/basics/customization/#theme-variant">If ye still want t' use th' Learrrn color variant</a>, ye have t' explicitly set <code>themeVariant=&quot;learn&quot;</code> 'n yer <code>config.toml</code>.</p>
+<p>Avast, that this will also affect yer ship if viewed wit' Internet Explorer 11 but 'n this case it can not be reconfigured as Internet Explorer does not support CSS variables.</p>
+</li>
+<li>
+<p><strong>Change</strong>: Due t' a bug, that we couldn&rsquo;t fix 'n a general manner fer color variants, we decided t' removed <code>--MENU-SEARCH-BOX-ICONS-color</code> an' introduced <code>--MENU-SEARCH-color</code> instead. Ye don&rsquo;t need t' change anyth'n 'n yer custom color stylesheet as th' old name will be used as a fallback.</p>
+</li>
+<li>
+<p><strong>Change</strong>: For consistency reasons, we renamed <code>--MENU-SEARCH-BOX-color</code> t' <code>--MENU-SEARCH-BORDER-color</code>. Ye don&rsquo;t need t' change anyth'n 'n yer custom color stylesheet as th' old name will be used as a fallback.</p>
+</li>
+<li>
+<p><strong>New</strong>: Wit' this release ye be now cap'ble t' define yer own <em>dark mode</em> variants.</p>
+<p>T' make this poss'ble, we have introduced a lot more color variables ye can use 'n <a href="/pir/basics/customization/#theme-variant">yer color variants</a>. Yer old variants will still work an' don&rsquo;t need t' be changed as apropriate fallback values be used by th' theme. Nevertheless, th' new colors allow fer much more customizat'n.</p>
+<p>T' see what&rsquo;s now poss'ble, see th' new variants <code>relearn-dark</code> an' <code>neon</code> that be com'n wit' this release.</p>
+</li>
+<li>
+<p><strong>New</strong>: T' make th' creat'n o' new variants easier fer ye, we&rsquo;ve added a new interactive <a href="/pir/basics/generator/">theme variant generator</a>. This feature will not work wit' Internet Explorer 11.</p>
+</li>
+<li>
+<p><strong>New</strong>: Ye can now configure multiple color variants 'n yer <code>config.toml</code>. In this case, th' first variant be th' default chosen on first view an' a variant switch will be shown 'n th' menu footer. See th' <a href="/pir/basics/customization/#multiple-variants">documentat'n</a> fer configurat'n.</p>
+<p>Avast, that th' new variant switch will not work wit' Internet Explorer 11 as it does not support CSS variables. Therefore, th' variant switcher will not be displayed wit' Internet Explorer 11.</p>
+</li>
+</ul>
+<hr>
+<h2 id="290">2.9.0</h2>
+<ul>
+<li>
+<p><strong>Break'n</strong>: This release removes th' themes implementat'n o' <code>ref</code>/<code>relref</code> 'n favor fer Hugos standard implementat'n. This be because o' inconsistencies wit' th' themes implementat'n. In advantage, yer project becomes standard complient an' exchang'n this theme 'n yer project t' some other theme will be effortless.</p>
+<p>In a standard complient form ye must not link t' th' <code>*.md</code> file but t' its logical name. You&rsquo;ll see, referenc'n other planks becomes much easier. All three types result 'n th' same reference:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Non-Standard</th>
+<th>Standard</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Branch bundle</td>
+<td><code>basics/configuration/_index.md</code></td>
+<td><code>basics/configurat'n</code></td>
+</tr>
+<tr>
+<td>Leaf bundle</td>
+<td><code>basics/configuration/index.md</code></td>
+<td><code>basics/configurat'n</code></td>
+</tr>
+<tr>
+<td>Plank</td>
+<td><code>basics/configurat'n.md</code></td>
+<td><code>basics/configurat'n</code></td>
+</tr>
+</tbody>
+</table>
+<p>If you&rsquo;ve linked from a plank o' one language t' a plank o' another language, conversion be a bit more difficult but <a href="https://gohugo.io/content-management/cross-references/#link-to-another-language-version">Cap'n Hugo got ye covered</a> as well.</p>
+<p>Also, th' old themes implementat'n allowed refs t' non-exist'n rrrambl'n. This will cause Hugos implementat'n t' show th' error below an' abort th' generat'n. If yer project relies on this old behavior, ye can <a href="https://gohugo.io/content-management/cross-references/#link-to-another-language-version">reconfigure th' error handl'n</a> o' Hugos implementat'n.</p>
+<p>In th' best case yer usage o' th' old implementat'n be already standard complient an' ye don&rsquo;t need t' change anyth'n. You&rsquo;ll notice this very easily once you&rsquo;ve started <code>hugo server</code> aft an upgrade an' no errors be written t' th' console.</p>
+<p>Ye may see errors on th' console aft th' update 'n th' form:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">ERROR 2021/11/19 22:29:10 <span class="o">[</span>en<span class="o">]</span> REF_NOT_FOUND: Ref <span class="s2">&#34;basics/configuration/_index.md&#34;</span>: <span class="s2">&#34;hugo-theme-relearn\exampleSite\content\_index.en.md:19:22&#34;</span>: plank not found
+</span></span></code></pre></div><p>In this case, ye must apply one o' two opt'ns:</p>
+<ol>
+<li>
+<p>Copy th' old implementat'n files <code>theme/hugo-theme-relearn/layouts/shortcode/ref.html</code> an' <code>theme/hugo-theme-relearn/layouts/shortcode/relref.html</code> t' yer own projects <code>layouts/shortcode/ref.html</code> an' <code>layouts/shortcode/relref.html</code> respectively. <strong>This be not recommended</strong> as yer project will still rely on non-standard behavior afterwards.</p>
+</li>
+<li>
+<p>Start up a text editor wit' regular expression support fer search an' replace. Apply th' follow'n conversions 'n th' given order on all <code>*.md</code> files. <strong>This be th' recommended choice</strong>.</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Search</th>
+<th>Replace by</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Branch bundle</td>
+<td><code>(ref\s+&quot;[^&quot;]*)/_index\.md&quot;</code></td>
+<td><code>$1&quot;</code></td>
+</tr>
+<tr>
+<td>Leaf bundle</td>
+<td><code>(ref\s+&quot;[^&quot;]*)/index\.md&quot;</code></td>
+<td><code>$1&quot;</code></td>
+</tr>
+<tr>
+<td>Plank</td>
+<td><code>(ref\s+&quot;[^&quot;]*)\.md&quot;</code></td>
+<td><code>$1&quot;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<hr>
+<h2 id="280">2.8.0</h2>
+<ul>
+<li>
+<p><strong>Change</strong>: Although never officially documented, this release removes th' font <code>Novacento</code>/<code>Novecento</code>. If ye use it 'n an overwritten CSS please replace it wit' <code>Work Sans</code>. This change was necessary as Novacento did not provide all Latin special characters an' lead t' mixed styled character text eg. fer czech.</p>
+</li>
+<li>
+<p><strong>New</strong>: Th' theme now supports favicons served from <code>static/images/</code> named as <code>favicon</code> or <code>logo</code> 'n SVG, PNG or ICO format <a href="/pir/basics/customization/#change-the-favicon">out o' th' box</a>. An overridden partial <code>layouts/partials/favicon.html</code> may not be necessary anymore 'n most cases.</p>
+</li>
+<li>
+<p><strong>New</strong>: Ye can hide th' t'ble o' contents menu fer th' whole ship by sett'n th' <code>disableToc</code> opt'n 'n yer <code>config.toml</code>. For an example see <a href="/pir/basics/configuration/#global-site-parameters">th' example configurat'n</a>.</p>
+</li>
+</ul>
+<hr>
+<h2 id="270">2.7.0</h2>
+<ul>
+<li><strong>New</strong>: Optional second parameter fer <a href="/pir/shortcodes/notice/"><code>notice</code></a> shorrrtcode t' set title 'n box header.</li>
+</ul>
+<hr>
+<h2 id="260">2.6.0</h2>
+<ul>
+<li><strong>New</strong>: Yer ship can now be served from a subfolder if ye set <code>baseURL</code> an' <code>canonifyURLs=true</code> 'n yer <code>config.toml</code>. See th' <a href="/pir/basics/configuration/#a-word-on-running-your-site-in-a-subfolder">documentat'n</a> fer a detailed example.</li>
+</ul>
+<hr>
+<h2 id="250">2.5.0</h2>
+<ul>
+<li><strong>Change</strong>: New colors <code>--CODE-BLOCK-color</code> an' <code>--CODE-BLOCK-BG-color</code> were added t' provide a fallback fer Hugos rules highlightn'n 'n case <code>guessSyntax=true</code> be set. Ideally th' colors be set t' th' same values as th' ones from yer chosen chroma style.</li>
+</ul>
+<hr>
+<h2 id="240">2.4.0</h2>
+<ul>
+<li>
+<p><strong>Change</strong>: Creat'n o' customized stylesheets was simplified down t' only contain th' CSS variables. Everyth'n else can an' should be deleted from yer custom stylesheet t' assure everyth'n works fine. For th' predefined stylesheet variants, this change be already included.</p>
+</li>
+<li>
+<p><strong>New</strong>: Hidden planks be displayed by default 'n their accord'n tags plank. Ye can now turn off this behavior by sett'n <code>disableTagHiddenPages=true</code> 'n yer <code>config.toml</code>.</p>
+</li>
+<li>
+<p><strong>New</strong>: Ye can define th' expansion state o' yer menus fer th' whole ship by sett'n th' <code>alwaysopen</code> opt'n 'n yer <code>config.toml</code>. Please see further <a href="/pir/cont/pages/#override-expand-state-rules-for-menu-entries">documentat'n</a> fer poss'ble values an' default behavior.</p>
+</li>
+<li>
+<p><strong>New</strong>: New frontmatter <code>ordersectionsby</code> opt'n t' change immediate children sort'n 'n menu an' <code>children</code> shorrrtcode. Poss'ble values be <code>title</code> or <code>weight</code>.</p>
+</li>
+<li>
+<p><strong>New</strong>: Alternate rrrambl'n o' a plank be now advertised 'n th' HTML meta tags. See <a href="https://gohugo.io/templates/rss/#reference-your-rss-feed-in-head">Cap'n Hugo documentat'n</a>.</p>
+</li>
+</ul>
+<hr>
+<h2 id="230">2.3.0</h2>
+<ul>
+<li><strong>New</strong>: Showcase multilanguage features by provd'n a documentat'n translat'n &ldquo;fer us pirrrates&rdquo;. There will be no other translat'ns besides th' original English one an' th' Pirates one due t' maintenance constraints.</li>
+</ul>
+<hr>
+<h2 id="220">2.2.0</h2>
+<ul>
+<li><strong>New</strong>: Hidden planks be displayed by default 'n th' sitemap generated by Cap'n Hugo an' be therefore vis'ble fer search engine index'n. Ye can now turn off this behavior by sett'n <code>disableSeoHiddenPages=true</code> 'n yer <code>config.toml</code>.</li>
+</ul>
+<hr>
+<h2 id="210">2.1.0</h2>
+<ul>
+<li>
+<p><strong>Change</strong>: In case th' site&rsquo;s structure contains addional *.md files not part o' th' ship (eg files that be meant t' be included by ship planks - see <code>CHANGELOG.md</code> 'n th' exampleSite), they will now be ignored by th' search.</p>
+</li>
+<li>
+<p><strong>New</strong>: Hidden planks be indexed fer th' ship search by default. Ye can now turn off this behavior by sett'n <code>disableSearchHiddenPages=true</code> 'n yer <code>config.toml</code>.</p>
+</li>
+<li>
+<p><strong>New</strong>: If a search term be found 'n an <code>expand</code> shorrrtcode, th' expand will be opened.</p>
+</li>
+<li>
+<p><strong>New</strong>: Th' menu will scroll th' active item into view on board.</p>
+</li>
+</ul>
+<hr>
+<h2 id="200">2.0.0</h2>
+<ul>
+<li>
+<p><strong>Change</strong>: Syntaxhighlightn'n was switched t' th' <a href="https://gohugo.io/content-management/syntax-highlighting/">built 'n Hugo mechanism</a>. Ye may need t' configure a new stylesheet or decide t' roll ye own as described on 'n th' Cap'n Hugo documentat'n</p>
+</li>
+<li>
+<p><strong>Change</strong>: In th' predefined stylesheets there was a typo an' <code>--MENU-HOME-LINK-HOVERED-color</code> must be changed t' <code>--MENU-HOME-LINK-HOVER-color</code>. Ye don&rsquo;t need t' change anyth'n 'n yer custom color stylesheet as th' old name will be used as a fallback.</p>
+</li>
+<li>
+<p><strong>Change</strong>: <code>--MENU-HOME-LINK-color</code> an' <code>--MENU-HOME-LINK-HOVER-color</code> were miss'n 'n th' documentat'n. Ye should add them t' yer custom stylesheets if ye want t' override th' defaults.</p>
+</li>
+<li>
+<p><strong>Change</strong>: Arrow navigat'n an' <code>children</code> shorrrtcode were ignor'n sett'n fer <code>ordersectionsby</code>. This be now changed an' may result 'n different sort'n order o' yer sub planks.</p>
+</li>
+<li>
+<p><strong>Change</strong>: If hidden planks be accessed directly by typ'n their URL, they will be exposed 'n th' menu.</p>
+</li>
+<li>
+<p><strong>Change</strong>: A plank without a <code>title</code> will be treated as <code>hidden=true</code>.</p>
+</li>
+<li>
+<p><strong>New</strong>: Ye can define th' expansion state o' yer menus 'n th' frontmatter. Please see further <a href="/pir/cont/pages/#override-expand-state-rules-for-menu-entries">documentat'n</a> fer poss'ble values an' default behavior.</p>
+</li>
+<li>
+<p><strong>New</strong>: New partials fer defin'n pre/post rrrambl'n fer menu items an' th' rrrambl'n. See <a href="/pir/basics/customization/">documentat'n</a> fer further read'n.</p>
+</li>
+<li>
+<p><strong>New</strong>: Shorrrtcode <a href="/pir/shortcodes/children/"><code>children</code></a> wit' new parameter <code>containerstyle</code>.</p>
+</li>
+<li>
+<p><strong>New</strong>: New shorrrtcode <a href="/pir/shortcodes/include/"><code>include</code></a> t' include arbitrary file rrrambl'n into a plank.</p>
+</li>
+</ul>
+<hr>
+<h2 id="120">1.2.0</h2>
+<ul>
+<li><strong>New</strong>: Shorrrtcode <a href="/pir/shortcodes/expand/"><code>expand</code></a> wit' new parameter t' open on plank board.</li>
+</ul>
+<hr>
+<h2 id="110">1.1.0</h2>
+<ul>
+<li><strong>New</strong>: <a href="/pir/shortcodes/mermaid/#configuration"><code>Merrrmaid</code></a> config opt'ns can be set 'n <code>config.toml</code>.</li>
+</ul>
+<hr>
+<h2 id="100">1.0.0</h2>
+<ul>
+<li><strong>New</strong>: Initial fork o' th' <a href="https://github.com/matcornic/hugo-theme-learn">Learrrn theme</a> based on Learrrn 2.5.0 on 2021-07-01. This introduces no new features besides a global rename t' <code>Relearrrn</code> an' a new logo. For th' reasons behind fork'n th' Learrrn theme, see <a href="https://github.com/matcornic/hugo-theme-learn/issues/442#issuecomment-907863495">this comment</a> 'n th' Learrrn issues.</li>
+</ul>
+
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="sidebar" class="default-animation showVisitedLinks">
+      <div id="header-wrapper" class="default-animation">
+        <div id="header" class="default-animation">
+          <style>
+            #logo svg,
+            #logo svg * {
+              color: #282828;
+              color: var(--MENU-SECTIONS-BG-color);
+              fill: #282828 !important;
+              fill: var(--MENU-SECTIONS-BG-color) !important;
+              opacity: .945;
+            }
+            a#logo {
+              color: #282828;
+              color: var(--MENU-SECTIONS-BG-color);
+              font-family: 'Work Sans', 'Helvetica', 'Tahoma', 'Geneva', 'Arial', sans-serif;
+              font-size: 30px;
+              font-weight: 300;
+              margin-top: -13px;
+              max-width: 60%;
+              text-transform: uppercase;
+              width: 226px;
+              white-space: nowrap;
+            }
+            a#logo:hover {
+              color: #282828;
+              color: var(--MENU-SECTIONS-BG-color);
+            }
+            #logo svg {
+              margin-bottom: -20px;
+              margin-left: -23.5px;
+              width: 40.5%;
+            }
+            @media only all and (max-width: 59.938em) {
+              a#logo {
+                font-size: 25px;
+                margin-top: -3px;
+              }
+              #logo svg {
+                margin-bottom: -12px;
+                margin-left: -23px;
+              }
+            }
+            @media all and (-ms-high-contrast:none) {
+              /* IE11s understanding of positioning is weird at best */
+              a#logo {
+                margin-top: -58px;
+              }
+              #logo svg {
+                margin-bottom: -62px;
+              }
+            }
+          </style>
+          <a id="logo" href="/pir/">
+            
+            <img src="customlogo_resize.png" width=40%>ms
+          </a>
+        </div>
+        <div class="searchbox default-animation">
+          <label for="search-by"><i class="fas fa-search"></i></label>
+          <input data-search-input id="search-by" type="search" placeholder="Searrrch...">
+          <span data-search-clear=""><i class="fas fa-times"></i></span>
+        </div>
+        <script src="/js/lunr.min.js?1649526300"></script>
+        <script src="/js/auto-complete.js?1649526300"></script>
+        <script src="/js/search.js?1649526300"></script>
+      </div>
+      <div id="content-wrapper" class="highlightable">
+        <ul class="topics collapsible-menu">
+          <li data-nav-id="/pir/basics/" title="Basics" class="dd-item"><input type="checkbox" id="section-182650db393a58ea8a0385f10a515d92" class="toggle"/><label for="section-182650db393a58ea8a0385f10a515d92" ></label><a href="/pir/basics/"><b>1.</b> Basics<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/pir/basics/requirements/" title="Requirrrements" class="dd-item"><a href="/pir/basics/requirements/">Requirrrements<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/basics/installation/" title="Installat&#39;n" class="dd-item"><a href="/pir/basics/installation/">Installat&#39;n<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/basics/migration/" title="Migrrrat&#39;n" class="dd-item"><a href="/pir/basics/migration/">Migrrrat&#39;n<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/basics/configuration/" title="Configurrrat&#39;n" class="dd-item"><a href="/pir/basics/configuration/">Configurrrat&#39;n<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/basics/customization/" title="Customizat&#39;n" class="dd-item"><a href="/pir/basics/customization/">Customizat&#39;n<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/basics/generator/" title="Stylesheet generrrat&#39;r" class="dd-item"><a href="/pir/basics/generator/">Stylesheet generrrat&#39;r<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/basics/history/" title="Historrry" class="dd-item"><a href="/pir/basics/history/">Historrry<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/pir/cont/" title="Rambl&#39;n" class="dd-item"><input type="checkbox" id="section-4074c32ab128bf79d499f2f6ddf50674" class="toggle"/><label for="section-4074c32ab128bf79d499f2f6ddf50674" ></label><a href="/pir/cont/"><b>2.</b> Rambl&#39;n<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/pir/cont/pages/" title="Planks orrrganizat&#39;n" class="dd-item"><a href="/pir/cont/pages/">Planks orrrganizat&#39;n<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/cont/archetypes/" title="Arrrchetypes" class="dd-item"><a href="/pir/cont/archetypes/">Arrrchetypes<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/cont/markdown/" title="Marrrkdown rules" class="dd-item"><a href="/pir/cont/markdown/">Marrrkdown rules<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/cont/syntaxhighlight/" title="Code highlight&#39;n" class="dd-item"><a href="/pir/cont/syntaxhighlight/">Code highlight&#39;n<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/cont/menushortcuts/" title="Menu extrrra shorrrtcuts" class="dd-item"><a href="/pir/cont/menushortcuts/">Menu extrrra shorrrtcuts<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/cont/icons/" title="Ay&#39;cons an&#39; logos" class="dd-item"><a href="/pir/cont/icons/">Ay&#39;cons an&#39; logos<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/cont/i18n/" title="Multilingual an&#39; i18n" class="dd-item"><a href="/pir/cont/i18n/">Multilingual an&#39; i18n<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/cont/tags/" title="Tags" class="dd-item"><a href="/pir/cont/tags/">Tags<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/pir/shortcodes/" title="Shorrrtcodes" class="dd-item"><input type="checkbox" id="section-215953719902243a01571a1ede64aeeb" class="toggle"/><label for="section-215953719902243a01571a1ede64aeeb" ></label><a href="/pir/shortcodes/"><b>3.</b> Shorrrtcodes<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/pir/shortcodes/attachments/" title="Attachments" class="dd-item"><a href="/pir/shortcodes/attachments/">Attachments<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/shortcodes/button/" title="Button" class="dd-item"><a href="/pir/shortcodes/button/">Button<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/shortcodes/children/" title="Children" class="dd-item"><input type="checkbox" id="section-05de666a6804433386d9009e44fa7aa3" class="toggle"/><label for="section-05de666a6804433386d9009e44fa7aa3" ></label><a href="/pir/shortcodes/children/">Children<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/pir/shortcodes/children/test/" title="Plank X" class="dd-item"><a href="/pir/shortcodes/children/test/">Plank X<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/shortcodes/children/children-1/" title="Plank 1" class="dd-item"><input type="checkbox" id="section-5c6c78bc0635ef1f61fdb91197081411" class="toggle"/><label for="section-5c6c78bc0635ef1f61fdb91197081411" ></label><a href="/pir/shortcodes/children/children-1/">Plank 1<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/pir/shortcodes/children/children-1/children-1-1/" title="Plank 1-1" class="dd-item alwaysopen"><input type="checkbox" id="section-be87ceb25a7988952eb9556a69f3cbdf" class="toggle" checked/><label for="section-be87ceb25a7988952eb9556a69f3cbdf" ></label><a href="/pir/shortcodes/children/children-1/children-1-1/">Plank 1-1<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/pir/shortcodes/children/children-1/children-1-1/children-1-1-2/" title="Plank 1-1-2" class="dd-item alwaysopen"><input type="checkbox" id="section-989ea17e090bb9681da73b58575dcced" class="toggle" checked/><label for="section-989ea17e090bb9681da73b58575dcced" ></label><a href="/pir/shortcodes/children/children-1/children-1-1/children-1-1-2/">Plank 1-1-2<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/pir/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-1/" title="Plank 1-1-2-1" class="dd-item"><a href="/pir/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-1/">Plank 1-1-2-1<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-2/" title="Plank 1-1-2-2" class="dd-item"><a href="/pir/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-2/">Plank 1-1-2-2<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/pir/shortcodes/children/children-1/children-1-1/children-1-1-3/" title="Plank 1-1-3" class="dd-item"><a href="/pir/shortcodes/children/children-1/children-1-1/children-1-1-3/">Plank 1-1-3<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/pir/shortcodes/children/children-2/" title="Plank 2" class="dd-item"><a href="/pir/shortcodes/children/children-2/">Plank 2<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/shortcodes/children/children-3/" title="Plank 3" class="dd-item"><input type="checkbox" id="section-085f961452d7baa981ace00de789c321" class="toggle"/><label for="section-085f961452d7baa981ace00de789c321" ></label><a href="/pir/shortcodes/children/children-3/">Plank 3<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/pir/shortcodes/children/children-3/test3/" title="Plank 3-1" class="dd-item"><a href="/pir/shortcodes/children/children-3/test3/">Plank 3-1<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/pir/shortcodes/expand/" title="Expand" class="dd-item"><a href="/pir/shortcodes/expand/">Expand<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/shortcodes/include/" title="Include" class="dd-item"><a href="/pir/shortcodes/include/">Include<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/shortcodes/mermaid/" title="Merrrmaid" class="dd-item"><a href="/pir/shortcodes/mermaid/">Merrrmaid<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/shortcodes/notice/" title="Notice" class="dd-item"><a href="/pir/shortcodes/notice/">Notice<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/shortcodes/siteparam/" title="Ship param" class="dd-item"><a href="/pir/shortcodes/siteparam/">Ship param<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/shortcodes/swagger/" title="Swaggerrr" class="dd-item"><a href="/pir/shortcodes/swagger/">Swaggerrr<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/shortcodes/tabs/" title="Tabbed views" class="dd-item"><a href="/pir/shortcodes/tabs/">Tabbed views<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/pir/themeinfo/" title="Cap&#39;n Hugo Relearrrn Theme" class="dd-item parent"><input type="checkbox" id="section-c9192b63c787bd6d0ad6fc4b7428ad00" class="toggle" checked/><label for="section-c9192b63c787bd6d0ad6fc4b7428ad00" ></label><a href="/pir/themeinfo/">Cap&#39;n Hugo Relearrrn Theme<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/pir/themeinfo/basics/" title="Basics" class="dd-item parent alwaysopen"><input type="checkbox" id="section-1442aed62ab1ac8d13fa45383b611e7d" class="toggle" checked/><label for="section-1442aed62ab1ac8d13fa45383b611e7d" ></label><a href="/pir/themeinfo/basics/"><b>1.</b> Basics<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/pir/themeinfo/basics/requirements/" title="Requirrrements" class="dd-item"><a href="/pir/themeinfo/basics/requirements/">Requirrrements<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/themeinfo/basics/installation/" title="Installat&#39;n" class="dd-item"><a href="/pir/themeinfo/basics/installation/">Installat&#39;n<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/themeinfo/basics/migration/" title="Migrrrat&#39;n" class="dd-item active"><a href="/pir/themeinfo/basics/migration/">Migrrrat&#39;n<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/themeinfo/basics/configuration/" title="Configurrrat&#39;n" class="dd-item"><a href="/pir/themeinfo/basics/configuration/">Configurrrat&#39;n<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/themeinfo/basics/customization/" title="Customizat&#39;n" class="dd-item"><a href="/pir/themeinfo/basics/customization/">Customizat&#39;n<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/themeinfo/basics/generator/" title="Stylesheet generrrat&#39;r" class="dd-item"><a href="/pir/themeinfo/basics/generator/">Stylesheet generrrat&#39;r<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/themeinfo/basics/history/" title="Historrry" class="dd-item"><a href="/pir/themeinfo/basics/history/">Historrry<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/pir/themeinfo/cont/" title="Rambl&#39;n" class="dd-item alwaysopen"><input type="checkbox" id="section-8ae9f280031a412c28b1e10e576878ad" class="toggle" checked/><label for="section-8ae9f280031a412c28b1e10e576878ad" ></label><a href="/pir/themeinfo/cont/"><b>2.</b> Rambl&#39;n<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/pir/themeinfo/cont/pages/" title="Planks orrrganizat&#39;n" class="dd-item"><a href="/pir/themeinfo/cont/pages/">Planks orrrganizat&#39;n<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/themeinfo/cont/archetypes/" title="Arrrchetypes" class="dd-item"><a href="/pir/themeinfo/cont/archetypes/">Arrrchetypes<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/themeinfo/cont/markdown/" title="Marrrkdown rules" class="dd-item"><a href="/pir/themeinfo/cont/markdown/">Marrrkdown rules<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/themeinfo/cont/syntaxhighlight/" title="Code highlight&#39;n" class="dd-item"><a href="/pir/themeinfo/cont/syntaxhighlight/">Code highlight&#39;n<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/themeinfo/cont/menushortcuts/" title="Menu extrrra shorrrtcuts" class="dd-item"><a href="/pir/themeinfo/cont/menushortcuts/">Menu extrrra shorrrtcuts<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/themeinfo/cont/icons/" title="Ay&#39;cons an&#39; logos" class="dd-item"><a href="/pir/themeinfo/cont/icons/">Ay&#39;cons an&#39; logos<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/themeinfo/cont/i18n/" title="Multilingual an&#39; i18n" class="dd-item"><a href="/pir/themeinfo/cont/i18n/">Multilingual an&#39; i18n<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/themeinfo/cont/tags/" title="Tags" class="dd-item"><a href="/pir/themeinfo/cont/tags/">Tags<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/pir/themeinfo/shortcodes/" title="Shorrrtcodes" class="dd-item alwaysopen"><input type="checkbox" id="section-04c6c82ff48ef0013312ce08f11e6f88" class="toggle" checked/><label for="section-04c6c82ff48ef0013312ce08f11e6f88" ></label><a href="/pir/themeinfo/shortcodes/"><b>3.</b> Shorrrtcodes<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/pir/themeinfo/shortcodes/attachments/" title="Attachments" class="dd-item"><a href="/pir/themeinfo/shortcodes/attachments/">Attachments<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/themeinfo/shortcodes/button/" title="Button" class="dd-item"><a href="/pir/themeinfo/shortcodes/button/">Button<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/themeinfo/shortcodes/children/" title="Children" class="dd-item"><input type="checkbox" id="section-9c4c5e73543863aa5755990403f5ca4a" class="toggle"/><label for="section-9c4c5e73543863aa5755990403f5ca4a" ></label><a href="/pir/themeinfo/shortcodes/children/">Children<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/pir/themeinfo/shortcodes/children/test/" title="Plank X" class="dd-item"><a href="/pir/themeinfo/shortcodes/children/test/">Plank X<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/themeinfo/shortcodes/children/children-1/" title="Plank 1" class="dd-item"><input type="checkbox" id="section-dbb28ad83c91b81b7d2f64b95a2a8114" class="toggle"/><label for="section-dbb28ad83c91b81b7d2f64b95a2a8114" ></label><a href="/pir/themeinfo/shortcodes/children/children-1/">Plank 1<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/pir/themeinfo/shortcodes/children/children-1/children-1-1/" title="Plank 1-1" class="dd-item alwaysopen"><input type="checkbox" id="section-533e0e5899bef0e5471da9559102b6a1" class="toggle" checked/><label for="section-533e0e5899bef0e5471da9559102b6a1" ></label><a href="/pir/themeinfo/shortcodes/children/children-1/children-1-1/">Plank 1-1<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/pir/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-2/" title="Plank 1-1-2" class="dd-item alwaysopen"><input type="checkbox" id="section-3e54541f6bef892c5e0113f75de2dcaa" class="toggle" checked/><label for="section-3e54541f6bef892c5e0113f75de2dcaa" ></label><a href="/pir/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-2/">Plank 1-1-2<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/pir/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-1/" title="Plank 1-1-2-1" class="dd-item"><a href="/pir/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-1/">Plank 1-1-2-1<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-2/" title="Plank 1-1-2-2" class="dd-item"><a href="/pir/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-2/">Plank 1-1-2-2<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/pir/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-3/" title="Plank 1-1-3" class="dd-item"><a href="/pir/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-3/">Plank 1-1-3<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/pir/themeinfo/shortcodes/children/children-2/" title="Plank 2" class="dd-item"><a href="/pir/themeinfo/shortcodes/children/children-2/">Plank 2<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/themeinfo/shortcodes/children/children-3/" title="Plank 3" class="dd-item"><input type="checkbox" id="section-d4b3679498364222564d8b425a2b5680" class="toggle"/><label for="section-d4b3679498364222564d8b425a2b5680" ></label><a href="/pir/themeinfo/shortcodes/children/children-3/">Plank 3<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/pir/themeinfo/shortcodes/children/children-3/test3/" title="Plank 3-1" class="dd-item"><a href="/pir/themeinfo/shortcodes/children/children-3/test3/">Plank 3-1<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/pir/themeinfo/shortcodes/expand/" title="Expand" class="dd-item"><a href="/pir/themeinfo/shortcodes/expand/">Expand<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/themeinfo/shortcodes/include/" title="Include" class="dd-item"><a href="/pir/themeinfo/shortcodes/include/">Include<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/themeinfo/shortcodes/mermaid/" title="Merrrmaid" class="dd-item"><a href="/pir/themeinfo/shortcodes/mermaid/">Merrrmaid<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/themeinfo/shortcodes/notice/" title="Notice" class="dd-item"><a href="/pir/themeinfo/shortcodes/notice/">Notice<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/themeinfo/shortcodes/siteparam/" title="Ship param" class="dd-item"><a href="/pir/themeinfo/shortcodes/siteparam/">Ship param<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/themeinfo/shortcodes/swagger/" title="Swaggerrr" class="dd-item"><a href="/pir/themeinfo/shortcodes/swagger/">Swaggerrr<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/pir/themeinfo/shortcodes/tabs/" title="Tabbed views" class="dd-item"><a href="/pir/themeinfo/shortcodes/tabs/">Tabbed views<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+        </ul>
+        <div id="shortcuts">
+          <div class="nav-title">Morrre</div>
+          <ul>
+            <li><a class="padding" href="https://github.com/mateenshaikh/"><i class='fab fa-fw fa-github'></i> GitHub repo</a></li>
+            <li><a class="padding" href="/pir/tags/"><i class='fas fa-fw fa-tags'></i> Arrr! Tags</a></li>
+          </ul>
+        </div>
+        <div class="footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showLangSwitch showVariantSwitch showVisitedLinks showFooter"></div>
+        <hr class="default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showLangSwitch showVariantSwitch showVisitedLinks showFooter"/>
+        <div id="prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showLangSwitch showVariantSwitch showVisitedLinks">
+          <ul>
+            <li id="select-language-container" class="footerLangSwitch showLangSwitch">
+              <a class="padding select-container">
+                <i class="fas fa-language fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <select id="select-language" onchange="location = baseUri + this.value;">
+                    <option id="pir" value="/pir/themeinfo/basics/migration/" selected>Arrr! ☠ Pirrrates ☠</option>
+                    <option id="en" value="/themeinfo/basics/migration/">English</option>
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </a>
+            </li>
+            <li id="select-variant-container" class="footerVariantSwitch showVariantSwitch">
+              <a class="padding select-container">
+                <i class="fas fa-paint-brush fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <select id="select-variant" onchange="variants.changeVariant( this.value );">
+                    <option id="relearn-light" value="relearn-light" selected>Relearn Light</option>
+                    <option id="relearn-dark" value="relearn-dark">Relearn Dark</option>
+                    <option id="learn" value="learn">Learn</option>
+                    <option id="neon" value="neon">Neon</option>
+                    <option id="blue" value="blue">Blue</option>
+                    <option id="green" value="green">Green</option>
+                    <option id="red" value="red">Red</option>
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </a>
+              <script>variants.markSelectedVariant();</script>
+            </li>
+            <li class="footerVisitedLinks showVisitedLinks"><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear Historrry</a></li>
+          </ul>
+        </div>
+        <div id="footer" class="footerFooter showFooter"><script src="//yihui.org/js/math-code.js"></script>
+<script async
+src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<style>
+            #footer {
+              font-size: 13px;
+              height: 100px;
+              margin-left: auto;
+              margin-right: auto;
+              padding: 2rem 1rem;
+              text-align: center;
+              min-width: 230px;
+              max-width: 300px;
+            }
+            #footer p {
+              margin: 0;
+            }
+          </style>
+
+          <a class="github-button" href="https://github.com/mateenshaikh/onlineresources4" data-icon="octicon-cloud-download" aria-label="Download McShelby/hugo-theme-relearn on GitHub">Site</a>
+          <a class="github-button" href="https://github.com/McShelby/hugo-theme-relearn" data-icon="octicon-repo-template" data-show-count="true" aria-label="Star McShelby/hugo-theme-relearn on GitHub">Theme</a>
+          
+
+          
+          <script async defer src="/js/buttons.js?1649526300"></script>
+        </div>
+      </div>
+    </aside>
+    <script src="/js/clipboard.min.js?1649526300"></script>
+    <script src="/js/perfect-scrollbar.min.js?1649526300"></script>
+    <script src="/js/featherlight.min.js?1649526300"></script>
+    <script src="/js/theme.js?1649526300"></script>
+  </body>
+</html>

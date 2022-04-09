@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.96.0" />
+    <meta name="generator" content="Relearn 3.4.1&#43;tip">
+    <meta name="description" content="Documentation for Hugo Relearn Theme">
+    <meta name="author" content="Sören Weber">
+    <title>Multilingual and i18n :: Mateen Shaikh</title>
+    <link rel="alternate" type="application/rss&#43;xml" href="/themeinfo/cont/i18n/index.xml" title="Mateen Shaikh" />
+    <link rel="alternate" type="text/html" href="/themeinfo/cont/i18n/_print/" title="Mateen Shaikh" />
+    <link rel="icon" href="/images/favicon.png?1649526298" type="image/png">
+    <link href="/css/nucleus.css?1649526298" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1649526298" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1649526298" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1649526298" rel="stylesheet">
+    <link href="/css/auto-complete.css?1649526298" rel="stylesheet">
+    <link href="/css/theme.css?1649526298" rel="stylesheet">
+    <link href="/css/theme-relearn-light.css?1649526298" rel="stylesheet" id="variant-style">
+    <link href="/css/variant.css?1649526298" rel="stylesheet">
+    <link href="/css/print.css?1649526298" rel="stylesheet" media="print">
+    <script src="/js/variant.js?1649526298"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      var index_url="/index.json";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      // some further base stuff
+      var baseUriFull='https:\/\/mateenshaikh.ca/';
+      variants.init( [ 'relearn-light', 'relearn-dark', 'learn', 'neon', 'blue', 'green', 'red' ] );
+    </script>
+    <script src="/js/jquery.min.js?1649526298"></script>
+  </head>
+  <body class="mobile-support" data-url="/themeinfo/cont/i18n/">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable">
+        <div>
+          <div class="navigation">
+             <a class="nav nav-next" href="/themeinfo/cont/tags/" title="Tags"><i class="fas fa-chevron-right fa-fw"></i></a>
+          </div>
+          <div class="navigation">
+             <a class="nav nav-prev" href="/themeinfo/cont/icons/" title="Icons and logos"><i class="fas fa-chevron-left fa-fw"></i></a>
+          </div>
+          <div id="top-print-link">
+            <a class="print-link" title='Print whole chapter' href="/themeinfo/cont/i18n/_print/">
+              <i class="fas fa-print fa-fw"></i>
+            </a>
+          </div>
+          <div id="top-github-link">
+            <a class="github-link" title='Edit' href="https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/themeinfo/cont/i18n/_index.en.md" target="blank">
+              <i class="fas fa-pen fa-fw"></i>
+            </a>
+          </div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <span id="toc-menu" title='Table of Contents'><i class="fas fa-list-alt fa-fw"></i></span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <meta itemprop="itemListOrder" content="Descending" />
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="4" /><a itemprop="item" href="/"><span itemprop="name">MS</span></a> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="3" /><a itemprop="item" href="/themeinfo/"><span itemprop="name">Page Theme</span></a> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="2" /><a itemprop="item" href="/themeinfo/cont/"><span itemprop="name">Content</span></a> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="1" /><a itemprop="item" href="/themeinfo/cont/i18n/" aria-disabled="true"><span itemprop="name">Multilingual and i18n</span></a></li>
+            </ol>
+          </div>
+          <div class="default-animation progress">
+            <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#basic-configuration">Basic configuration</a></li>
+    <li><a href="#overwrite-translation-strings">Overwrite translation strings</a></li>
+    <li><a href="#disable-language-switching">Disable language switching</a></li>
+  </ul>
+</nav>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+          <article>
+
+<h1>Multilingual and i18n</h1>
+<p>The Relearn theme is fully compatible with Hugo multilingual mode.</p>
+<p>It provides:</p>
+<ul>
+<li>Translation strings for default values (English, Piratized English, Arabic, Simplified Chinese, Traditional Chinesse, Dutch, French, German, Hindi, Indonesian, Japanese, Korean, Portuguese, Russian, Spanish, Turkish, Vietnamese). Feel free to contribute!</li>
+<li>Automatic menu generation from multilingual content</li>
+<li>In-browser language switching</li>
+</ul>
+<p><img src="images/i18n-menu.gif?classes=shadow&amp;width=300px" alt="I18n menu"></p>
+<h2 id="basic-configuration">Basic configuration</h2>
+<p>After learning <a href="https://gohugo.io/content-management/multilingual">how Hugo handle multilingual websites</a>, define your languages in your <code>config.toml</code> file.</p>
+<p>For example with current English and Piratized English website.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="c"># English is the default language</span>
+</span></span><span class="line"><span class="cl"><span class="nx">defaultContentLanguage</span> <span class="p">=</span> <span class="s2">&#34;en&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">Languages</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">Languages</span><span class="p">.</span><span class="nx">en</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;Hugo Relearn Theme&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">weight</span> <span class="p">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="nx">languageName</span> <span class="p">=</span> <span class="s2">&#34;English&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">Languages</span><span class="p">.</span><span class="nx">pir</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;Cap&#39;n Hugo Relearrrn Theme&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">weight</span> <span class="p">=</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl"><span class="nx">languageName</span> <span class="p">=</span> <span class="s2">&#34;Arrr! Pirrrates&#34;</span>
+</span></span></code></pre></div><p>Then, for each new page, append the <em>id</em> of the language to the file.</p>
+<ul>
+<li>Single file <code>my-page.md</code> is split in two files:
+<ul>
+<li>in English: <code>my-page.md</code></li>
+<li>in Piratized English: <code>my-page.pir.md</code></li>
+</ul>
+</li>
+<li>Single file <code>_index.md</code> is split in two files:
+<ul>
+<li>in English: <code>_index.md</code></li>
+<li>in Piratized English: <code>_index.pir.md</code></li>
+</ul>
+</li>
+</ul>
+
+<div class="box notices info">
+    <div class="box-label"><i class="fas fa-info-circle fa-fw"></i> Info</div>
+    <div class="box-content">
+<p>Be aware that only translated pages are displayed in menu. It&rsquo;s not replaced with default language content.</p>
+
+    </div>
+</div>
+
+<div class="box notices tip">
+    <div class="box-label"><i class="fas fa-lightbulb fa-fw"></i> Tip</div>
+    <div class="box-content">
+<p>Use <a href="https://gohugo.io/content-management/multilingual/#translate-your-content">slug</a> Front Matter parameter to translate urls too.</p>
+
+    </div>
+</div>
+<h2 id="overwrite-translation-strings">Overwrite translation strings</h2>
+<p>Translations strings are used for common default values used in the theme (<em>Edit</em> button, <em>Search placeholder</em> and so on). Translations are available in English and Piratized English but you may use another language or want to override default values.</p>
+<p>To override these values, create a new file in your local i18n folder <code>i18n/&lt;idlanguage&gt;.toml</code> and inspire yourself from the theme <code>themes/hugo-theme-relearn/i18n/en.toml</code></p>
+<h2 id="disable-language-switching">Disable language switching</h2>
+<p>Switching the language in the browser is a great feature, but for some reasons you may want to disable it.</p>
+<p>Just set <code>disableLanguageSwitchingButton=true</code> in your <code>config.toml</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># When using mulitlingual website, disable the switch language button.</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">disableLanguageSwitchingButton</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span></code></pre></div>
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="sidebar" class="default-animation showVisitedLinks">
+      <div id="header-wrapper" class="default-animation">
+        <div id="header" class="default-animation">
+          <style>
+            #logo svg,
+            #logo svg * {
+              color: #282828;
+              color: var(--MENU-SECTIONS-BG-color);
+              fill: #282828 !important;
+              fill: var(--MENU-SECTIONS-BG-color) !important;
+              opacity: .945;
+            }
+            a#logo {
+              color: #282828;
+              color: var(--MENU-SECTIONS-BG-color);
+              font-family: 'Work Sans', 'Helvetica', 'Tahoma', 'Geneva', 'Arial', sans-serif;
+              font-size: 30px;
+              font-weight: 300;
+              margin-top: -13px;
+              max-width: 60%;
+              text-transform: uppercase;
+              width: 226px;
+              white-space: nowrap;
+            }
+            a#logo:hover {
+              color: #282828;
+              color: var(--MENU-SECTIONS-BG-color);
+            }
+            #logo svg {
+              margin-bottom: -20px;
+              margin-left: -23.5px;
+              width: 40.5%;
+            }
+            @media only all and (max-width: 59.938em) {
+              a#logo {
+                font-size: 25px;
+                margin-top: -3px;
+              }
+              #logo svg {
+                margin-bottom: -12px;
+                margin-left: -23px;
+              }
+            }
+            @media all and (-ms-high-contrast:none) {
+              /* IE11s understanding of positioning is weird at best */
+              a#logo {
+                margin-top: -58px;
+              }
+              #logo svg {
+                margin-bottom: -62px;
+              }
+            }
+          </style>
+          <a id="logo" href="/">
+            
+            <img src="customlogo_resize.png" width=40%>ms
+          </a>
+        </div>
+        <div class="searchbox default-animation">
+          <label for="search-by"><i class="fas fa-search"></i></label>
+          <input data-search-input id="search-by" type="search" placeholder="Search...">
+          <span data-search-clear=""><i class="fas fa-times"></i></span>
+        </div>
+        <script src="/js/lunr.min.js?1649526298"></script>
+        <script src="/js/auto-complete.js?1649526298"></script>
+        <script src="/js/search.js?1649526298"></script>
+      </div>
+      <div id="content-wrapper" class="highlightable">
+        <ul class="topics collapsible-menu">
+          <li data-nav-id="/post/" title="Posts" class="dd-item"><input type="checkbox" id="section-1551eb054d26fb2c8c41239224ca8616" class="toggle"/><label for="section-1551eb054d26fb2c8c41239224ca8616" ></label><a href="/post/">Posts<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/post/2022-04-09-acknowledgement/" title="acknowledgement" class="dd-item"><a href="/post/2022-04-09-acknowledgement/">acknowledgement<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/post/2022-04-08-juliatimings/" title="juliatimings" class="dd-item"><a href="/post/2022-04-08-juliatimings/">juliatimings<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/post/2020-12-01-r-rmarkdown/" title="Hello R Markdown" class="dd-item"><a href="/post/2020-12-01-r-rmarkdown/">Hello R Markdown<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/themechanges/" title="Theme Changes" class="dd-item"><input type="checkbox" id="section-aece8d214b1d123d0baee3d16b5da943" class="toggle"/><label for="section-aece8d214b1d123d0baee3d16b5da943" ></label><a href="/themechanges/">Theme Changes<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themechanges/2022-04-08-fix-mathjax/" title="Mathjax" class="dd-item"><a href="/themechanges/2022-04-08-fix-mathjax/">Mathjax<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themechanges/2022-04-08-changemenus/" title="Remove old menus" class="dd-item"><a href="/themechanges/2022-04-08-changemenus/">Remove old menus<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/themeinfo/" title="Page Theme" class="dd-item parent"><input type="checkbox" id="section-c98299165197569a7dbb7c16c879ec94" class="toggle" checked/><label for="section-c98299165197569a7dbb7c16c879ec94" ></label><a href="/themeinfo/">Page Theme<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themeinfo/basics/" title="Basics" class="dd-item alwaysopen"><input type="checkbox" id="section-d1c5e3c5791323678e3ad8e1c500f13c" class="toggle" checked/><label for="section-d1c5e3c5791323678e3ad8e1c500f13c" ></label><a href="/themeinfo/basics/"><b>1.</b> Basics<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themeinfo/basics/migration/" title="What&#39;s new" class="dd-item"><a href="/themeinfo/basics/migration/">What&#39;s new<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/basics/requirements/" title="Requirements" class="dd-item"><a href="/themeinfo/basics/requirements/">Requirements<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/basics/installation/" title="Installation" class="dd-item"><a href="/themeinfo/basics/installation/">Installation<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/basics/configuration/" title="Configuration" class="dd-item"><a href="/themeinfo/basics/configuration/">Configuration<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/basics/customization/" title="Customization" class="dd-item"><a href="/themeinfo/basics/customization/">Customization<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/basics/generator/" title="Stylesheet generator" class="dd-item"><a href="/themeinfo/basics/generator/">Stylesheet generator<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/basics/history/" title="History" class="dd-item"><a href="/themeinfo/basics/history/">History<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/themeinfo/cont/" title="Content" class="dd-item parent alwaysopen"><input type="checkbox" id="section-6a723ced917e39b993d27cbc25abafab" class="toggle" checked/><label for="section-6a723ced917e39b993d27cbc25abafab" ></label><a href="/themeinfo/cont/"><b>2.</b> Content<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themeinfo/cont/pages/" title="Pages organization" class="dd-item"><a href="/themeinfo/cont/pages/">Pages organization<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/cont/archetypes/" title="Archetypes" class="dd-item"><a href="/themeinfo/cont/archetypes/">Archetypes<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/cont/markdown/" title="Markdown syntax" class="dd-item"><a href="/themeinfo/cont/markdown/">Markdown syntax<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/cont/syntaxhighlight/" title="Code highlighting" class="dd-item"><a href="/themeinfo/cont/syntaxhighlight/">Code highlighting<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/cont/menushortcuts/" title="Menu extra shortcuts" class="dd-item"><a href="/themeinfo/cont/menushortcuts/">Menu extra shortcuts<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/cont/icons/" title="Icons and logos" class="dd-item"><a href="/themeinfo/cont/icons/">Icons and logos<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/cont/i18n/" title="Multilingual and i18n" class="dd-item active"><a href="/themeinfo/cont/i18n/">Multilingual and i18n<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/cont/tags/" title="Tags" class="dd-item"><a href="/themeinfo/cont/tags/">Tags<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/themeinfo/shortcodes/" title="Shortcodes" class="dd-item alwaysopen"><input type="checkbox" id="section-52d5db2ef975f3fd0dba8d661a91fd38" class="toggle" checked/><label for="section-52d5db2ef975f3fd0dba8d661a91fd38" ></label><a href="/themeinfo/shortcodes/"><b>3.</b> Shortcodes<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themeinfo/shortcodes/attachments/" title="Attachments" class="dd-item"><a href="/themeinfo/shortcodes/attachments/">Attachments<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/button/" title="Button" class="dd-item"><a href="/themeinfo/shortcodes/button/">Button<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/children/" title="Children" class="dd-item"><input type="checkbox" id="section-ff454e2d1a76e72579a3eb4047153271" class="toggle"/><label for="section-ff454e2d1a76e72579a3eb4047153271" ></label><a href="/themeinfo/shortcodes/children/">Children<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themeinfo/shortcodes/children/test/" title="page X" class="dd-item"><a href="/themeinfo/shortcodes/children/test/">page X<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/children/children-1/" title="page 1" class="dd-item"><input type="checkbox" id="section-71b703f727a5a1fd0923b542d7953e0c" class="toggle"/><label for="section-71b703f727a5a1fd0923b542d7953e0c" ></label><a href="/themeinfo/shortcodes/children/children-1/">page 1<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themeinfo/shortcodes/children/children-1/children-1-1/" title="page 1-1" class="dd-item alwaysopen"><input type="checkbox" id="section-db4a2653fc99b551cad0351d97b47a4f" class="toggle" checked/><label for="section-db4a2653fc99b551cad0351d97b47a4f" ></label><a href="/themeinfo/shortcodes/children/children-1/children-1-1/">page 1-1<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-2/" title="page 1-1-2" class="dd-item alwaysopen"><input type="checkbox" id="section-26971ac834b91a594c74aae81a42e063" class="toggle" checked/><label for="section-26971ac834b91a594c74aae81a42e063" ></label><a href="/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-2/">page 1-1-2<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-1/" title="page 1-1-2-1" class="dd-item"><a href="/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-1/">page 1-1-2-1<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-2/" title="page 1-1-2-2" class="dd-item"><a href="/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-2/">page 1-1-2-2<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-3/" title="page 1-1-3" class="dd-item"><a href="/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-3/">page 1-1-3<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/themeinfo/shortcodes/children/children-2/" title="page 2" class="dd-item"><a href="/themeinfo/shortcodes/children/children-2/">page 2<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/children/children-3/" title="page 3" class="dd-item"><input type="checkbox" id="section-290d79cee905a3070eb690186d121cd1" class="toggle"/><label for="section-290d79cee905a3070eb690186d121cd1" ></label><a href="/themeinfo/shortcodes/children/children-3/">page 3<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themeinfo/shortcodes/children/children-3/test3/" title="page 3-1" class="dd-item"><a href="/themeinfo/shortcodes/children/children-3/test3/">page 3-1<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/themeinfo/shortcodes/expand/" title="Expand" class="dd-item"><a href="/themeinfo/shortcodes/expand/">Expand<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/include/" title="Include" class="dd-item"><a href="/themeinfo/shortcodes/include/">Include<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/mermaid/" title="Mermaid" class="dd-item"><a href="/themeinfo/shortcodes/mermaid/">Mermaid<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/notice/" title="Notice" class="dd-item"><a href="/themeinfo/shortcodes/notice/">Notice<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/siteparam/" title="Site param" class="dd-item"><a href="/themeinfo/shortcodes/siteparam/">Site param<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/swagger/" title="Swagger" class="dd-item"><a href="/themeinfo/shortcodes/swagger/">Swagger<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/tabs/" title="Tabbed views" class="dd-item"><a href="/themeinfo/shortcodes/tabs/">Tabbed views<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+        </ul>
+        <div id="shortcuts">
+          <div class="nav-title">More</div>
+          <ul>
+            <li><a class="padding" href="https://github.com/mateenshaikh/"><i class='fab fa-fw fa-github'></i> GitHub repo</a></li>
+            <li><a class="padding" href="/tags/"><i class='fas fa-fw fa-tags'></i> Tags</a></li>
+          </ul>
+        </div>
+        <div class="footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showLangSwitch showVariantSwitch showVisitedLinks showFooter"></div>
+        <hr class="default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showLangSwitch showVariantSwitch showVisitedLinks showFooter"/>
+        <div id="prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showLangSwitch showVariantSwitch showVisitedLinks">
+          <ul>
+            <li id="select-language-container" class="footerLangSwitch showLangSwitch">
+              <a class="padding select-container">
+                <i class="fas fa-language fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <select id="select-language" onchange="location = baseUri + this.value;">
+                    <option id="pir" value="/pir/themeinfo/cont/i18n/">Arrr! ☠ Pirrrates ☠</option>
+                    <option id="en" value="/themeinfo/cont/i18n/" selected>English</option>
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </a>
+            </li>
+            <li id="select-variant-container" class="footerVariantSwitch showVariantSwitch">
+              <a class="padding select-container">
+                <i class="fas fa-paint-brush fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <select id="select-variant" onchange="variants.changeVariant( this.value );">
+                    <option id="relearn-light" value="relearn-light" selected>Relearn Light</option>
+                    <option id="relearn-dark" value="relearn-dark">Relearn Dark</option>
+                    <option id="learn" value="learn">Learn</option>
+                    <option id="neon" value="neon">Neon</option>
+                    <option id="blue" value="blue">Blue</option>
+                    <option id="green" value="green">Green</option>
+                    <option id="red" value="red">Red</option>
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </a>
+              <script>variants.markSelectedVariant();</script>
+            </li>
+            <li class="footerVisitedLinks showVisitedLinks"><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+          </ul>
+        </div>
+        <div id="footer" class="footerFooter showFooter"><script src="//yihui.org/js/math-code.js"></script>
+<script async
+src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<style>
+            #footer {
+              font-size: 13px;
+              height: 100px;
+              margin-left: auto;
+              margin-right: auto;
+              padding: 2rem 1rem;
+              text-align: center;
+              min-width: 230px;
+              max-width: 300px;
+            }
+            #footer p {
+              margin: 0;
+            }
+          </style>
+
+          <a class="github-button" href="https://github.com/mateenshaikh/onlineresources4" data-icon="octicon-cloud-download" aria-label="Download McShelby/hugo-theme-relearn on GitHub">Site</a>
+          <a class="github-button" href="https://github.com/McShelby/hugo-theme-relearn" data-icon="octicon-repo-template" data-show-count="true" aria-label="Star McShelby/hugo-theme-relearn on GitHub">Theme</a>
+          
+
+          
+          <script async defer src="/js/buttons.js?1649526298"></script>
+        </div>
+      </div>
+    </aside>
+    <script src="/js/clipboard.min.js?1649526298"></script>
+    <script src="/js/perfect-scrollbar.min.js?1649526298"></script>
+    <script src="/js/featherlight.min.js?1649526298"></script>
+    <script src="/js/theme.js?1649526298"></script>
+  </body>
+</html>

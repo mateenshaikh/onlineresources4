@@ -1,0 +1,2 @@
+require(blogdown)
+stop_server();build_site();serve_site()

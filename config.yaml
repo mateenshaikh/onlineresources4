@@ -1,0 +1,84 @@
+baseURL: https://mateenshaikh.ca
+canonifyURLs: no
+relativeURLs: no
+theme: hugo-theme-relearn
+languageCode: en
+defaultContentLanguage: en
+title: Hugo Relearn Documentation
+params:
+  author: Sören Weber
+  collapsibleMenu: yes
+  description: Documentation for Hugo Relearn Theme
+  disableBreadcrumb: no
+  disableLandingPageButton: yes
+  disableNextPrev: no
+  disableSeoHiddenPages: yes
+  editURL: https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/
+  mermaidInitialize: '{ "securityLevel": "loose" }'
+  showVisitedLinks: yes
+  themeVariant:
+    - relearn-light
+    - relearn-dark
+    - learn
+    - neon
+    - blue
+    - green
+    - red
+  titleSeparator: '::'
+outputs:
+  home:
+    - HTML
+    - RSS
+    - PRINT
+    - JSON
+  page:
+    - HTML
+    - RSS
+    - PRINT
+  section:
+    - HTML
+    - RSS
+    - PRINT
+markup:
+  goldmark:
+    renderer:
+      unsafe: yes
+  highlight:
+    guessSyntax: no
+    noClasses: no
+server:
+  headers:
+    - for: '**.html'
+      values:
+        X-UA-Compatible: IE=edge
+Languages:
+  en:
+    landingPageName: <i class='fas fa-home'></i> Home
+    landingPageURL: /
+    languageName: English
+    menu:
+      shortcuts:
+        - identifier: ds
+          name: <i class='fab fa-fw fa-github'></i> GitHub repo
+          url: https://github.com/mateenshaikh/
+          weight: 10
+        - name: <i class='fas fa-fw fa-tags'></i> Tags
+          url: tags/
+          weight: 40
+    title: Mateen Shaikh
+    weight: 1
+  pir:
+    landingPageName: <i class='fas fa-home'></i> Arrr! Home
+    landingPageURL: /pir/
+    languageName: Arrr! ☠ Pirrrates ☠
+    menu:
+      shortcuts:
+        - identifier: ds
+          name: <i class='fab fa-fw fa-github'></i> GitHub repo
+          url: https://github.com/mateenshaikh/
+          weight: 10
+        - name: <i class='fas fa-fw fa-tags'></i> Arrr! Tags
+          url: tags/
+          weight: 40
+    title: Cap'n MS, cat owner
+    weight: 1

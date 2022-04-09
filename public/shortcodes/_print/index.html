@@ -1,0 +1,1793 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.96.0" />
+    <meta name="generator" content="Relearn 3.4.1&#43;tip">
+    <meta name="description" content="Documentation for Hugo Relearn Theme">
+    <meta name="author" content="Sören Weber">
+    <title>Shortcodes :: Mateen Shaikh</title>
+    <link rel="canonical" type="text/html" href="/shortcodes/" title="Mateen Shaikh" />
+    <link rel="alternate" type="application/rss&#43;xml" href="/shortcodes/index.xml" title="Mateen Shaikh" />
+    <link rel="icon" href="/images/favicon.png?1649526298" type="image/png">
+    <link href="/css/nucleus.css?1649526298" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1649526298" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1649526298" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1649526298" rel="stylesheet">
+    <link href="/css/auto-complete.css?1649526298" rel="stylesheet">
+    <link href="/css/theme.css?1649526298" rel="stylesheet">
+    <link href="/css/theme-relearn-light.css?1649526298" rel="stylesheet" id="variant-style">
+    <link href="/css/variant.css?1649526298" rel="stylesheet">
+    <link href="/css/print.css?1649526298" rel="stylesheet">
+    <script src="/js/variant.js?1649526298"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      var index_url="/index.json";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      // some further base stuff
+      var baseUriFull='https:\/\/mateenshaikh.ca/';
+      variants.init( [ 'relearn-light', 'relearn-dark', 'learn', 'neon', 'blue', 'green', 'red' ] );
+    </script>
+    <script src="/js/jquery.min.js?1649526298"></script>
+  </head>
+  <body class="mobile-support print" data-url="/shortcodes/">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable">
+        <div>
+          <div class="navigation">
+             <a class="nav nav-next" href="/shortcodes/attachments/" title="Attachments"><i class="fas fa-chevron-right fa-fw"></i></a>
+          </div>
+          <div class="navigation">
+             <a class="nav nav-prev" href="/" title="MS"><i class="fas fa-chevron-left fa-fw"></i></a>
+          </div>
+          <div id="top-print-link">
+            <a class="print-link" title='Print whole chapter' href="/shortcodes/_print/">
+              <i class="fas fa-print fa-fw"></i>
+            </a>
+          </div>
+          <div id="top-github-link">
+            <a class="github-link" title='Edit' href="https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/shortcodes/_index.en.md" target="blank">
+              <i class="fas fa-pen fa-fw"></i>
+            </a>
+          </div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <meta itemprop="itemListOrder" content="Descending" />
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="2" /><a itemprop="item" href="/"><span itemprop="name">MS</span></a> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="1" /><a itemprop="item" href="/shortcodes/" aria-disabled="true"><span itemprop="name">Shortcodes</span></a></li>
+            </ol>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable chapter">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+    
+          <article class="chapter">
+
+<h3 id="chapter-3">Chapter 3</h3>
+<h1 id="shortcodes">Shortcodes</h1>
+<p>Hugo uses Markdown for its simple content format. However, there are a lot of things that Markdown doesn’t support well. You could use pure HTML to expand possibilities.</p>
+<p>But this happens to be a bad idea. Everyone uses Markdown because it&rsquo;s pure and simple to read even non-rendered. You should avoid HTML to keep it as simple as possible.</p>
+<p>To avoid this limitations, Hugo created <a href="https://gohugo.io/extras/shortcodes/">shortcodes</a>. A shortcode is a simple snippet inside a page.</p>
+<p>The Relearn theme provides multiple shortcodes on top of existing ones.</p>
+
+
+<div class="children children-h2 children-sort-">
+
+<h2><a href="/shortcodes/attachments/" >Attachments</a></h2>
+<p>The Attachments shortcode displays a list of files attached to a page</p>
+					
+
+<h2><a href="/shortcodes/button/" >Button</a></h2>
+<p>Nice buttons on your page</p>
+					
+
+<h2><a href="/shortcodes/children/" >Children</a></h2>
+<p>List the child pages of a page</p>
+					
+
+<h2><a href="/shortcodes/expand/" >Expand</a></h2>
+<p>Displays an expandable/collapsible section of text on your page</p>
+					
+
+<h2><a href="/shortcodes/include/" >Include</a></h2>
+<p>Displays content from other Markdown files</p>
+					
+
+<h2><a href="/shortcodes/mermaid/" >Mermaid</a></h2>
+<p>Generation of diagram and flowchart from text in a similar manner as Markdown</p>
+					
+
+<h2><a href="/shortcodes/notice/" >Notice</a></h2>
+<p>Disclaimers to help you structure your page</p>
+					
+
+<h2><a href="/shortcodes/siteparam/" >Site param</a></h2>
+<p>Get value of site params variables in your page</p>
+					
+
+<h2><a href="/shortcodes/swagger/" >Swagger</a></h2>
+<p>Adds UI for your Swagger / OpenAPI Specifications</p>
+					
+
+<h2><a href="/shortcodes/tabs/" >Tabbed views</a></h2>
+<p>Synchronize selection of content in different tabbed views</p>
+					
+</div>
+
+            <footer class="footline">
+            </footer>
+          </article>
+          <section>
+    
+          <article>
+
+<h1>Attachments</h1>
+<p>The Attachments shortcode displays a list of files attached to a page.</p>
+
+<div class="box attachments transparent">
+  <div class="box-label"><i class="fas fa-paperclip fa-fw"></i> Attachments</div>
+  <ul class="box-content attachments-files">
+    <li><a href="/shortcodes/attachments.en.files/adivorciarsetoca00cape.pdf">adivorciarsetoca00cape.pdf</a> (361 KB)</li>
+    <li><a href="/shortcodes/attachments.en.files/BachGavotteShort.mp3">BachGavotteShort.mp3</a> (357 KB)</li>
+    <li><a href="/shortcodes/attachments.en.files/Carroll_AliceAuPaysDesMerveilles.pdf">Carroll_AliceAuPaysDesMerveilles.pdf</a> (175 KB)</li>
+    <li><a href="/shortcodes/attachments.en.files/hugo.png">hugo.png</a> (17 KB)</li>
+    <li><a href="/shortcodes/attachments.en.files/hugo.txt">hugo.txt</a> (20 B)</li>
+    <li><a href="/shortcodes/attachments.en.files/movieselectricsheep-flock-244-32500-2.mp4">movieselectricsheep-flock-244-32500-2.mp4</a> (340 KB)</li>
+  </ul>
+</div>
+
+<h2 id="usage">Usage</h2>
+<p>The shortcurt lists files found in a <strong>specific folder</strong>.
+Currently, it support two implementations for pages</p>
+<ol>
+<li>
+<p>If your page is a Markdown file, attachements must be placed in a <strong>folder</strong> named like your page and ending with <strong>.files</strong>.</p>
+<blockquote>
+<ul>
+<li>content
+<ul>
+<li>_index.md</li>
+<li>page.files
+<ul>
+<li>attachment.pdf</li>
+</ul>
+</li>
+<li>page.md</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</li>
+<li>
+<p>If your page is a <strong>folder</strong>, attachements must be placed in a nested <strong>&lsquo;files&rsquo;</strong> folder.</p>
+<blockquote>
+<ul>
+<li>content
+<ul>
+<li>_index.md</li>
+<li>page
+<ul>
+<li>index.md</li>
+<li>files
+<ul>
+<li>attachment.pdf</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<p>Be aware that if you use a multilingual website, you will need to have as many folders as languages.</p>
+<p>That&rsquo;s all!</p>
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Parameter</th>
+<th style="text-align:left">Default</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">title</td>
+<td style="text-align:left">&ldquo;Attachments&rdquo;</td>
+<td style="text-align:left">List&rsquo;s title</td>
+</tr>
+<tr>
+<td style="text-align:left">icon</td>
+<td style="text-align:left">&ldquo;paperclip&rdquo;</td>
+<td style="text-align:left">Sets the icon near the title; if you want no icon at all, you have to set this parameter to <code>&quot; &quot;</code> (a non empty string filled with spaces)</td>
+</tr>
+<tr>
+<td style="text-align:left">sort</td>
+<td style="text-align:left">&ldquo;asc&rdquo;</td>
+<td style="text-align:left">Sorting the output in <code>asc</code>ending or <code>desc</code>ending order</td>
+</tr>
+<tr>
+<td style="text-align:left">style</td>
+<td style="text-align:left">&quot;&quot;</td>
+<td style="text-align:left">Choose between <code>orange</code>, <code>grey</code>, <code>blue</code> and <code>green</code> for nice style</td>
+</tr>
+<tr>
+<td style="text-align:left">pattern</td>
+<td style="text-align:left">&ldquo;.*&rdquo;</td>
+<td style="text-align:left">A regular expressions, used to filter the attachments by file name. <br/><br/>The <strong>pattern</strong> parameter value must be <a href="https://en.wikipedia.org/wiki/Regular_expression">regular expressions</a>.</td>
+</tr>
+</tbody>
+</table>
+<p>For example:</p>
+<ul>
+<li>To match a file suffix of &lsquo;jpg&rsquo;, use *<em>.<em>jpg</em></em> (not *.jpg).</li>
+<li>To match file names ending in &lsquo;jpg&rsquo; or &lsquo;png&rsquo;, use <strong>.*(jpg|png)</strong></li>
+</ul>
+<h3 id="examples">Examples</h3>
+<h4 id="list-of-attachments-ending-in-pdf-or-mp4">List of attachments ending in pdf or mp4</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span><span class="nx">attachments</span> <span class="nx">title</span><span class="p">=</span><span class="s">&#34;Related files&#34;</span> <span class="nx">pattern</span><span class="p">=</span><span class="s">&#34;.*(pdf|mp4)&#34;</span><span class="o">/%</span><span class="p">}}</span>
+</span></span></code></pre></div><p>renders as</p>
+
+<div class="box attachments transparent">
+  <div class="box-label"><i class="fas fa-paperclip fa-fw"></i> Related files</div>
+  <ul class="box-content attachments-files">
+    <li><a href="/shortcodes/attachments.en.files/adivorciarsetoca00cape.pdf">adivorciarsetoca00cape.pdf</a> (361 KB)</li>
+    <li><a href="/shortcodes/attachments.en.files/Carroll_AliceAuPaysDesMerveilles.pdf">Carroll_AliceAuPaysDesMerveilles.pdf</a> (175 KB)</li>
+    <li><a href="/shortcodes/attachments.en.files/movieselectricsheep-flock-244-32500-2.mp4">movieselectricsheep-flock-244-32500-2.mp4</a> (340 KB)</li>
+  </ul>
+</div>
+
+<h4 id="colored-styled-box">Colored styled box</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span><span class="nx">attachments</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;orange&#34;</span> <span class="o">/%</span><span class="p">}}</span>
+</span></span></code></pre></div><p>renders as</p>
+
+<div class="box attachments orange">
+  <div class="box-label"><i class="fas fa-paperclip fa-fw"></i> Attachments</div>
+  <ul class="box-content attachments-files">
+    <li><a href="/shortcodes/attachments.en.files/adivorciarsetoca00cape.pdf">adivorciarsetoca00cape.pdf</a> (361 KB)</li>
+    <li><a href="/shortcodes/attachments.en.files/BachGavotteShort.mp3">BachGavotteShort.mp3</a> (357 KB)</li>
+    <li><a href="/shortcodes/attachments.en.files/Carroll_AliceAuPaysDesMerveilles.pdf">Carroll_AliceAuPaysDesMerveilles.pdf</a> (175 KB)</li>
+    <li><a href="/shortcodes/attachments.en.files/hugo.png">hugo.png</a> (17 KB)</li>
+    <li><a href="/shortcodes/attachments.en.files/hugo.txt">hugo.txt</a> (20 B)</li>
+    <li><a href="/shortcodes/attachments.en.files/movieselectricsheep-flock-244-32500-2.mp4">movieselectricsheep-flock-244-32500-2.mp4</a> (340 KB)</li>
+  </ul>
+</div>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span><span class="nx">attachments</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;grey&#34;</span> <span class="o">/%</span><span class="p">}}</span>
+</span></span></code></pre></div><p>renders as</p>
+
+<div class="box attachments grey">
+  <div class="box-label"><i class="fas fa-paperclip fa-fw"></i> Attachments</div>
+  <ul class="box-content attachments-files">
+    <li><a href="/shortcodes/attachments.en.files/adivorciarsetoca00cape.pdf">adivorciarsetoca00cape.pdf</a> (361 KB)</li>
+    <li><a href="/shortcodes/attachments.en.files/BachGavotteShort.mp3">BachGavotteShort.mp3</a> (357 KB)</li>
+    <li><a href="/shortcodes/attachments.en.files/Carroll_AliceAuPaysDesMerveilles.pdf">Carroll_AliceAuPaysDesMerveilles.pdf</a> (175 KB)</li>
+    <li><a href="/shortcodes/attachments.en.files/hugo.png">hugo.png</a> (17 KB)</li>
+    <li><a href="/shortcodes/attachments.en.files/hugo.txt">hugo.txt</a> (20 B)</li>
+    <li><a href="/shortcodes/attachments.en.files/movieselectricsheep-flock-244-32500-2.mp4">movieselectricsheep-flock-244-32500-2.mp4</a> (340 KB)</li>
+  </ul>
+</div>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span><span class="nx">attachments</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;blue&#34;</span> <span class="o">/%</span><span class="p">}}</span>
+</span></span></code></pre></div><p>renders as</p>
+
+<div class="box attachments blue">
+  <div class="box-label"><i class="fas fa-paperclip fa-fw"></i> Attachments</div>
+  <ul class="box-content attachments-files">
+    <li><a href="/shortcodes/attachments.en.files/adivorciarsetoca00cape.pdf">adivorciarsetoca00cape.pdf</a> (361 KB)</li>
+    <li><a href="/shortcodes/attachments.en.files/BachGavotteShort.mp3">BachGavotteShort.mp3</a> (357 KB)</li>
+    <li><a href="/shortcodes/attachments.en.files/Carroll_AliceAuPaysDesMerveilles.pdf">Carroll_AliceAuPaysDesMerveilles.pdf</a> (175 KB)</li>
+    <li><a href="/shortcodes/attachments.en.files/hugo.png">hugo.png</a> (17 KB)</li>
+    <li><a href="/shortcodes/attachments.en.files/hugo.txt">hugo.txt</a> (20 B)</li>
+    <li><a href="/shortcodes/attachments.en.files/movieselectricsheep-flock-244-32500-2.mp4">movieselectricsheep-flock-244-32500-2.mp4</a> (340 KB)</li>
+  </ul>
+</div>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span><span class="nx">attachments</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;green&#34;</span> <span class="o">/%</span><span class="p">}}</span>
+</span></span></code></pre></div><p>renders as</p>
+
+<div class="box attachments green">
+  <div class="box-label"><i class="fas fa-paperclip fa-fw"></i> Attachments</div>
+  <ul class="box-content attachments-files">
+    <li><a href="/shortcodes/attachments.en.files/adivorciarsetoca00cape.pdf">adivorciarsetoca00cape.pdf</a> (361 KB)</li>
+    <li><a href="/shortcodes/attachments.en.files/BachGavotteShort.mp3">BachGavotteShort.mp3</a> (357 KB)</li>
+    <li><a href="/shortcodes/attachments.en.files/Carroll_AliceAuPaysDesMerveilles.pdf">Carroll_AliceAuPaysDesMerveilles.pdf</a> (175 KB)</li>
+    <li><a href="/shortcodes/attachments.en.files/hugo.png">hugo.png</a> (17 KB)</li>
+    <li><a href="/shortcodes/attachments.en.files/hugo.txt">hugo.txt</a> (20 B)</li>
+    <li><a href="/shortcodes/attachments.en.files/movieselectricsheep-flock-244-32500-2.mp4">movieselectricsheep-flock-244-32500-2.mp4</a> (340 KB)</li>
+  </ul>
+</div>
+
+
+            <footer class="footline">
+            </footer>
+          </article>
+    
+          <article>
+
+<h1>Button</h1>
+<p>A button is a just a clickable button with optional icon.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Get</span> <span class="nx">Hugo</span><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="nx">icon</span><span class="p">=</span><span class="s">&#34;fas fa-download&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Get</span> <span class="nx">Hugo</span> <span class="nx">with</span> <span class="nx">icon</span><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">button</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;https://gohugo.io/&#34;</span> <span class="nx">icon</span><span class="p">=</span><span class="s">&#34;fas fa-download&#34;</span> <span class="nx">icon</span><span class="o">-</span><span class="nx">position</span><span class="p">=</span><span class="s">&#34;right&#34;</span> <span class="o">%</span><span class="p">}}</span><span class="nx">Get</span> <span class="nx">Hugo</span> <span class="nx">with</span> <span class="nx">icon</span> <span class="nx">right</span><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">button</span> <span class="o">%</span><span class="p">}}</span>
+</span></span></code></pre></div><p>
+<a href="https://gohugo.io/" target="_blank" class="btn btn-default">
+  Get Hugo
+</a>
+
+
+<a href="https://gohugo.io/" target="_blank" class="btn btn-default">
+  <i class="fas fa-download"></i>
+  Get Hugo with icon
+</a>
+
+
+<a href="https://gohugo.io/" target="_blank" class="btn btn-default">
+  Get Hugo with icon right
+  <i class="fas fa-download"></i>
+</a>
+</p>
+
+            <footer class="footline">
+            </footer>
+          </article>
+    
+          <article>
+
+<h1>Children</h1>
+<p>Use the children shortcode to list the child pages of a page and the further descendants (children&rsquo;s children). By default, the shortcode displays links to the child pages.</p>
+<h2 id="usage">Usage</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Parameter</th>
+<th style="text-align:left">Default</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">page</td>
+<td style="text-align:left"><em>current</em></td>
+<td style="text-align:left">Specify the page name (section name) to display children for</td>
+</tr>
+<tr>
+<td style="text-align:left">containerstyle</td>
+<td style="text-align:left">&ldquo;ul&rdquo;</td>
+<td style="text-align:left">Choose the style used to group all children. It could be any HTML tag name</td>
+</tr>
+<tr>
+<td style="text-align:left">style</td>
+<td style="text-align:left">&ldquo;li&rdquo;</td>
+<td style="text-align:left">Choose the style used to display each descendant. It could be any HTML tag name</td>
+</tr>
+<tr>
+<td style="text-align:left">showhidden</td>
+<td style="text-align:left">&ldquo;false&rdquo;</td>
+<td style="text-align:left">When true, child pages hidden from the menu will be displayed</td>
+</tr>
+<tr>
+<td style="text-align:left">description</td>
+<td style="text-align:left">&ldquo;false&rdquo;</td>
+<td style="text-align:left">Allows you to include a short text under each page in the list. When no description exists for the page, children shortcode takes the first 70 words of your content. <a href="https://gohugo.io/content/summaries/">Read more info about summaries on gohugo.io</a></td>
+</tr>
+<tr>
+<td style="text-align:left">depth</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">Enter a number to specify the depth of descendants to display. For example, if the value is 2, the shortcode will display 2 levels of child pages.  <strong>Tips:</strong> set 999 to get all descendants</td>
+</tr>
+<tr>
+<td style="text-align:left">sort</td>
+<td style="text-align:left"><a href="/basics/configuration/#global-site-parameters">ordersectionsby</a></td>
+<td style="text-align:left">Sort children by <strong>weight</strong>, to sort on menu order - <strong>title</strong>, to sort alphabetically on menu label. If not set it is sorted by the <code>ordersectionsby</code> setting of the site and the pages frontmatter</td>
+</tr>
+</tbody>
+</table>
+<h2 id="demo">Demo</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">children</span>  <span class="o">%</span><span class="p">}}</span>
+</span></span></code></pre></div>
+
+<ul class="children children-li children-sort-">
+<li><a href="/shortcodes/children/test/" >page X</a></li>
+<li><a href="/shortcodes/children/children-1/" >page 1</a></li>
+<li><a href="/shortcodes/children/children-2/" >page 2</a></li>
+<li><a href="/shortcodes/children/children-3/" >page 3</a></li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">children</span> <span class="nx">description</span><span class="p">=</span><span class="s">&#34;true&#34;</span> <span class="o">%</span><span class="p">}}</span>
+</span></span></code></pre></div>
+
+<ul class="children children-li children-sort-">
+<li><a href="/shortcodes/children/test/" >page X</a></li>
+<p>This is a plain page test, and the beginning of a YAML multiline description...
+</p>
+					
+<li><a href="/shortcodes/children/children-1/" >page 1</a></li>
+<p>This is a demo child page</p>
+					
+<li><a href="/shortcodes/children/children-2/" >page 2</a></li>
+<p>This is a demo child page with no description.
+So its content is used as description.</p>
+<li><a href="/shortcodes/children/children-3/" >page 3</a></li>
+<p>This is a demo child page</p>
+					
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">children</span> <span class="nx">depth</span><span class="p">=</span><span class="s">&#34;999&#34;</span> <span class="nx">showhidden</span><span class="p">=</span><span class="s">&#34;true&#34;</span> <span class="o">%</span><span class="p">}}</span>
+</span></span></code></pre></div>
+
+<ul class="children children-li children-sort-">
+<li><a href="/shortcodes/children/test/" >page X</a></li><ul></ul>
+<li><a href="/shortcodes/children/children-1/" >page 1</a></li><ul>
+<li><a href="/shortcodes/children/children-1/children-1-1/" >page 1-1</a></li><ul>
+<li><a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/" >page 1-1-1 (hidden)</a></li><ul>
+<li><a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/" >page 1-1-1-1</a></li><ul>
+<li><a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/children-1-1-1-1-1/" >page 1-1-1-1-1 (hidden)</a></li><ul>
+<li><a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/children-1-1-1-1-1/children-1-1-1-1-1-1/" >page 1-1-1-1-1-1</a></li><ul></ul></ul></ul></ul>
+<li><a href="/shortcodes/children/children-1/children-1-1/children-1-1-2/" >page 1-1-2</a></li><ul>
+<li><a href="/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-1/" >page 1-1-2-1</a></li><ul></ul>
+<li><a href="/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-2/" >page 1-1-2-2</a></li><ul></ul></ul>
+<li><a href="/shortcodes/children/children-1/children-1-1/children-1-1-3/" >page 1-1-3</a></li><ul></ul></ul></ul>
+<li><a href="/shortcodes/children/children-2/" >page 2</a></li><ul></ul>
+<li><a href="/shortcodes/children/children-3/" >page 3</a></li><ul>
+<li><a href="/shortcodes/children/children-3/test3/" >page 3-1</a></li><ul></ul></ul>
+<li><a href="/shortcodes/children/children-4/" >page 4 (hidden)</a></li><ul></ul>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">children</span> <span class="nx">containerstyle</span><span class="p">=</span><span class="s">&#34;div&#34;</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;h2&#34;</span> <span class="nx">depth</span><span class="p">=</span><span class="s">&#34;3&#34;</span> <span class="nx">description</span><span class="p">=</span><span class="s">&#34;true&#34;</span> <span class="o">%</span><span class="p">}}</span>
+</span></span></code></pre></div>
+
+<div class="children children-h2 children-sort-">
+
+<h2><a href="/shortcodes/children/test/" >page X</a></h2>
+<p>This is a plain page test, and the beginning of a YAML multiline description...
+</p>
+					
+
+<h2><a href="/shortcodes/children/children-1/" >page 1</a></h2>
+<p>This is a demo child page</p>
+					
+
+<h3><a href="/shortcodes/children/children-1/children-1-1/" >page 1-1</a></h3>
+<p>This is a demo child page</p>
+					
+
+<h4><a href="/shortcodes/children/children-1/children-1-1/children-1-1-2/" >page 1-1-2</a></h4>
+<p>This is a demo child page</p>
+					
+
+<h4><a href="/shortcodes/children/children-1/children-1-1/children-1-1-3/" >page 1-1-3</a></h4>
+<p>This is a demo child page</p>
+					
+
+<h2><a href="/shortcodes/children/children-2/" >page 2</a></h2>
+<p>This is a demo child page with no description.
+So its content is used as description.</p>
+
+<h2><a href="/shortcodes/children/children-3/" >page 3</a></h2>
+<p>This is a demo child page</p>
+					
+
+<h3><a href="/shortcodes/children/children-3/test3/" >page 3-1</a></h3>
+<p>This is a plain page test nested in a parent</p>
+					
+</div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">children</span> <span class="nx">containerstyle</span><span class="p">=</span><span class="s">&#34;div&#34;</span> <span class="nx">style</span><span class="p">=</span><span class="s">&#34;div&#34;</span> <span class="nx">depth</span><span class="p">=</span><span class="s">&#34;999&#34;</span> <span class="o">%</span><span class="p">}}</span>
+</span></span></code></pre></div>
+
+<div class="children children-div children-sort-">
+<div><a href="/shortcodes/children/test/" >page X</a></div>
+<div><a href="/shortcodes/children/children-1/" >page 1</a></div>
+<div><a href="/shortcodes/children/children-1/children-1-1/" >page 1-1</a></div>
+<div><a href="/shortcodes/children/children-1/children-1-1/children-1-1-2/" >page 1-1-2</a></div>
+<div><a href="/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-1/" >page 1-1-2-1</a></div>
+<div><a href="/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-2/" >page 1-1-2-2</a></div>
+<div><a href="/shortcodes/children/children-1/children-1-1/children-1-1-3/" >page 1-1-3</a></div>
+<div><a href="/shortcodes/children/children-2/" >page 2</a></div>
+<div><a href="/shortcodes/children/children-3/" >page 3</a></div>
+<div><a href="/shortcodes/children/children-3/test3/" >page 3-1</a></div>
+</div>
+
+            <footer class="footline">
+            </footer>
+          </article>
+          <section>
+    
+          <article>
+
+<h1>page X</h1>
+<p>This is a plain demo child page.</p>
+
+            <footer class="footline">
+            </footer>
+          </article>
+    
+          <article>
+
+<h1>page 1</h1>
+<p>This is a demo child page.</p>
+<h2 id="subpages-of-this-page">Subpages of this page</h2>
+
+
+<ul class="children children-li children-sort-">
+<li><a href="/shortcodes/children/children-1/children-1-1/" >page 1-1</a></li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+          <section>
+    
+          <article>
+
+<h1>page 1-1</h1>
+<p>This is a demo child page with a hidden child. You can still access the hidden child <a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/">directly</a> or via the search.</p>
+<h2 id="subpages-of-this-page">Subpages of this page</h2>
+
+
+<ul class="children children-li children-sort-">
+<li><a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/" >page 1-1-1 (hidden)</a></li>
+<li><a href="/shortcodes/children/children-1/children-1-1/children-1-1-2/" >page 1-1-2</a></li>
+<li><a href="/shortcodes/children/children-1/children-1-1/children-1-1-3/" >page 1-1-3</a></li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+          <section>
+    
+          <article>
+
+<h1>page 1-1-2</h1>
+<p>This is a plain demo child page.</p>
+<h2 id="subpages-of-this-page">Subpages of this page</h2>
+
+
+<ul class="children children-li children-sort-">
+<li><a href="/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-1/" >page 1-1-2-1</a></li>
+<li><a href="/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-2/" >page 1-1-2-2</a></li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+          <section>
+    
+          <article>
+
+<h1>page 1-1-2-1</h1>
+<p>This is a plain demo child page.</p>
+
+            <footer class="footline">
+            </footer>
+          </article>
+    
+          <article>
+
+<h1>page 1-1-2-2</h1>
+<p>This is a plain demo child page.</p>
+
+            <footer class="footline">
+            </footer>
+          </article>
+          </section>
+    
+          <article>
+
+<h1>page 1-1-3</h1>
+<p>This is a plain demo child page.</p>
+
+            <footer class="footline">
+            </footer>
+          </article>
+          </section>
+          </section>
+    
+          <article>
+
+<h1>page 2</h1>
+<p>This is a demo child page with no description.</p>
+<p>So its content is used as description.</p>
+
+            <footer class="footline">
+            </footer>
+          </article>
+    
+          <article>
+
+<h1>page 3</h1>
+<p>This is a demo child page.</p>
+<h2 id="subpages-of-this-page">Subpages of this page</h2>
+
+
+<ul class="children children-li children-sort-">
+<li><a href="/shortcodes/children/children-3/test3/" >page 3-1</a></li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+          <section>
+    
+          <article>
+
+<h1>page 3-1</h1>
+<p>This is a plain demo child page.</p>
+
+            <footer class="footline">
+            </footer>
+          </article>
+          </section>
+          </section>
+    
+          <article>
+
+<h1>Expand</h1>
+<p>The Expand shortcode displays an expandable/collapsible section of text on your page.</p>
+<h2 id="usage">Usage</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">expand</span> <span class="p">[</span> <span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="p">[</span> <span class="s">&#34;true&#34;</span> <span class="p">|</span> <span class="s">&#34;false&#34;</span> <span class="p">]</span> <span class="p">]</span> <span class="o">%</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Yes</span><span class="p">!</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">expand</span> <span class="o">%</span><span class="p">}}</span>
+</span></span></code></pre></div><p>The first optional parameter defines the text that appears next to the expand/collapse icon. The default text is <code>&quot;Expand me...&quot;</code>.</p>
+<p>The second optional parameter controls if the block is initially shown as expanded (<code>&quot;true&quot;</code>) or collapsed (<code>&quot;false&quot;</code>). The default ist <code>&quot;false&quot;</code>.</p>
+<h2 id="examples">Examples</h2>
+
+<div class="expand">
+    <a class="expand-label" onclick="$t=$(this); if($t.parent('.expand-expanded.expand-marked').length){ $t.next().css('display','none') }else if($t.parent('.expand-marked').length){ $t.next().css('display','block') }else{ $t.next('.expand-content').slideToggle(100); } $t.parent().toggleClass('expand-expanded');">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-right"></i>
+        I&#39;ll tell you a secret...
+    </a>
+    <div class="expand-content" style="display: none;">
+<p>&hellip;maybe the next time you&rsquo;ll open this expander!</p>
+
+    </div>
+</div>
+<h3 id="all-defaults">All defaults</h3>
+
+<div class="expand">
+    <a class="expand-label" onclick="$t=$(this); if($t.parent('.expand-expanded.expand-marked').length){ $t.next().css('display','none') }else if($t.parent('.expand-marked').length){ $t.next().css('display','block') }else{ $t.next('.expand-content').slideToggle(100); } $t.parent().toggleClass('expand-expanded');">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-right"></i>
+        Expand me...
+    </a>
+    <div class="expand-content" style="display: none;">
+<p>Yes, you did it!</p>
+
+    </div>
+</div>
+
+<div class="expand expand-expanded">
+    <a class="expand-label" onclick="$t=$(this); if($t.parent('.expand-expanded.expand-marked').length){ $t.next().css('display','none') }else if($t.parent('.expand-marked').length){ $t.next().css('display','block') }else{ $t.next('.expand-content').slideToggle(100); } $t.parent().toggleClass('expand-expanded');">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-right"></i>
+        Show markup
+    </a>
+    <div class="expand-content" style="display: block;">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">expand</span> <span class="o">%</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Yes</span><span class="p">,</span> <span class="nx">you</span> <span class="nx">did</span> <span class="nx">it</span><span class="p">!</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">expand</span> <span class="o">%</span><span class="p">}}</span>
+</span></span></code></pre></div>
+    </div>
+</div>
+<h3 id="initially-expanded">Initially expanded</h3>
+
+<div class="expand expand-expanded">
+    <a class="expand-label" onclick="$t=$(this); if($t.parent('.expand-expanded.expand-marked').length){ $t.next().css('display','none') }else if($t.parent('.expand-marked').length){ $t.next().css('display','block') }else{ $t.next('.expand-content').slideToggle(100); } $t.parent().toggleClass('expand-expanded');">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-right"></i>
+        Expand me...
+    </a>
+    <div class="expand-content" style="display: block;">
+<p>No need to press you!</p>
+
+    </div>
+</div>
+
+<div class="expand expand-expanded">
+    <a class="expand-label" onclick="$t=$(this); if($t.parent('.expand-expanded.expand-marked').length){ $t.next().css('display','none') }else if($t.parent('.expand-marked').length){ $t.next().css('display','block') }else{ $t.next('.expand-content').slideToggle(100); } $t.parent().toggleClass('expand-expanded');">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-right"></i>
+        Show markup
+    </a>
+    <div class="expand-content" style="display: block;">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">expand</span> <span class="s">&#34;Expand me...&#34;</span> <span class="s">&#34;true&#34;</span> <span class="o">%</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">No</span> <span class="nx">need</span> <span class="nx">to</span> <span class="nx">press</span> <span class="nx">you</span><span class="p">!</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">expand</span> <span class="o">%</span><span class="p">}}</span>
+</span></span></code></pre></div>
+    </div>
+</div>
+<h3 id="arbitrary-text">Arbitrary text</h3>
+
+<div class="expand">
+    <a class="expand-label" onclick="$t=$(this); if($t.parent('.expand-expanded.expand-marked').length){ $t.next().css('display','none') }else if($t.parent('.expand-marked').length){ $t.next().css('display','block') }else{ $t.next('.expand-content').slideToggle(100); } $t.parent().toggleClass('expand-expanded');">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-right"></i>
+        Show me endless possibilities
+    </a>
+    <div class="expand-content" style="display: none;">
+<p>Some expandable text.</p>
+<p>You can add:</p>
+<ul>
+<li>multiple paragraphs</li>
+<li>bullet point lists</li>
+<li><em>emphasized</em>, <strong>bold</strong> and even <strong><em>bold emphasized</em></strong> text</li>
+<li><a href="https://example.com">links</a></li>
+<li>other shortcodes besides <code>expand</code></li>
+<li>etc.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">...and even source code
+</span></span></code></pre></div><blockquote>
+<p>the possiblities are endless</p>
+</blockquote>
+
+    </div>
+</div>
+
+<div class="expand">
+    <a class="expand-label" onclick="$t=$(this); if($t.parent('.expand-expanded.expand-marked').length){ $t.next().css('display','none') }else if($t.parent('.expand-marked').length){ $t.next().css('display','block') }else{ $t.next('.expand-content').slideToggle(100); } $t.parent().toggleClass('expand-expanded');">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-right"></i>
+        Show markup
+    </a>
+    <div class="expand-content" style="display: none;">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">expand</span> <span class="s">&#34;Show me endless possibilities&#34;</span> <span class="o">%</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Some</span> <span class="nx">expandable</span> <span class="nx">text</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">You</span> <span class="nx">can</span> <span class="nx">add</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="nx">multiple</span> <span class="nx">paragraphs</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="nx">bullet</span> <span class="nx">point</span> <span class="nx">lists</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="nx">_emphasized_</span><span class="p">,</span> <span class="o">**</span><span class="nx">bold</span><span class="o">**</span> <span class="nx">and</span> <span class="nx">even</span> <span class="o">**</span><span class="nx">_bold</span> <span class="nx">emphasized_</span><span class="o">**</span> <span class="nx">text</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="p">[</span><span class="nx">links</span><span class="p">](</span><span class="nx">https</span><span class="p">:</span><span class="c1">//example.com)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">-</span> <span class="nx">other</span> <span class="nx">shortcodes</span> <span class="nx">besides</span> <span class="s">`expand`</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="nx">etc</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s">```plaintext
+</span></span></span><span class="line"><span class="cl"><span class="s">...and even source code
+</span></span></span><span class="line"><span class="cl"><span class="s">```</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&gt;</span> <span class="nx">the</span> <span class="nx">possiblities</span> <span class="nx">are</span> <span class="nx">endless</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">expand</span> <span class="o">%</span><span class="p">}}</span>
+</span></span></code></pre></div>
+    </div>
+</div>
+
+            <footer class="footline">
+            </footer>
+          </article>
+    
+          <article>
+
+<h1>Include</h1>
+<p>The include shortcode includes other files from your project inside of the current file. This can even contain Markdown and will be taken into account when generating the table of contents.</p>
+<h2 id="usage">Usage</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">include</span> <span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="p">[</span> <span class="s">&#34;true&#34;</span> <span class="p">|</span> <span class="s">&#34;false&#34;</span> <span class="p">]</span> <span class="o">%</span><span class="p">}}</span>
+</span></span></code></pre></div><p>The first required parameter is the path to the file to be included.</p>
+<p>If the file&rsquo;s content will be displayed as HTML, the second optional parameter controls if the first heading of the included file should be displayed (<code>&quot;true&quot;</code>)- which is the default - or be hidden.</p>
+<h2 id="examples">Examples</h2>
+<h3 id="arbitray-content">Arbitray content</h3>
+<hr>
+<h2 id="heading"></h2>
+
+<div class="expand">
+    <a class="expand-label" onclick="$t=$(this); if($t.parent('.expand-expanded.expand-marked').length){ $t.next().css('display','none') }else if($t.parent('.expand-marked').length){ $t.next().css('display','block') }else{ $t.next('.expand-content').slideToggle(100); } $t.parent().toggleClass('expand-expanded');">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-right"></i>
+        Show markup
+    </a>
+    <div class="expand-content" style="display: none;">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">include</span> <span class="s">&#34;shortcodes/INCLUDE_ME.md&#34;</span> <span class="o">%</span><span class="p">}}</span>
+</span></span></code></pre></div>
+    </div>
+</div>
+
+            <footer class="footline">
+            </footer>
+          </article>
+    
+          <article>
+
+<h1>Mermaid</h1>
+<p><a href="https://mermaidjs.github.io/">Mermaid</a> is a library helping you to generate diagram and flowcharts from text, in a similar manner as Markdown.</p>
+
+<div class="box notices note">
+    <div class="box-label"><i class="fas fa-exclamation-circle fa-fw"></i> Note</div>
+    <div class="box-content">
+<p>This only works in modern browsers.</p>
+
+    </div>
+</div>
+
+<div class="box notices warning">
+    <div class="box-label"><i class="fas fa-exclamation-triangle fa-fw"></i> Warning</div>
+    <div class="box-content">
+<p>Due to limitations with <a href="https://github.com/mermaid-js/mermaid/issues/1846">Mermaid</a>, it is currently not possible to use Mermaid code fences in an initially collapsed <code>expand</code> shortcode. This is a know issue and <a href="https://github.com/McShelby/hugo-theme-relearn/issues/187">can&rsquo;t be fixed by this theme</a>.</p>
+
+    </div>
+</div>
+<h2 id="usage">Usage</h2>
+<p>Just insert your Mermaid code in the <code>mermaid</code> shortcode like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="nx">mermaid</span> <span class="p">[</span> <span class="nx">align</span><span class="p">=(</span><span class="s">&#34;left&#34;</span><span class="p">|</span><span class="s">&#34;right&#34;</span><span class="p">|</span><span class="s">&#34;center&#34;</span><span class="p">|</span><span class="s">&#34;justify&#34;</span><span class="p">)</span> <span class="p">]</span> <span class="p">&gt;}}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">classDiagram</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Person</span> <span class="o">*--</span> <span class="nx">Dog</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="o">/</span><span class="nx">mermaid</span> <span class="p">&gt;}}</span>
+</span></span></code></pre></div><p>You can set an optional <code>align</code> attribute which defaults to <code>&quot;center&quot;</code>.</p>
+<p>If you don&rsquo;t need alignment you can use the alternative syntax using code fences if you have turned off <code>guessSyntax</code> for the <code>markup.highlight</code> setting (see below):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">```mermaid
+</span></span><span class="line"><span class="cl">classDiagram
+</span></span><span class="line"><span class="cl">    Person *-- Dog
+</span></span><span class="line"><span class="cl">```
+</span></span></code></pre></div><p>The generated graphs can be be panned by dragging them and zoomed by using the mousewheel. On mobile devices you can use finger gestures.</p>
+<h2 id="examples">Examples</h2>
+<h3 id="flowchart">Flowchart</h3>
+
+<div class="mermaid" align="left">
+%%{init:{"theme":"forest"}}%%
+graph LR;
+    A[Hard edge] -->|Link text| B(Round edge)
+    B --> C{<strong>Decision</strong>}
+    C -->|One| D[Result one]
+    C -->|Two| E[Result two]
+</div>
+
+<div class="expand expand-expanded">
+    <a class="expand-label" onclick="$t=$(this); if($t.parent('.expand-expanded.expand-marked').length){ $t.next().css('display','none') }else if($t.parent('.expand-marked').length){ $t.next().css('display','block') }else{ $t.next('.expand-content').slideToggle(100); } $t.parent().toggleClass('expand-expanded');">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-right"></i>
+        Show markup
+    </a>
+    <div class="expand-content" style="display: block;">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="nx">mermaid</span> <span class="nx">align</span><span class="p">=</span><span class="s">&#34;left&#34;</span> <span class="p">&gt;}}</span>
+</span></span><span class="line"><span class="cl"><span class="o">%%</span><span class="p">{</span><span class="nx">init</span><span class="p">:{</span><span class="s">&#34;theme&#34;</span><span class="p">:</span><span class="s">&#34;forest&#34;</span><span class="p">}}</span><span class="o">%%</span>
+</span></span><span class="line"><span class="cl"><span class="nx">graph</span> <span class="nx">LR</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">A</span><span class="p">[</span><span class="nx">Hard</span> <span class="nx">edge</span><span class="p">]</span> <span class="o">--</span><span class="p">&gt;|</span><span class="nx">Link</span> <span class="nx">text</span><span class="p">|</span> <span class="nf">B</span><span class="p">(</span><span class="nx">Round</span> <span class="nx">edge</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">B</span> <span class="o">--</span><span class="p">&gt;</span> <span class="nx">C</span><span class="p">{&lt;</span><span class="nx">strong</span><span class="p">&gt;</span><span class="nx">Decision</span><span class="p">&lt;</span><span class="o">/</span><span class="nx">strong</span><span class="p">&gt;}</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">C</span> <span class="o">--</span><span class="p">&gt;|</span><span class="nx">One</span><span class="p">|</span> <span class="nx">D</span><span class="p">[</span><span class="nx">Result</span> <span class="nx">one</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">C</span> <span class="o">--</span><span class="p">&gt;|</span><span class="nx">Two</span><span class="p">|</span> <span class="nx">E</span><span class="p">[</span><span class="nx">Result</span> <span class="nx">two</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="o">/</span><span class="nx">mermaid</span> <span class="p">&gt;}}</span>
+</span></span></code></pre></div>
+    </div>
+</div>
+<h3 id="sequence">Sequence</h3>
+
+<div class="mermaid" align="center">
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->>John: Hello John, how are you?
+    loop Healthcheck
+        John->John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts <br/>prevail...
+    John-->Alice: Great!
+    John->Bob: How about you?
+    Bob-->John: Jolly good!
+</div>
+
+<div class="expand expand-expanded">
+    <a class="expand-label" onclick="$t=$(this); if($t.parent('.expand-expanded.expand-marked').length){ $t.next().css('display','none') }else if($t.parent('.expand-marked').length){ $t.next().css('display','block') }else{ $t.next('.expand-content').slideToggle(100); } $t.parent().toggleClass('expand-expanded');">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-right"></i>
+        Show markup
+    </a>
+    <div class="expand-content" style="display: block;">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="nx">mermaid</span> <span class="p">&gt;}}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">sequenceDiagram</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">participant</span> <span class="nx">Alice</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">participant</span> <span class="nx">Bob</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Alice</span><span class="o">-&gt;&gt;</span><span class="nx">John</span><span class="p">:</span> <span class="nx">Hello</span> <span class="nx">John</span><span class="p">,</span> <span class="nx">how</span> <span class="nx">are</span> <span class="nx">you</span><span class="err">?</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">loop</span> <span class="nx">Healthcheck</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">John</span><span class="o">-</span><span class="p">&gt;</span><span class="nx">John</span><span class="p">:</span> <span class="nx">Fight</span> <span class="nx">against</span> <span class="nx">hypochondria</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">end</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Note</span> <span class="nx">right</span> <span class="nx">of</span> <span class="nx">John</span><span class="p">:</span> <span class="nx">Rational</span> <span class="nx">thoughts</span> <span class="p">&lt;</span><span class="nx">br</span><span class="o">/</span><span class="p">&gt;</span><span class="nx">prevail</span><span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">John</span><span class="o">--</span><span class="p">&gt;</span><span class="nx">Alice</span><span class="p">:</span> <span class="nx">Great</span><span class="p">!</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">John</span><span class="o">-</span><span class="p">&gt;</span><span class="nx">Bob</span><span class="p">:</span> <span class="nx">How</span> <span class="nx">about</span> <span class="nx">you</span><span class="err">?</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Bob</span><span class="o">--</span><span class="p">&gt;</span><span class="nx">John</span><span class="p">:</span> <span class="nx">Jolly</span> <span class="nx">good</span><span class="p">!</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="o">/</span><span class="nx">mermaid</span> <span class="p">&gt;}}</span>
+</span></span></code></pre></div>
+    </div>
+</div>
+<h3 id="gantt">GANTT</h3>
+
+<div class="mermaid" align="center">
+gantt
+        dateFormat  YYYY-MM-DD
+        title Adding GANTT diagram functionality to Mermaid
+        section A section
+        Completed task            :done,    des1, 2014-01-06,2014-01-08
+        Active task               :active,  des2, 2014-01-09, 3d
+        Future task               :         des3, after des2, 5d
+        Future task2              :         des4, after des3, 5d
+        section Critical tasks
+        Completed task in the critical line :crit, done, 2014-01-06,24h
+        Implement parser and jison          :crit, done, after des1, 2d
+        Create tests for parser             :crit, active, 3d
+        Future task in critical line        :crit, 5d
+        Create tests for renderer           :2d
+        Add to Mermaid                      :1d
+</div>
+
+<div class="expand expand-expanded">
+    <a class="expand-label" onclick="$t=$(this); if($t.parent('.expand-expanded.expand-marked').length){ $t.next().css('display','none') }else if($t.parent('.expand-marked').length){ $t.next().css('display','block') }else{ $t.next('.expand-content').slideToggle(100); } $t.parent().toggleClass('expand-expanded');">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-right"></i>
+        Show markup
+    </a>
+    <div class="expand-content" style="display: block;">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="nx">mermaid</span> <span class="p">&gt;}}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">gantt</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">dateFormat</span>  <span class="nx">YYYY</span><span class="o">-</span><span class="nx">MM</span><span class="o">-</span><span class="nx">DD</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">title</span> <span class="nx">Adding</span> <span class="nx">GANTT</span> <span class="nx">diagram</span> <span class="nx">functionality</span> <span class="nx">to</span> <span class="nx">Mermaid</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">section</span> <span class="nx">A</span> <span class="nx">section</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Completed</span> <span class="nx">task</span>            <span class="p">:</span><span class="nx">done</span><span class="p">,</span>    <span class="nx">des1</span><span class="p">,</span> <span class="mi">2014</span><span class="o">-</span><span class="mo">01</span><span class="o">-</span><span class="mo">06</span><span class="p">,</span><span class="mi">2014</span><span class="o">-</span><span class="mo">01</span><span class="o">-</span><span class="mi">08</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Active</span> <span class="nx">task</span>               <span class="p">:</span><span class="nx">active</span><span class="p">,</span>  <span class="nx">des2</span><span class="p">,</span> <span class="mi">2014</span><span class="o">-</span><span class="mo">01</span><span class="o">-</span><span class="mi">09</span><span class="p">,</span> <span class="mi">3</span><span class="nx">d</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Future</span> <span class="nx">task</span>               <span class="p">:</span>         <span class="nx">des3</span><span class="p">,</span> <span class="nx">after</span> <span class="nx">des2</span><span class="p">,</span> <span class="mi">5</span><span class="nx">d</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Future</span> <span class="nx">task2</span>              <span class="p">:</span>         <span class="nx">des4</span><span class="p">,</span> <span class="nx">after</span> <span class="nx">des3</span><span class="p">,</span> <span class="mi">5</span><span class="nx">d</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">section</span> <span class="nx">Critical</span> <span class="nx">tasks</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Completed</span> <span class="nx">task</span> <span class="nx">in</span> <span class="nx">the</span> <span class="nx">critical</span> <span class="nx">line</span> <span class="p">:</span><span class="nx">crit</span><span class="p">,</span> <span class="nx">done</span><span class="p">,</span> <span class="mi">2014</span><span class="o">-</span><span class="mo">01</span><span class="o">-</span><span class="mo">06</span><span class="p">,</span><span class="mi">24</span><span class="nx">h</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Implement</span> <span class="nx">parser</span> <span class="nx">and</span> <span class="nx">jison</span>          <span class="p">:</span><span class="nx">crit</span><span class="p">,</span> <span class="nx">done</span><span class="p">,</span> <span class="nx">after</span> <span class="nx">des1</span><span class="p">,</span> <span class="mi">2</span><span class="nx">d</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Create</span> <span class="nx">tests</span> <span class="k">for</span> <span class="nx">parser</span>             <span class="p">:</span><span class="nx">crit</span><span class="p">,</span> <span class="nx">active</span><span class="p">,</span> <span class="mi">3</span><span class="nx">d</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Future</span> <span class="nx">task</span> <span class="nx">in</span> <span class="nx">critical</span> <span class="nx">line</span>        <span class="p">:</span><span class="nx">crit</span><span class="p">,</span> <span class="mi">5</span><span class="nx">d</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Create</span> <span class="nx">tests</span> <span class="k">for</span> <span class="nx">renderer</span>           <span class="p">:</span><span class="mi">2</span><span class="nx">d</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Add</span> <span class="nx">to</span> <span class="nx">Mermaid</span>                      <span class="p">:</span><span class="mi">1</span><span class="nx">d</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="o">/</span><span class="nx">mermaid</span> <span class="p">&gt;}}</span>
+</span></span></code></pre></div>
+    </div>
+</div>
+<h3 id="class">Class</h3>
+
+<div class="mermaid" align="center">
+classDiagram
+  Class01 <|-- AveryLongClass : Cool
+  Class03 *-- Class04
+  Class05 o-- Class06
+  Class07 .. Class08
+  Class09 --> C2 : Where am i?
+  Class09 --* C3
+  Class09 --|> Class07
+  Class07 : equals()
+  Class07 : Object[] elementData
+  Class01 : size()
+  Class01 : int chimp
+  Class01 : int gorilla
+  Class08 <--> C2: Cool label
+</div>
+
+<div class="expand expand-expanded">
+    <a class="expand-label" onclick="$t=$(this); if($t.parent('.expand-expanded.expand-marked').length){ $t.next().css('display','none') }else if($t.parent('.expand-marked').length){ $t.next().css('display','block') }else{ $t.next('.expand-content').slideToggle(100); } $t.parent().toggleClass('expand-expanded');">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-right"></i>
+        Show markup
+    </a>
+    <div class="expand-content" style="display: block;">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="nx">mermaid</span> <span class="p">&gt;}}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">classDiagram</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Class01</span> <span class="p">&lt;|</span><span class="o">--</span> <span class="nx">AveryLongClass</span> <span class="p">:</span> <span class="nx">Cool</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Class03</span> <span class="o">*--</span> <span class="nx">Class04</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Class05</span> <span class="nx">o</span><span class="o">--</span> <span class="nx">Class06</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Class07</span> <span class="p">..</span> <span class="nx">Class08</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Class09</span> <span class="o">--</span><span class="p">&gt;</span> <span class="nx">C2</span> <span class="p">:</span> <span class="nx">Where</span> <span class="nx">am</span> <span class="nx">i</span><span class="err">?</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Class09</span> <span class="o">--*</span> <span class="nx">C3</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Class09</span> <span class="o">--</span><span class="p">|&gt;</span> <span class="nx">Class07</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Class07</span> <span class="p">:</span> <span class="nf">equals</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Class07</span> <span class="p">:</span> <span class="nx">Object</span><span class="p">[]</span> <span class="nx">elementData</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Class01</span> <span class="p">:</span> <span class="nf">size</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Class01</span> <span class="p">:</span> <span class="kt">int</span> <span class="nx">chimp</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Class01</span> <span class="p">:</span> <span class="kt">int</span> <span class="nx">gorilla</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Class08</span> <span class="o">&lt;--</span><span class="p">&gt;</span> <span class="nx">C2</span><span class="p">:</span> <span class="nx">Cool</span> <span class="nx">label</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="o">/</span><span class="nx">mermaid</span> <span class="p">&gt;}}</span>
+</span></span></code></pre></div>
+    </div>
+</div>
+<h3 id="state">State</h3>
+<div class="mermaid" align="center">stateDiagram-v2
+  open: Open Door
+  closed: Closed Door
+  locked: Locked Door
+  open   --> closed: Close
+  closed --> locked: Lock
+  locked --> closed: Unlock
+  closed --> open: Open</div>
+
+<div class="expand expand-expanded">
+    <a class="expand-label" onclick="$t=$(this); if($t.parent('.expand-expanded.expand-marked').length){ $t.next().css('display','none') }else if($t.parent('.expand-marked').length){ $t.next().css('display','block') }else{ $t.next('.expand-content').slideToggle(100); } $t.parent().toggleClass('expand-expanded');">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-right"></i>
+        Show markup
+    </a>
+    <div class="expand-content" style="display: block;">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="s">```mermaid
+</span></span></span><span class="line"><span class="cl"><span class="s">stateDiagram-v2
+</span></span></span><span class="line"><span class="cl"><span class="s">    open: Open Door
+</span></span></span><span class="line"><span class="cl"><span class="s">    closed: Closed Door
+</span></span></span><span class="line"><span class="cl"><span class="s">    locked: Locked Door
+</span></span></span><span class="line"><span class="cl"><span class="s">    open   --&gt; closed: Close
+</span></span></span><span class="line"><span class="cl"><span class="s">    closed --&gt; locked: Lock
+</span></span></span><span class="line"><span class="cl"><span class="s">    locked --&gt; closed: Unlock
+</span></span></span><span class="line"><span class="cl"><span class="s">    closed --&gt; open: Open
+</span></span></span><span class="line"><span class="cl"><span class="s">```</span>
+</span></span></code></pre></div>
+    </div>
+</div>
+<h2 id="configuration">Configuration</h2>
+<p>Mermaid is configured with default settings. You can customize Mermaid&rsquo;s default settings for all of your files thru a JSON object in your <code>config.toml</code>, override these settings per page thru your pages frontmatter or override these setting per diagramm thru <a href="https://mermaid-js.github.io/mermaid/#/directives?id=directives">diagram directives</a>.</p>
+<p>The JSON object of your <code>config.toml</code> / frontmatter is forwarded into Mermaid&rsquo;s <code>mermaid.initialize()</code> function.</p>
+<p>See <a href="http://mermaid-js.github.io/mermaid/#/Setup?id=mermaidapi-configuration-defaults">Mermaid documentation</a> for all allowed settings.</p>
+<p>The <code>theme</code> setting can also be set by your used color variant. This will be the sitewide default and can - again - be overridden by your settings in <code>config.toml</code>, frontmatter or diagram directives.</p>
+
+<div class="box notices note">
+    <div class="box-label"><i class="fas fa-exclamation-circle fa-fw"></i> Note</div>
+    <div class="box-content">
+<p>If you want to use mermaid codefences, you have to turn off <code>guessSyntax</code> for the <code>markup.highlight</code> setting.</p>
+
+    </div>
+</div>
+<h3 id="example">Example</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">mermaidInitialize</span> <span class="p">=</span> <span class="s2">&#34;{ \&#34;theme\&#34;: \&#34;dark\&#34; }&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">markup</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">highlight</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># if set to `guessSyntax = true`, there will be no unstyled code even if no language</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># was given BUT mermaid code fences will not work anymore! So this is a mandatory</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># setting for your site</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">guessSyntax</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span></code></pre></div><p>or pages frontmatter</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="err">+++</span>
+</span></span><span class="line"><span class="cl"><span class="nx">mermaidInitialize</span> <span class="p">=</span> <span class="s2">&#34;{ \&#34;theme\&#34;: \&#34;dark\&#34; }&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="err">+++</span>
+</span></span></code></pre></div>
+            <footer class="footline">
+            </footer>
+          </article>
+    
+          <article>
+
+<h1>Notice</h1>
+<p>The notice shortcode shows four types of disclaimers to help you structure your page.</p>
+<h2 id="usage">Usage</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nf">notice</span> <span class="p">(</span> <span class="nx">note</span> <span class="p">|</span> <span class="nx">info</span> <span class="p">|</span> <span class="nx">tip</span> <span class="p">|</span> <span class="nx">warning</span> <span class="p">)</span> <span class="p">[</span> <span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="p">[</span> <span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="p">]</span> <span class="p">]</span> <span class="o">%</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Some</span> <span class="nx">markup</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">notice</span> <span class="o">%</span><span class="p">}}</span>
+</span></span></code></pre></div><p>The first parameter is required and indicates the type of notice.</p>
+<p>The second parameter is optional. If provided, it will be used as the title of the notice. If not provided, then the type of notice will be used as the title. For example, the title of a warning notice will be &ldquo;Warning&rdquo;.</p>
+<p>The third parameter is optional. If provided, it will set the icon of near the title. For the standard types of notices, this is automatically determined but can be overridden with this parameter. If you want no icon at all, you have to set this parameter to <code>&quot; &quot;</code> (a non empty string filled with spaces).</p>
+<h2 id="examples">Examples</h2>
+<h3 id="note">Note</h3>
+
+<div class="box notices note">
+    <div class="box-label"><i class="fas fa-exclamation-circle fa-fw"></i> Note</div>
+    <div class="box-content">
+<p>A <strong>notice</strong> disclaimer</p>
+<p>You can add:</p>
+<ul>
+<li>multiple paragraphs</li>
+<li>bullet point lists</li>
+<li><em>emphasized</em>, <strong>bold</strong> and even <em><strong>bold emphasized</strong></em> text</li>
+<li><a href="https://example.com">links</a></li>
+<li>other shortcodes besides <code>notice</code></li>
+<li>etc.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">...and even source code
+</span></span></code></pre></div><blockquote>
+<p>the possiblities are endless</p>
+</blockquote>
+
+    </div>
+</div>
+
+<div class="expand">
+    <a class="expand-label" onclick="$t=$(this); if($t.parent('.expand-expanded.expand-marked').length){ $t.next().css('display','none') }else if($t.parent('.expand-marked').length){ $t.next().css('display','block') }else{ $t.next('.expand-content').slideToggle(100); } $t.parent().toggleClass('expand-expanded');">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-right"></i>
+        Show markup
+    </a>
+    <div class="expand-content" style="display: none;">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">notice</span> <span class="nx">note</span> <span class="o">%</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">A</span> <span class="o">**</span><span class="nx">notice</span><span class="o">**</span> <span class="nx">disclaimer</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">You</span> <span class="nx">can</span> <span class="nx">add</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="nx">multiple</span> <span class="nx">paragraphs</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="nx">bullet</span> <span class="nx">point</span> <span class="nx">lists</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="nx">_emphasized_</span><span class="p">,</span> <span class="o">**</span><span class="nx">bold</span><span class="o">**</span> <span class="nx">and</span> <span class="nx">even</span> <span class="o">***</span><span class="nx">bold</span> <span class="nx">emphasized</span><span class="o">***</span> <span class="nx">text</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="p">[</span><span class="nx">links</span><span class="p">](</span><span class="nx">https</span><span class="p">:</span><span class="c1">//example.com)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">-</span> <span class="nx">other</span> <span class="nx">shortcodes</span> <span class="nx">besides</span> <span class="s">`notice`</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="nx">etc</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s">```plaintext
+</span></span></span><span class="line"><span class="cl"><span class="s">...and even source code
+</span></span></span><span class="line"><span class="cl"><span class="s">```</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&gt;</span> <span class="nx">the</span> <span class="nx">possiblities</span> <span class="nx">are</span> <span class="nx">endless</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">notice</span> <span class="o">%</span><span class="p">}}</span>
+</span></span></code></pre></div>
+    </div>
+</div>
+<h3 id="info">Info</h3>
+
+<div class="box notices info">
+    <div class="box-label"><i class="fas fa-info-circle fa-fw"></i> Info</div>
+    <div class="box-content">
+<p>An <strong>information</strong> disclaimer</p>
+<p>You can add:</p>
+<ul>
+<li>multiple paragraphs</li>
+<li>bullet point lists</li>
+<li><em>emphasized</em>, <strong>bold</strong> and even <em><strong>bold emphasized</strong></em> text</li>
+<li><a href="https://example.com">links</a></li>
+<li>other shortcodes besides <code>notice</code></li>
+<li>etc.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">...and even source code
+</span></span></code></pre></div><blockquote>
+<p>the possiblities are endless</p>
+</blockquote>
+
+    </div>
+</div>
+
+<div class="expand">
+    <a class="expand-label" onclick="$t=$(this); if($t.parent('.expand-expanded.expand-marked').length){ $t.next().css('display','none') }else if($t.parent('.expand-marked').length){ $t.next().css('display','block') }else{ $t.next('.expand-content').slideToggle(100); } $t.parent().toggleClass('expand-expanded');">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-right"></i>
+        Show markup
+    </a>
+    <div class="expand-content" style="display: none;">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">notice</span> <span class="nx">info</span> <span class="o">%</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">An</span> <span class="o">**</span><span class="nx">information</span><span class="o">**</span> <span class="nx">disclaimer</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">You</span> <span class="nx">can</span> <span class="nx">add</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="nx">multiple</span> <span class="nx">paragraphs</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="nx">bullet</span> <span class="nx">point</span> <span class="nx">lists</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="nx">_emphasized_</span><span class="p">,</span> <span class="o">**</span><span class="nx">bold</span><span class="o">**</span> <span class="nx">and</span> <span class="nx">even</span> <span class="o">***</span><span class="nx">bold</span> <span class="nx">emphasized</span><span class="o">***</span> <span class="nx">text</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="p">[</span><span class="nx">links</span><span class="p">](</span><span class="nx">https</span><span class="p">:</span><span class="c1">//example.com)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">-</span> <span class="nx">other</span> <span class="nx">shortcodes</span> <span class="nx">besides</span> <span class="s">`notice`</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="nx">etc</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s">```plaintext
+</span></span></span><span class="line"><span class="cl"><span class="s">...and even source code
+</span></span></span><span class="line"><span class="cl"><span class="s">```</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&gt;</span> <span class="nx">the</span> <span class="nx">possiblities</span> <span class="nx">are</span> <span class="nx">endless</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">notice</span> <span class="o">%</span><span class="p">}}</span>
+</span></span></code></pre></div>
+    </div>
+</div>
+<h3 id="tip">Tip</h3>
+
+<div class="box notices tip">
+    <div class="box-label"><i class="fas fa-lightbulb fa-fw"></i> Tip</div>
+    <div class="box-content">
+<p>A <strong>tip</strong> disclaimer</p>
+<p>You can add:</p>
+<ul>
+<li>multiple paragraphs</li>
+<li>bullet point lists</li>
+<li><em>emphasized</em>, <strong>bold</strong> and even <em><strong>bold emphasized</strong></em> text</li>
+<li><a href="https://example.com">links</a></li>
+<li>other shortcodes besides <code>notice</code></li>
+<li>etc.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">...and even source code
+</span></span></code></pre></div><blockquote>
+<p>the possiblities are endless</p>
+</blockquote>
+
+    </div>
+</div>
+
+<div class="expand">
+    <a class="expand-label" onclick="$t=$(this); if($t.parent('.expand-expanded.expand-marked').length){ $t.next().css('display','none') }else if($t.parent('.expand-marked').length){ $t.next().css('display','block') }else{ $t.next('.expand-content').slideToggle(100); } $t.parent().toggleClass('expand-expanded');">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-right"></i>
+        Show markup
+    </a>
+    <div class="expand-content" style="display: none;">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">notice</span> <span class="nx">tip</span> <span class="o">%</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">A</span> <span class="o">**</span><span class="nx">tip</span><span class="o">**</span> <span class="nx">disclaimer</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">You</span> <span class="nx">can</span> <span class="nx">add</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="nx">multiple</span> <span class="nx">paragraphs</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="nx">bullet</span> <span class="nx">point</span> <span class="nx">lists</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="nx">_emphasized_</span><span class="p">,</span> <span class="o">**</span><span class="nx">bold</span><span class="o">**</span> <span class="nx">and</span> <span class="nx">even</span> <span class="o">***</span><span class="nx">bold</span> <span class="nx">emphasized</span><span class="o">***</span> <span class="nx">text</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="p">[</span><span class="nx">links</span><span class="p">](</span><span class="nx">https</span><span class="p">:</span><span class="c1">//example.com)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">-</span> <span class="nx">other</span> <span class="nx">shortcodes</span> <span class="nx">besides</span> <span class="s">`notice`</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="nx">etc</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s">```plaintext
+</span></span></span><span class="line"><span class="cl"><span class="s">...and even source code
+</span></span></span><span class="line"><span class="cl"><span class="s">```</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&gt;</span> <span class="nx">the</span> <span class="nx">possiblities</span> <span class="nx">are</span> <span class="nx">endless</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">notice</span> <span class="o">%</span><span class="p">}}</span>
+</span></span></code></pre></div>
+    </div>
+</div>
+<h3 id="warning">Warning</h3>
+
+<div class="box notices warning">
+    <div class="box-label"><i class="fas fa-exclamation-triangle fa-fw"></i> Warning</div>
+    <div class="box-content">
+<p>A <strong>warning</strong> disclaimer</p>
+<p>You can add:</p>
+<ul>
+<li>multiple paragraphs</li>
+<li>bullet point lists</li>
+<li><em>emphasized</em>, <strong>bold</strong> and even <em><strong>bold emphasized</strong></em> text</li>
+<li><a href="https://example.com">links</a></li>
+<li>other shortcodes besides <code>notice</code></li>
+<li>etc.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">...and even source code
+</span></span></code></pre></div><blockquote>
+<p>the possiblities are endless</p>
+</blockquote>
+
+    </div>
+</div>
+
+<div class="expand">
+    <a class="expand-label" onclick="$t=$(this); if($t.parent('.expand-expanded.expand-marked').length){ $t.next().css('display','none') }else if($t.parent('.expand-marked').length){ $t.next().css('display','block') }else{ $t.next('.expand-content').slideToggle(100); } $t.parent().toggleClass('expand-expanded');">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-right"></i>
+        Show markup
+    </a>
+    <div class="expand-content" style="display: none;">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">notice</span> <span class="nx">warning</span> <span class="o">%</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">A</span> <span class="o">**</span><span class="nx">warning</span><span class="o">**</span> <span class="nx">disclaimer</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">You</span> <span class="nx">can</span> <span class="nx">add</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="nx">multiple</span> <span class="nx">paragraphs</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="nx">bullet</span> <span class="nx">point</span> <span class="nx">lists</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="nx">_emphasized_</span><span class="p">,</span> <span class="o">**</span><span class="nx">bold</span><span class="o">**</span> <span class="nx">and</span> <span class="nx">even</span> <span class="o">***</span><span class="nx">bold</span> <span class="nx">emphasized</span><span class="o">***</span> <span class="nx">text</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="p">[</span><span class="nx">links</span><span class="p">](</span><span class="nx">https</span><span class="p">:</span><span class="c1">//example.com)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">-</span> <span class="nx">other</span> <span class="nx">shortcodes</span> <span class="nx">besides</span> <span class="s">`notice`</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="nx">etc</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s">```plaintext
+</span></span></span><span class="line"><span class="cl"><span class="s">...and even source code
+</span></span></span><span class="line"><span class="cl"><span class="s">```</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&gt;</span> <span class="nx">the</span> <span class="nx">possiblities</span> <span class="nx">are</span> <span class="nx">endless</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">notice</span> <span class="o">%</span><span class="p">}}</span>
+</span></span></code></pre></div>
+    </div>
+</div>
+<h3 id="notice-with-default-color-custom-title-and-icon">Notice with default color, custom title and icon</h3>
+<p>You can customize the title of the notice by passing it as a second parameter.</p>
+
+<div class="box notices default">
+    <div class="box-label"><i class="fas fa-skull-crossbones fa-fw"></i> Pay Attention to this Note!</div>
+    <div class="box-content">
+<p>The title is now the parameter that was provided.</p>
+
+    </div>
+</div>
+
+<div class="expand">
+    <a class="expand-label" onclick="$t=$(this); if($t.parent('.expand-expanded.expand-marked').length){ $t.next().css('display','none') }else if($t.parent('.expand-marked').length){ $t.next().css('display','block') }else{ $t.next('.expand-content').slideToggle(100); } $t.parent().toggleClass('expand-expanded');">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-right"></i>
+        Show markup
+    </a>
+    <div class="expand-content" style="display: none;">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">notice</span> <span class="k">default</span> <span class="s">&#34;Pay Attention to this Note!&#34;</span> <span class="s">&#34;skull-crossbones&#34;</span> <span class="o">%</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">The</span> <span class="nx">title</span> <span class="nx">is</span> <span class="nx">now</span> <span class="nx">the</span> <span class="nx">parameter</span> <span class="nx">that</span> <span class="nx">was</span> <span class="nx">provided</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">notice</span> <span class="o">%</span><span class="p">}}</span>
+</span></span></code></pre></div>
+    </div>
+</div>
+
+            <footer class="footline">
+            </footer>
+          </article>
+    
+          <article>
+
+<h1>Site param</h1>
+<p>The <code>siteparam</code> shortcode is used to help you print values of site params.</p>
+<h2 id="usage">Usage</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">siteparam</span> <span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="o">%</span><span class="p">}}</span>
+</span></span></code></pre></div><p>The first required parameter is the name of the site param to be displayed.</p>
+<h2 id="examples">Examples</h2>
+<p>For instance, in this current site, the <code>editURL</code> variable is used in <code>config.toml</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">editURL</span> <span class="p">=</span> <span class="s2">&#34;https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/&#34;</span>
+</span></span></code></pre></div><p>Use the <code>siteparam</code> shortcode to display its value.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="s">`editURL`</span> <span class="nx">Value</span> <span class="p">:</span> <span class="p">{{</span><span class="o">%</span> <span class="nx">siteparam</span> <span class="s">&#34;editURL&#34;</span> <span class="o">%</span><span class="p">}}</span>
+</span></span></code></pre></div><p>is displayed as</p>
+<p><code>editURL</code> Value : <a href="https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/">https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/</a></p>
+
+            <footer class="footline">
+            </footer>
+          </article>
+    
+          <article>
+
+<h1>Swagger</h1>
+<p>This shortcode uses the <a href="https://mrin9.github.io/RapiDoc">RapiDoc</a> library to display your OpenAPI Specifications.</p>
+
+<div class="box notices note">
+    <div class="box-label"><i class="fas fa-exclamation-circle fa-fw"></i> Note</div>
+    <div class="box-content">
+<p>This only works in modern browsers.</p>
+
+    </div>
+</div>
+<h2 id="configuration">Configuration</h2>
+<p>Swagger is configured with default settings. You can customize Swagger&rsquo;s default settings for all of your files thru a JSON object in your <code>config.toml</code> or override these settings per page thru your pages frontmatter.</p>
+<p>The JSON object of your <code>config.toml</code> / frontmatter is forwarded into Swagger&rsquo;s initialization. At the moment, only the <code>theme</code> setting is supported.</p>
+<p>The <code>theme</code> setting can also be set by your used color variant. This will be the sitewide default and can - again - be overridden by your settings in <code>config.toml</code> or frontmatter.</p>
+<h3 id="example">Example</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">swaggerInitialize</span> <span class="p">=</span> <span class="s2">&#34;{ \&#34;theme\&#34;: \&#34;dark\&#34; }&#34;</span>
+</span></span></code></pre></div><h2 id="usage">Usage</h2>
+<p>Just insert give the URL to your OpenAPI Specification like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="nx">swagger</span> <span class="nx">src</span><span class="p">=</span><span class="s">&#34;https://petstore3.swagger.io/api/v3/openapi.json&#34;</span> <span class="p">&gt;}}</span>
+</span></span></code></pre></div><p>If your page is a leaf or branch bundle, you can also use relative URLs:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="nx">swagger</span> <span class="nx">src</span><span class="p">=</span><span class="s">&#34;petstore.json&#34;</span> <span class="p">&gt;}}</span>
+</span></span></code></pre></div><p>The <code>src</code> parameter is mandatory and can be either an absolute or a relative URL.</p>
+<h2 id="example-1">Example</h2>
+
+<rapi-doc
+  allow-spec-file-download="true"
+  default-schema-tab="example"
+  font-size="largest"
+  layout="column"
+  load-fonts="false"
+  render-style="view"
+  schema-description-expanded="true"
+  schema-style="table"
+  show-header="false"
+  spec-url="/shortcodes/swagger/petstore.json"
+  sort-tags="true"
+></rapi-doc>
+
+            <footer class="footline">
+            </footer>
+          </article>
+    
+          <article>
+
+<h1>Tabbed views</h1>
+<p>Choose which content to see across the page. Very handy for providing code
+snippets for multiple languages or providing configuration in different formats.</p>
+<h2 id="code-example">Code example</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="nx">tabs</span> <span class="p">&gt;}}</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">tab</span> <span class="nx">name</span><span class="p">=</span><span class="s">&#34;python&#34;</span> <span class="o">%</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="s">```python
+</span></span></span><span class="line"><span class="cl"><span class="s">print(&#34;Hello World!&#34;)
+</span></span></span><span class="line"><span class="cl"><span class="s">```</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">tab</span> <span class="o">%</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">tab</span> <span class="nx">name</span><span class="p">=</span><span class="s">&#34;R&#34;</span> <span class="o">%</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="s">```R
+</span></span></span><span class="line"><span class="cl"><span class="s">&gt; print(&#34;Hello World!&#34;)
+</span></span></span><span class="line"><span class="cl"><span class="s">```</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">tab</span> <span class="o">%</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">tab</span> <span class="nx">name</span><span class="p">=</span><span class="s">&#34;Bash&#34;</span> <span class="o">%</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="s">```Bash
+</span></span></span><span class="line"><span class="cl"><span class="s">echo &#34;Hello World!&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s">```</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">tab</span> <span class="o">%</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="o">/</span><span class="nx">tabs</span> <span class="p">&gt;}}</span>
+</span></span></code></pre></div><p>Renders as:</p>
+
+<div class="tab-panel">
+  <div class="tab-nav">
+    <button
+      data-tab-item="python"
+      data-tab-group="default"
+      class="tab-nav-button btn active"
+      onclick="switchTab('default','python')"
+      ><span>python</span></button>
+    <button
+      data-tab-item="R"
+      data-tab-group="default"
+      class="tab-nav-button btn "
+      onclick="switchTab('default','R')"
+      ><span>R</span></button>
+    <button
+      data-tab-item="Bash"
+      data-tab-group="default"
+      class="tab-nav-button btn "
+      onclick="switchTab('default','Bash')"
+      ><span>Bash</span></button>
+  </div>
+  <div class="tab-content">
+    <div data-tab-item="python" data-tab-group="default" class="tab-item active">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Hello World!&#34;</span><span class="p">)</span>
+</span></span></code></pre></div>
+    </div>
+    <div data-tab-item="R" data-tab-group="default" class="tab-item ">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="nf">print</span><span class="p">(</span><span class="s">&#34;Hello World!&#34;</span><span class="p">)</span>
+</span></span></code></pre></div>
+    </div>
+    <div data-tab-item="Bash" data-tab-group="default" class="tab-item ">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Bash" data-lang="Bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Hello World!&#34;</span>
+</span></span></code></pre></div>
+    </div>
+  </div>
+</div>
+
+<p>Tab views with the same tabs that belong to the same group sychronize their selection:</p>
+
+<div class="tab-panel">
+  <div class="tab-nav">
+    <button
+      data-tab-item="python"
+      data-tab-group="default"
+      class="tab-nav-button btn active"
+      onclick="switchTab('default','python')"
+      ><span>python</span></button>
+    <button
+      data-tab-item="R"
+      data-tab-group="default"
+      class="tab-nav-button btn "
+      onclick="switchTab('default','R')"
+      ><span>R</span></button>
+    <button
+      data-tab-item="Bash"
+      data-tab-group="default"
+      class="tab-nav-button btn "
+      onclick="switchTab('default','Bash')"
+      ><span>Bash</span></button>
+  </div>
+  <div class="tab-content">
+    <div data-tab-item="python" data-tab-group="default" class="tab-item active">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Hello World!&#34;</span><span class="p">)</span>
+</span></span></code></pre></div>
+    </div>
+    <div data-tab-item="R" data-tab-group="default" class="tab-item ">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="nf">print</span><span class="p">(</span><span class="s">&#34;Hello World!&#34;</span><span class="p">)</span>
+</span></span></code></pre></div>
+    </div>
+    <div data-tab-item="Bash" data-tab-group="default" class="tab-item ">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Bash" data-lang="Bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Hello World!&#34;</span>
+</span></span></code></pre></div>
+    </div>
+  </div>
+</div>
+
+<h2 id="config-example">Config example</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="nx">tabs</span> <span class="nx">groupId</span><span class="p">=</span><span class="s">&#34;config&#34;</span> <span class="p">&gt;}}</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">tab</span> <span class="nx">name</span><span class="p">=</span><span class="s">&#34;json&#34;</span> <span class="o">%</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="s">```json
+</span></span></span><span class="line"><span class="cl"><span class="s">{
+</span></span></span><span class="line"><span class="cl"><span class="s">  &#34;Hello&#34;: &#34;World&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s">}
+</span></span></span><span class="line"><span class="cl"><span class="s">```</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">tab</span> <span class="o">%</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">tab</span> <span class="nx">name</span><span class="p">=</span><span class="s">&#34;XML&#34;</span> <span class="o">%</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="s">```xml
+</span></span></span><span class="line"><span class="cl"><span class="s">&lt;Hello&gt;World&lt;/Hello&gt;
+</span></span></span><span class="line"><span class="cl"><span class="s">```</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">tab</span> <span class="o">%</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="nx">tab</span> <span class="nx">name</span><span class="p">=</span><span class="s">&#34;properties&#34;</span> <span class="o">%</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="s">```properties
+</span></span></span><span class="line"><span class="cl"><span class="s">Hello = World
+</span></span></span><span class="line"><span class="cl"><span class="s">```</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span> <span class="o">/</span><span class="nx">tab</span> <span class="o">%</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span> <span class="o">/</span><span class="nx">tabs</span> <span class="p">&gt;}}</span>
+</span></span></code></pre></div><p>Renders as:</p>
+
+<div class="tab-panel">
+  <div class="tab-nav">
+    <button
+      data-tab-item="json"
+      data-tab-group="config"
+      class="tab-nav-button btn active"
+      onclick="switchTab('config','json')"
+      ><span>json</span></button>
+    <button
+      data-tab-item="XML"
+      data-tab-group="config"
+      class="tab-nav-button btn "
+      onclick="switchTab('config','XML')"
+      ><span>XML</span></button>
+    <button
+      data-tab-item="properties"
+      data-tab-group="config"
+      class="tab-nav-button btn "
+      onclick="switchTab('config','properties')"
+      ><span>properties</span></button>
+  </div>
+  <div class="tab-content">
+    <div data-tab-item="json" data-tab-group="config" class="tab-item active">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;Hello&#34;</span><span class="p">:</span> <span class="s2">&#34;World&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
+    </div>
+    <div data-tab-item="XML" data-tab-group="config" class="tab-item ">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;Hello&gt;</span>World<span class="nt">&lt;/Hello&gt;</span>
+</span></span></code></pre></div>
+    </div>
+    <div data-tab-item="properties" data-tab-group="config" class="tab-item ">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="na">Hello</span> <span class="o">=</span> <span class="s">World</span>
+</span></span></code></pre></div>
+    </div>
+  </div>
+</div>
+
+
+<div class="box notices warning">
+    <div class="box-label"><i class="fas fa-exclamation-triangle fa-fw"></i> Warning</div>
+    <div class="box-content">
+<p>When using tab views with different content sets, make sure to use a common <code>groupId</code> for equal sets but distinct
+<code>groupId</code> for different sets. The <code>groupId</code> defaults to <code>'default'</code>.
+<strong>Take this into account across the whole site!</strong>
+The tab selection is restored automatically based on the <code>groupId</code> and if it cannot find a tab item because it came
+from the <code>'default'</code> group on a different page then all tabs will be empty at first.</p>
+
+    </div>
+</div>
+
+            <footer class="footline">
+            </footer>
+          </article>
+          </section>
+        </div>
+      </main>
+    </div>
+    <aside id="sidebar" class="default-animation showVisitedLinks">
+      <div id="header-wrapper" class="default-animation">
+        <div id="header" class="default-animation">
+          <style>
+            #logo svg,
+            #logo svg * {
+              color: #282828;
+              color: var(--MENU-SECTIONS-BG-color);
+              fill: #282828 !important;
+              fill: var(--MENU-SECTIONS-BG-color) !important;
+              opacity: .945;
+            }
+            a#logo {
+              color: #282828;
+              color: var(--MENU-SECTIONS-BG-color);
+              font-family: 'Work Sans', 'Helvetica', 'Tahoma', 'Geneva', 'Arial', sans-serif;
+              font-size: 30px;
+              font-weight: 300;
+              margin-top: -13px;
+              max-width: 60%;
+              text-transform: uppercase;
+              width: 226px;
+              white-space: nowrap;
+            }
+            a#logo:hover {
+              color: #282828;
+              color: var(--MENU-SECTIONS-BG-color);
+            }
+            #logo svg {
+              margin-bottom: -20px;
+              margin-left: -23.5px;
+              width: 40.5%;
+            }
+            @media only all and (max-width: 59.938em) {
+              a#logo {
+                font-size: 25px;
+                margin-top: -3px;
+              }
+              #logo svg {
+                margin-bottom: -12px;
+                margin-left: -23px;
+              }
+            }
+            @media all and (-ms-high-contrast:none) {
+              /* IE11s understanding of positioning is weird at best */
+              a#logo {
+                margin-top: -58px;
+              }
+              #logo svg {
+                margin-bottom: -62px;
+              }
+            }
+          </style>
+          <a id="logo" href="/">
+            
+            <img src="customlogo_resize.png" width=40%>ms
+          </a>
+        </div>
+        <div class="searchbox default-animation">
+          <label for="search-by"><i class="fas fa-search"></i></label>
+          <input data-search-input id="search-by" type="search" placeholder="Search...">
+          <span data-search-clear=""><i class="fas fa-times"></i></span>
+        </div>
+        <script src="/js/lunr.min.js?1649526298"></script>
+        <script src="/js/auto-complete.js?1649526298"></script>
+        <script src="/js/search.js?1649526298"></script>
+      </div>
+      <div id="content-wrapper" class="highlightable">
+        <ul class="topics collapsible-menu">
+          <li data-nav-id="/shortcodes/" title="Shortcodes" class="dd-item active parent"><input type="checkbox" id="section-c0549379138a5c256f6c0600d532453f" class="toggle" checked/><label for="section-c0549379138a5c256f6c0600d532453f" ></label><a href="/shortcodes/"><b>3.</b> Shortcodes<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/shortcodes/attachments/" title="Attachments" class="dd-item"><a href="/shortcodes/attachments/">Attachments<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/shortcodes/button/" title="Button" class="dd-item"><a href="/shortcodes/button/">Button<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/shortcodes/children/" title="Children" class="dd-item"><input type="checkbox" id="section-efce957ff9dad000e250ff868aa3291d" class="toggle"/><label for="section-efce957ff9dad000e250ff868aa3291d" ></label><a href="/shortcodes/children/">Children<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/shortcodes/children/test/" title="page X" class="dd-item"><a href="/shortcodes/children/test/">page X<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/shortcodes/children/children-1/" title="page 1" class="dd-item"><input type="checkbox" id="section-c27b80e9c4c5ceb911093893f4f00a2b" class="toggle"/><label for="section-c27b80e9c4c5ceb911093893f4f00a2b" ></label><a href="/shortcodes/children/children-1/">page 1<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/shortcodes/children/children-1/children-1-1/" title="page 1-1" class="dd-item alwaysopen"><input type="checkbox" id="section-bc0c0185f32af18e77e51e4a5f0a3ba4" class="toggle" checked/><label for="section-bc0c0185f32af18e77e51e4a5f0a3ba4" ></label><a href="/shortcodes/children/children-1/children-1-1/">page 1-1<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-2/" title="page 1-1-2" class="dd-item alwaysopen"><input type="checkbox" id="section-9c0a5b93d94f133c09f9cec9eec310a6" class="toggle" checked/><label for="section-9c0a5b93d94f133c09f9cec9eec310a6" ></label><a href="/shortcodes/children/children-1/children-1-1/children-1-1-2/">page 1-1-2<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-1/" title="page 1-1-2-1" class="dd-item"><a href="/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-1/">page 1-1-2-1<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-2/" title="page 1-1-2-2" class="dd-item"><a href="/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-2/">page 1-1-2-2<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-3/" title="page 1-1-3" class="dd-item"><a href="/shortcodes/children/children-1/children-1-1/children-1-1-3/">page 1-1-3<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/shortcodes/children/children-2/" title="page 2" class="dd-item"><a href="/shortcodes/children/children-2/">page 2<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/shortcodes/children/children-3/" title="page 3" class="dd-item"><input type="checkbox" id="section-801eeaaa0748a0846cc1e95f3a734fb7" class="toggle"/><label for="section-801eeaaa0748a0846cc1e95f3a734fb7" ></label><a href="/shortcodes/children/children-3/">page 3<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/shortcodes/children/children-3/test3/" title="page 3-1" class="dd-item"><a href="/shortcodes/children/children-3/test3/">page 3-1<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/shortcodes/expand/" title="Expand" class="dd-item"><a href="/shortcodes/expand/">Expand<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/shortcodes/include/" title="Include" class="dd-item"><a href="/shortcodes/include/">Include<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/shortcodes/mermaid/" title="Mermaid" class="dd-item"><a href="/shortcodes/mermaid/">Mermaid<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/shortcodes/notice/" title="Notice" class="dd-item"><a href="/shortcodes/notice/">Notice<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/shortcodes/siteparam/" title="Site param" class="dd-item"><a href="/shortcodes/siteparam/">Site param<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/shortcodes/swagger/" title="Swagger" class="dd-item"><a href="/shortcodes/swagger/">Swagger<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/shortcodes/tabs/" title="Tabbed views" class="dd-item"><a href="/shortcodes/tabs/">Tabbed views<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/post/" title="Posts" class="dd-item"><input type="checkbox" id="section-1551eb054d26fb2c8c41239224ca8616" class="toggle"/><label for="section-1551eb054d26fb2c8c41239224ca8616" ></label><a href="/post/">Posts<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/post/2022-04-09-acknowledgement/" title="acknowledgement" class="dd-item"><a href="/post/2022-04-09-acknowledgement/">acknowledgement<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/post/2022-04-08-juliatimings/" title="juliatimings" class="dd-item"><a href="/post/2022-04-08-juliatimings/">juliatimings<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/post/2020-12-01-r-rmarkdown/" title="Hello R Markdown" class="dd-item"><a href="/post/2020-12-01-r-rmarkdown/">Hello R Markdown<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/themechanges/" title="Theme Changes" class="dd-item"><input type="checkbox" id="section-aece8d214b1d123d0baee3d16b5da943" class="toggle"/><label for="section-aece8d214b1d123d0baee3d16b5da943" ></label><a href="/themechanges/">Theme Changes<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themechanges/2022-04-08-fix-mathjax/" title="Mathjax" class="dd-item"><a href="/themechanges/2022-04-08-fix-mathjax/">Mathjax<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themechanges/2022-04-08-changemenus/" title="Remove old menus" class="dd-item"><a href="/themechanges/2022-04-08-changemenus/">Remove old menus<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/themeinfo/" title="Page Theme" class="dd-item"><input type="checkbox" id="section-c98299165197569a7dbb7c16c879ec94" class="toggle"/><label for="section-c98299165197569a7dbb7c16c879ec94" ></label><a href="/themeinfo/">Page Theme<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themeinfo/basics/" title="Basics" class="dd-item alwaysopen"><input type="checkbox" id="section-d1c5e3c5791323678e3ad8e1c500f13c" class="toggle" checked/><label for="section-d1c5e3c5791323678e3ad8e1c500f13c" ></label><a href="/themeinfo/basics/"><b>1.</b> Basics<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themeinfo/basics/migration/" title="What&#39;s new" class="dd-item"><a href="/themeinfo/basics/migration/">What&#39;s new<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/basics/requirements/" title="Requirements" class="dd-item"><a href="/themeinfo/basics/requirements/">Requirements<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/basics/installation/" title="Installation" class="dd-item"><a href="/themeinfo/basics/installation/">Installation<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/basics/configuration/" title="Configuration" class="dd-item"><a href="/themeinfo/basics/configuration/">Configuration<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/basics/customization/" title="Customization" class="dd-item"><a href="/themeinfo/basics/customization/">Customization<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/basics/generator/" title="Stylesheet generator" class="dd-item"><a href="/themeinfo/basics/generator/">Stylesheet generator<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/basics/history/" title="History" class="dd-item"><a href="/themeinfo/basics/history/">History<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/themeinfo/cont/" title="Content" class="dd-item alwaysopen"><input type="checkbox" id="section-6a723ced917e39b993d27cbc25abafab" class="toggle" checked/><label for="section-6a723ced917e39b993d27cbc25abafab" ></label><a href="/themeinfo/cont/"><b>2.</b> Content<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themeinfo/cont/pages/" title="Pages organization" class="dd-item"><a href="/themeinfo/cont/pages/">Pages organization<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/cont/archetypes/" title="Archetypes" class="dd-item"><a href="/themeinfo/cont/archetypes/">Archetypes<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/cont/markdown/" title="Markdown syntax" class="dd-item"><a href="/themeinfo/cont/markdown/">Markdown syntax<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/cont/syntaxhighlight/" title="Code highlighting" class="dd-item"><a href="/themeinfo/cont/syntaxhighlight/">Code highlighting<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/cont/menushortcuts/" title="Menu extra shortcuts" class="dd-item"><a href="/themeinfo/cont/menushortcuts/">Menu extra shortcuts<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/cont/icons/" title="Icons and logos" class="dd-item"><a href="/themeinfo/cont/icons/">Icons and logos<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/cont/i18n/" title="Multilingual and i18n" class="dd-item"><a href="/themeinfo/cont/i18n/">Multilingual and i18n<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/cont/tags/" title="Tags" class="dd-item"><a href="/themeinfo/cont/tags/">Tags<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/themeinfo/shortcodes/" title="Shortcodes" class="dd-item alwaysopen"><input type="checkbox" id="section-52d5db2ef975f3fd0dba8d661a91fd38" class="toggle" checked/><label for="section-52d5db2ef975f3fd0dba8d661a91fd38" ></label><a href="/themeinfo/shortcodes/"><b>3.</b> Shortcodes<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themeinfo/shortcodes/attachments/" title="Attachments" class="dd-item"><a href="/themeinfo/shortcodes/attachments/">Attachments<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/button/" title="Button" class="dd-item"><a href="/themeinfo/shortcodes/button/">Button<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/children/" title="Children" class="dd-item"><input type="checkbox" id="section-ff454e2d1a76e72579a3eb4047153271" class="toggle"/><label for="section-ff454e2d1a76e72579a3eb4047153271" ></label><a href="/themeinfo/shortcodes/children/">Children<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themeinfo/shortcodes/children/test/" title="page X" class="dd-item"><a href="/themeinfo/shortcodes/children/test/">page X<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/children/children-1/" title="page 1" class="dd-item"><input type="checkbox" id="section-71b703f727a5a1fd0923b542d7953e0c" class="toggle"/><label for="section-71b703f727a5a1fd0923b542d7953e0c" ></label><a href="/themeinfo/shortcodes/children/children-1/">page 1<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themeinfo/shortcodes/children/children-1/children-1-1/" title="page 1-1" class="dd-item alwaysopen"><input type="checkbox" id="section-db4a2653fc99b551cad0351d97b47a4f" class="toggle" checked/><label for="section-db4a2653fc99b551cad0351d97b47a4f" ></label><a href="/themeinfo/shortcodes/children/children-1/children-1-1/">page 1-1<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-2/" title="page 1-1-2" class="dd-item alwaysopen"><input type="checkbox" id="section-26971ac834b91a594c74aae81a42e063" class="toggle" checked/><label for="section-26971ac834b91a594c74aae81a42e063" ></label><a href="/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-2/">page 1-1-2<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-1/" title="page 1-1-2-1" class="dd-item"><a href="/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-1/">page 1-1-2-1<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-2/" title="page 1-1-2-2" class="dd-item"><a href="/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-2/">page 1-1-2-2<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-3/" title="page 1-1-3" class="dd-item"><a href="/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-3/">page 1-1-3<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/themeinfo/shortcodes/children/children-2/" title="page 2" class="dd-item"><a href="/themeinfo/shortcodes/children/children-2/">page 2<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/children/children-3/" title="page 3" class="dd-item"><input type="checkbox" id="section-290d79cee905a3070eb690186d121cd1" class="toggle"/><label for="section-290d79cee905a3070eb690186d121cd1" ></label><a href="/themeinfo/shortcodes/children/children-3/">page 3<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themeinfo/shortcodes/children/children-3/test3/" title="page 3-1" class="dd-item"><a href="/themeinfo/shortcodes/children/children-3/test3/">page 3-1<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/themeinfo/shortcodes/expand/" title="Expand" class="dd-item"><a href="/themeinfo/shortcodes/expand/">Expand<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/include/" title="Include" class="dd-item"><a href="/themeinfo/shortcodes/include/">Include<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/mermaid/" title="Mermaid" class="dd-item"><a href="/themeinfo/shortcodes/mermaid/">Mermaid<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/notice/" title="Notice" class="dd-item"><a href="/themeinfo/shortcodes/notice/">Notice<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/siteparam/" title="Site param" class="dd-item"><a href="/themeinfo/shortcodes/siteparam/">Site param<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/swagger/" title="Swagger" class="dd-item"><a href="/themeinfo/shortcodes/swagger/">Swagger<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/tabs/" title="Tabbed views" class="dd-item"><a href="/themeinfo/shortcodes/tabs/">Tabbed views<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+        </ul>
+        <div id="shortcuts">
+          <div class="nav-title">More</div>
+          <ul>
+            <li><a class="padding" href="https://github.com/mateenshaikh/"><i class='fab fa-fw fa-github'></i> GitHub repo</a></li>
+            <li><a class="padding" href="/tags/"><i class='fas fa-fw fa-tags'></i> Tags</a></li>
+          </ul>
+        </div>
+        <div class="footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showLangSwitch showVariantSwitch showVisitedLinks showFooter"></div>
+        <hr class="default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showLangSwitch showVariantSwitch showVisitedLinks showFooter"/>
+        <div id="prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showLangSwitch showVariantSwitch showVisitedLinks">
+          <ul>
+            <li id="select-language-container" class="footerLangSwitch showLangSwitch">
+              <a class="padding select-container">
+                <i class="fas fa-language fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <select id="select-language" onchange="location = baseUri + this.value;">
+                    <option id="pir" value="/pir/shortcodes/">Arrr! ☠ Pirrrates ☠</option>
+                    <option id="en" value="/shortcodes/" selected>English</option>
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </a>
+            </li>
+            <li id="select-variant-container" class="footerVariantSwitch showVariantSwitch">
+              <a class="padding select-container">
+                <i class="fas fa-paint-brush fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <select id="select-variant" onchange="variants.changeVariant( this.value );">
+                    <option id="relearn-light" value="relearn-light" selected>Relearn Light</option>
+                    <option id="relearn-dark" value="relearn-dark">Relearn Dark</option>
+                    <option id="learn" value="learn">Learn</option>
+                    <option id="neon" value="neon">Neon</option>
+                    <option id="blue" value="blue">Blue</option>
+                    <option id="green" value="green">Green</option>
+                    <option id="red" value="red">Red</option>
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </a>
+              <script>variants.markSelectedVariant();</script>
+            </li>
+            <li class="footerVisitedLinks showVisitedLinks"><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+          </ul>
+        </div>
+        <div id="footer" class="footerFooter showFooter"><script src="//yihui.org/js/math-code.js"></script>
+<script async
+src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<style>
+            #footer {
+              font-size: 13px;
+              height: 100px;
+              margin-left: auto;
+              margin-right: auto;
+              padding: 2rem 1rem;
+              text-align: center;
+              min-width: 230px;
+              max-width: 300px;
+            }
+            #footer p {
+              margin: 0;
+            }
+          </style>
+
+          <a class="github-button" href="https://github.com/mateenshaikh/onlineresources4" data-icon="octicon-cloud-download" aria-label="Download McShelby/hugo-theme-relearn on GitHub">Site</a>
+          <a class="github-button" href="https://github.com/McShelby/hugo-theme-relearn" data-icon="octicon-repo-template" data-show-count="true" aria-label="Star McShelby/hugo-theme-relearn on GitHub">Theme</a>
+          
+
+          
+          <script async defer src="/js/buttons.js?1649526298"></script>
+        </div>
+      </div>
+    </aside>
+    <script src="/js/clipboard.min.js?1649526298"></script>
+    <script src="/js/perfect-scrollbar.min.js?1649526298"></script>
+    <script src="/js/featherlight.min.js?1649526298"></script>
+    <script src="/js/jquery.svg.pan.zoom.js?1649526298"></script>
+    <script src="/js/mermaid.min.js?1649526298"></script>
+    <script>
+      function useMermaid( config ){
+        if (typeof mermaid != 'undefined' && typeof mermaid.mermaidAPI != 'undefined') {
+          mermaid.initialize( Object.assign( { "securityLevel": "antiscript", "startOnLoad": false  }, config ) );
+          if( config.theme ){
+            var write_style = variants.findLoadedStylesheet( 'variant-style' );
+            write_style.setProperty( '--CONFIG-MERMAID-theme', config.theme );
+          }
+        }
+      }
+      useMermaid( JSON.parse("{ \"securityLevel\": \"loose\" }") );
+    </script>
+    <script src="/js/rapidoc-min.js?1649526298"></script>
+    <script>
+      function useSwagger( config ){
+        if( config.theme ){
+          var write_style = variants.findLoadedStylesheet( 'variant-style' );
+          write_style.setProperty( '--CONFIG-SWAGGER-theme', config.theme );
+        }
+      }
+      useSwagger( JSON.parse("{}") );
+    </script>
+    <script src="/js/theme.js?1649526298"></script>
+  </body>
+</html>

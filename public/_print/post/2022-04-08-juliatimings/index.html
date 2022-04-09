@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.96.0" />
+    <meta name="generator" content="Relearn 3.4.1&#43;tip">
+    <meta name="description" content="Documentation for Hugo Relearn Theme">
+    <meta name="author" content="Sören Weber">
+    <title>juliatimings :: Mateen Shaikh</title>
+    <link rel="canonical" type="text/html" href="/post/2022-04-08-juliatimings/" title="Mateen Shaikh" />
+    <link rel="alternate" type="application/rss&#43;xml" href="/post/2022-04-08-juliatimings/index.xml" title="Mateen Shaikh" />
+    <link rel="icon" href="/images/favicon.png?1649526298" type="image/png">
+    <link href="/css/nucleus.css?1649526298" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1649526298" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1649526298" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1649526298" rel="stylesheet">
+    <link href="/css/auto-complete.css?1649526298" rel="stylesheet">
+    <link href="/css/theme.css?1649526298" rel="stylesheet">
+    <link href="/css/theme-relearn-light.css?1649526298" rel="stylesheet" id="variant-style">
+    <link href="/css/variant.css?1649526298" rel="stylesheet">
+    <link href="/css/print.css?1649526298" rel="stylesheet">
+    <script src="/js/variant.js?1649526298"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      var index_url="/index.json";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      // some further base stuff
+      var baseUriFull='https:\/\/mateenshaikh.ca/';
+      variants.init( [ 'relearn-light', 'relearn-dark', 'learn', 'neon', 'blue', 'green', 'red' ] );
+    </script>
+    <script src="/js/jquery.min.js?1649526298"></script>
+  </head>
+  <body class="mobile-support print" data-url="/post/2022-04-08-juliatimings/">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable">
+        <div>
+          <div class="navigation">
+             <a class="nav nav-next" href="/post/2020-12-01-r-rmarkdown/" title="Hello R Markdown"><i class="fas fa-chevron-right fa-fw"></i></a>
+          </div>
+          <div class="navigation">
+             <a class="nav nav-prev" href="/post/2022-04-09-acknowledgement/" title="acknowledgement"><i class="fas fa-chevron-left fa-fw"></i></a>
+          </div>
+          <div id="top-print-link">
+            <a class="print-link" title='Print whole chapter' href="/_print/post/2022-04-08-juliatimings/">
+              <i class="fas fa-print fa-fw"></i>
+            </a>
+          </div>
+          <div id="top-github-link">
+            <a class="github-link" title='Edit' href="https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/post/2022-04-08-juliatimings/index.en.markdown" target="blank">
+              <i class="fas fa-pen fa-fw"></i>
+            </a>
+          </div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <meta itemprop="itemListOrder" content="Descending" />
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="3" /><a itemprop="item" href="/"><span itemprop="name">MS</span></a> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="2" /><a itemprop="item" href="/post/"><span itemprop="name">Posts</span></a> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="1" /><a itemprop="item" href="/post/2022-04-08-juliatimings/" aria-disabled="true"><span itemprop="name">juliatimings</span></a></li>
+            </ol>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+    
+          <article>
+
+<h1>juliatimings</h1>
+<p>This documents the timings of a simple newton method in R, C (technically cpp but it&rsquo;s all just C code), and julia.</p>
+<p>The function is <code>\(f_0(x)=e^x+\sin(x)\)</code> so the newton update would be
+<code>$$x\leftarrow x-\frac{f_0(x)}{f_1(x)}=x-\frac{e^x+sin(x)}{e^x+cos(x)}$$</code></p>
+<p>applied repeatedly. A graph of the curve is shown below. It&rsquo;s already fairly linear so the function will hit the root very quickly but that&rsquo;s ok.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">curve</span><span class="p">(</span><span class="nf">exp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">+</span><span class="nf">sin</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="m">-1</span><span class="p">,</span><span class="m">0</span><span class="p">)</span>
+</span></span></code></pre></div><img src="https://mateenshaikh.ca/post/2022-04-08-juliatimings/index.en_files/figure-html/unnamed-chunk-1-1.png" width="672" />
+We'll run the code a fixed number of iterations. I don't know if hitting 0 in the numerator does any short-cutting in any language but thats ok for now.
+
+<div class="tab-panel">
+  <div class="tab-nav">
+    <button
+      data-tab-item="julia"
+      data-tab-group="default"
+      class="tab-nav-button btn active"
+      onclick="switchTab('default','julia')"
+      ><span>julia</span></button>
+    <button
+      data-tab-item="R"
+      data-tab-group="default"
+      class="tab-nav-button btn "
+      onclick="switchTab('default','R')"
+      ><span>R</span></button>
+    <button
+      data-tab-item="Rcpp"
+      data-tab-group="default"
+      class="tab-nav-button btn "
+      onclick="switchTab('default','Rcpp')"
+      ><span>Rcpp</span></button>
+  </div>
+  <div class="tab-content">
+    <div data-tab-item="julia" data-tab-group="default" class="tab-item active">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-julia" data-lang="julia"><span class="line"><span class="cl"><span class="n">f0</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">=</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">+</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span></code></pre></div><pre tabindex="0"><code>## f0 (generic function with 1 method)
+</code></pre><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-julia" data-lang="julia"><span class="line"><span class="cl"><span class="n">f1</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">=</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">+</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span></code></pre></div><pre tabindex="0"><code>## f1 (generic function with 1 method)
+</code></pre><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-julia" data-lang="julia"><span class="line"><span class="cl"><span class="n">update</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">=</span><span class="n">x</span><span class="o">-</span><span class="n">f0</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="n">f1</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span></code></pre></div><pre tabindex="0"><code>## update (generic function with 1 method)
+</code></pre><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-julia" data-lang="julia"><span class="line"><span class="cl"><span class="k">function</span> <span class="n">getroot_julia</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="n">x</span><span class="o">=</span><span class="mf">0.0</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">1</span><span class="o">:</span><span class="mi">50000</span>
+</span></span><span class="line"><span class="cl">        <span class="n">x</span><span class="o">=</span><span class="n">update</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">end</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">x</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span></code></pre></div><pre tabindex="0"><code>## getroot_julia (generic function with 1 method)
+</code></pre><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-julia" data-lang="julia"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="n">BenchmarkTools</span>
+</span></span><span class="line"><span class="cl"><span class="n">timing_julia</span> <span class="o">=</span> <span class="nd">@benchmark</span> <span class="n">getroot_julia</span><span class="p">()</span> <span class="n">samples</span><span class="o">=</span><span class="mi">5</span> <span class="n">evals</span><span class="o">=</span><span class="mi">5</span>
+</span></span></code></pre></div><pre tabindex="0"><code>## BenchmarkTools.Trial: 
+##   memory estimate:  0 bytes
+##   allocs estimate:  0
+##   --------------
+##   minimum time:     1.020 ms (0.00% GC)
+##   median time:      1.028 ms (0.00% GC)
+##   mean time:        1.030 ms (0.00% GC)
+##   maximum time:     1.044 ms (0.00% GC)
+##   --------------
+##   samples:          5
+##   evals/sample:     5
+</code></pre><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-julia" data-lang="julia"><span class="line"><span class="cl"><span class="n">print</span><span class="p">(</span><span class="n">timing_julia</span><span class="p">)</span>
+</span></span></code></pre></div><pre tabindex="0"><code>## Trial(1.020 ms)
+</code></pre>
+    </div>
+    <div data-tab-item="R" data-tab-group="default" class="tab-item ">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">getroot_r</span><span class="o">=</span><span class="nf">function</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">  <span class="n">x</span><span class="o">=</span><span class="m">0.0</span>
+</span></span><span class="line"><span class="cl">  <span class="n">ee</span><span class="o">=</span><span class="m">0</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">for </span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="m">1</span><span class="o">:</span><span class="m">50000</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ee</span><span class="o">=</span><span class="nf">exp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="o">-</span><span class="p">(</span><span class="n">ee</span><span class="o">+</span><span class="nf">sin</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">ee</span><span class="o">+</span><span class="nf">cos</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">return </span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
+    </div>
+    <div data-tab-item="Rcpp" data-tab-group="default" class="tab-item ">
+<p>the c code</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;Rcpp.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">Rcpp</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//[[Rcpp::export]]
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">double</span> <span class="nf">getroot_cpp</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">double</span> <span class="n">x</span><span class="o">=</span><span class="mf">0.0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">double</span> <span class="n">ee</span><span class="o">=</span><span class="mf">0.0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">50000</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ee</span><span class="o">=</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="o">-</span><span class="p">(</span><span class="n">ee</span><span class="o">+</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">ee</span><span class="o">+</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">(</span><span class="n">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">JuliaCall</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">julia_command</span><span class="p">(</span><span class="s">&#34;f0(x)=exp(x)+sin(x)&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><pre tabindex="0"><code>## Julia version 1.6.0 at location /opt/julia-1.6.0/bin will be used.
+</code></pre><pre tabindex="0"><code>## Loading setup script for JuliaCall...
+</code></pre><pre tabindex="0"><code>## Finish loading setup script for JuliaCall.
+</code></pre><pre tabindex="0"><code>## f0 (generic function with 1 method)
+</code></pre><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">julia_command</span><span class="p">(</span><span class="s">&#34;f1(x)=exp(x)+cos(x)&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><pre tabindex="0"><code>## f1 (generic function with 1 method)
+</code></pre><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">julia_command</span><span class="p">(</span><span class="s">&#34;update(x)=x-f0(x)/f1(x)&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><pre tabindex="0"><code>## update (generic function with 1 method)
+</code></pre><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">julia_command</span><span class="p">(</span><span class="s">&#34;function getroot_julia()
+</span></span></span><span class="line"><span class="cl"><span class="s">    x=0.0
+</span></span></span><span class="line"><span class="cl"><span class="s">    for i in 1:50000
+</span></span></span><span class="line"><span class="cl"><span class="s">        x=update(x)
+</span></span></span><span class="line"><span class="cl"><span class="s">    end
+</span></span></span><span class="line"><span class="cl"><span class="s">    return x
+</span></span></span><span class="line"><span class="cl"><span class="s">end&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><pre tabindex="0"><code>## getroot_julia (generic function with 1 method)
+</code></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="results">Results</h1>
+<p>Now that all the functions are created and available, they&rsquo;re assessed in R. Each runs the same number of iterations with the same initial guess. Each language&rsquo;s implementation is run a few times times.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">microbenchmark</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">results</span> <span class="o">=</span> <span class="nf">microbenchmark</span><span class="p">(</span><span class="nf">getroot_r</span><span class="p">(),</span><span class="nf">getroot_cpp</span><span class="p">(),</span><span class="nf">julia_eval</span><span class="p">(</span><span class="s">&#34;getroot_julia()&#34;</span><span class="p">),</span><span class="n">times</span><span class="o">=</span><span class="m">5</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">languages</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;R&#34;</span><span class="p">,</span><span class="s">&#34;cpp&#34;</span><span class="p">,</span><span class="s">&#34;julia&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">boxplot</span><span class="p">(</span><span class="n">results</span><span class="p">,</span><span class="n">names</span><span class="o">=</span><span class="n">languages</span><span class="p">)</span>
+</span></span></code></pre></div><img src="https://mateenshaikh.ca/post/2022-04-08-juliatimings/index.en_files/figure-html/unnamed-chunk-7-1.png" width="672" />
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">print</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+</span></span></code></pre></div><pre tabindex="0"><code>## Unit: milliseconds
+##                           expr      min       lq      mean   median       uq
+##                    getroot_r() 6.909239 6.978445  8.151796 7.135719 7.372746
+##                  getroot_cpp() 1.712824 1.747627  3.805588 1.769192 1.890966
+##  julia_eval(&#34;getroot_julia()&#34;) 1.170483 1.295313 23.182798 1.325362 1.350895
+##        max neval
+##   12.36283     5
+##   11.90733     5
+##  110.77194     5
+</code></pre><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">medians</span> <span class="o">=</span> <span class="nf">summary</span><span class="p">(</span><span class="n">results</span><span class="p">)</span><span class="n">[</span><span class="p">,</span><span class="s">&#34;median&#34;</span><span class="n">]</span>
+</span></span><span class="line"><span class="cl"><span class="nf">names</span><span class="p">(</span><span class="n">medians</span><span class="p">)</span><span class="o">=</span><span class="n">languages</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#speeds relative to r</span>
+</span></span><span class="line"><span class="cl"><span class="n">medians</span><span class="o">/</span><span class="nf">max</span><span class="p">(</span><span class="n">medians</span><span class="p">)</span>
+</span></span></code></pre></div><pre tabindex="0"><code>##         R       cpp     julia 
+## 1.0000000 0.2479347 0.1857363
+</code></pre><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">#speeds relative to julia</span>
+</span></span><span class="line"><span class="cl"><span class="n">medians</span><span class="o">/</span><span class="nf">min</span><span class="p">(</span><span class="n">medians</span><span class="p">)</span>
+</span></span></code></pre></div><pre tabindex="0"><code>##        R      cpp    julia 
+## 5.383977 1.334875 1.000000
+</code></pre>
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="sidebar" class="default-animation showVisitedLinks">
+      <div id="header-wrapper" class="default-animation">
+        <div id="header" class="default-animation">
+          <style>
+            #logo svg,
+            #logo svg * {
+              color: #282828;
+              color: var(--MENU-SECTIONS-BG-color);
+              fill: #282828 !important;
+              fill: var(--MENU-SECTIONS-BG-color) !important;
+              opacity: .945;
+            }
+            a#logo {
+              color: #282828;
+              color: var(--MENU-SECTIONS-BG-color);
+              font-family: 'Work Sans', 'Helvetica', 'Tahoma', 'Geneva', 'Arial', sans-serif;
+              font-size: 30px;
+              font-weight: 300;
+              margin-top: -13px;
+              max-width: 60%;
+              text-transform: uppercase;
+              width: 226px;
+              white-space: nowrap;
+            }
+            a#logo:hover {
+              color: #282828;
+              color: var(--MENU-SECTIONS-BG-color);
+            }
+            #logo svg {
+              margin-bottom: -20px;
+              margin-left: -23.5px;
+              width: 40.5%;
+            }
+            @media only all and (max-width: 59.938em) {
+              a#logo {
+                font-size: 25px;
+                margin-top: -3px;
+              }
+              #logo svg {
+                margin-bottom: -12px;
+                margin-left: -23px;
+              }
+            }
+            @media all and (-ms-high-contrast:none) {
+              /* IE11s understanding of positioning is weird at best */
+              a#logo {
+                margin-top: -58px;
+              }
+              #logo svg {
+                margin-bottom: -62px;
+              }
+            }
+          </style>
+          <a id="logo" href="/">
+            
+            <img src="customlogo_resize.png" width=40%>ms
+          </a>
+        </div>
+        <div class="searchbox default-animation">
+          <label for="search-by"><i class="fas fa-search"></i></label>
+          <input data-search-input id="search-by" type="search" placeholder="Search...">
+          <span data-search-clear=""><i class="fas fa-times"></i></span>
+        </div>
+        <script src="/js/lunr.min.js?1649526298"></script>
+        <script src="/js/auto-complete.js?1649526298"></script>
+        <script src="/js/search.js?1649526298"></script>
+      </div>
+      <div id="content-wrapper" class="highlightable">
+        <ul class="topics collapsible-menu">
+          <li data-nav-id="/post/" title="Posts" class="dd-item parent"><input type="checkbox" id="section-1551eb054d26fb2c8c41239224ca8616" class="toggle" checked/><label for="section-1551eb054d26fb2c8c41239224ca8616" ></label><a href="/post/">Posts<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/post/2022-04-09-acknowledgement/" title="acknowledgement" class="dd-item"><a href="/post/2022-04-09-acknowledgement/">acknowledgement<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/post/2022-04-08-juliatimings/" title="juliatimings" class="dd-item active"><a href="/post/2022-04-08-juliatimings/">juliatimings<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/post/2020-12-01-r-rmarkdown/" title="Hello R Markdown" class="dd-item"><a href="/post/2020-12-01-r-rmarkdown/">Hello R Markdown<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/themechanges/" title="Theme Changes" class="dd-item"><input type="checkbox" id="section-aece8d214b1d123d0baee3d16b5da943" class="toggle"/><label for="section-aece8d214b1d123d0baee3d16b5da943" ></label><a href="/themechanges/">Theme Changes<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themechanges/2022-04-08-fix-mathjax/" title="Mathjax" class="dd-item"><a href="/themechanges/2022-04-08-fix-mathjax/">Mathjax<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themechanges/2022-04-08-changemenus/" title="Remove old menus" class="dd-item"><a href="/themechanges/2022-04-08-changemenus/">Remove old menus<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/themeinfo/" title="Page Theme" class="dd-item"><input type="checkbox" id="section-c98299165197569a7dbb7c16c879ec94" class="toggle"/><label for="section-c98299165197569a7dbb7c16c879ec94" ></label><a href="/themeinfo/">Page Theme<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themeinfo/basics/" title="Basics" class="dd-item alwaysopen"><input type="checkbox" id="section-d1c5e3c5791323678e3ad8e1c500f13c" class="toggle" checked/><label for="section-d1c5e3c5791323678e3ad8e1c500f13c" ></label><a href="/themeinfo/basics/"><b>1.</b> Basics<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themeinfo/basics/migration/" title="What&#39;s new" class="dd-item"><a href="/themeinfo/basics/migration/">What&#39;s new<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/basics/requirements/" title="Requirements" class="dd-item"><a href="/themeinfo/basics/requirements/">Requirements<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/basics/installation/" title="Installation" class="dd-item"><a href="/themeinfo/basics/installation/">Installation<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/basics/configuration/" title="Configuration" class="dd-item"><a href="/themeinfo/basics/configuration/">Configuration<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/basics/customization/" title="Customization" class="dd-item"><a href="/themeinfo/basics/customization/">Customization<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/basics/generator/" title="Stylesheet generator" class="dd-item"><a href="/themeinfo/basics/generator/">Stylesheet generator<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/basics/history/" title="History" class="dd-item"><a href="/themeinfo/basics/history/">History<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/themeinfo/cont/" title="Content" class="dd-item alwaysopen"><input type="checkbox" id="section-6a723ced917e39b993d27cbc25abafab" class="toggle" checked/><label for="section-6a723ced917e39b993d27cbc25abafab" ></label><a href="/themeinfo/cont/"><b>2.</b> Content<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themeinfo/cont/pages/" title="Pages organization" class="dd-item"><a href="/themeinfo/cont/pages/">Pages organization<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/cont/archetypes/" title="Archetypes" class="dd-item"><a href="/themeinfo/cont/archetypes/">Archetypes<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/cont/markdown/" title="Markdown syntax" class="dd-item"><a href="/themeinfo/cont/markdown/">Markdown syntax<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/cont/syntaxhighlight/" title="Code highlighting" class="dd-item"><a href="/themeinfo/cont/syntaxhighlight/">Code highlighting<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/cont/menushortcuts/" title="Menu extra shortcuts" class="dd-item"><a href="/themeinfo/cont/menushortcuts/">Menu extra shortcuts<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/cont/icons/" title="Icons and logos" class="dd-item"><a href="/themeinfo/cont/icons/">Icons and logos<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/cont/i18n/" title="Multilingual and i18n" class="dd-item"><a href="/themeinfo/cont/i18n/">Multilingual and i18n<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/cont/tags/" title="Tags" class="dd-item"><a href="/themeinfo/cont/tags/">Tags<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/themeinfo/shortcodes/" title="Shortcodes" class="dd-item alwaysopen"><input type="checkbox" id="section-52d5db2ef975f3fd0dba8d661a91fd38" class="toggle" checked/><label for="section-52d5db2ef975f3fd0dba8d661a91fd38" ></label><a href="/themeinfo/shortcodes/"><b>3.</b> Shortcodes<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themeinfo/shortcodes/attachments/" title="Attachments" class="dd-item"><a href="/themeinfo/shortcodes/attachments/">Attachments<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/button/" title="Button" class="dd-item"><a href="/themeinfo/shortcodes/button/">Button<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/children/" title="Children" class="dd-item"><input type="checkbox" id="section-ff454e2d1a76e72579a3eb4047153271" class="toggle"/><label for="section-ff454e2d1a76e72579a3eb4047153271" ></label><a href="/themeinfo/shortcodes/children/">Children<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themeinfo/shortcodes/children/test/" title="page X" class="dd-item"><a href="/themeinfo/shortcodes/children/test/">page X<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/children/children-1/" title="page 1" class="dd-item"><input type="checkbox" id="section-71b703f727a5a1fd0923b542d7953e0c" class="toggle"/><label for="section-71b703f727a5a1fd0923b542d7953e0c" ></label><a href="/themeinfo/shortcodes/children/children-1/">page 1<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themeinfo/shortcodes/children/children-1/children-1-1/" title="page 1-1" class="dd-item alwaysopen"><input type="checkbox" id="section-db4a2653fc99b551cad0351d97b47a4f" class="toggle" checked/><label for="section-db4a2653fc99b551cad0351d97b47a4f" ></label><a href="/themeinfo/shortcodes/children/children-1/children-1-1/">page 1-1<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-2/" title="page 1-1-2" class="dd-item alwaysopen"><input type="checkbox" id="section-26971ac834b91a594c74aae81a42e063" class="toggle" checked/><label for="section-26971ac834b91a594c74aae81a42e063" ></label><a href="/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-2/">page 1-1-2<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-1/" title="page 1-1-2-1" class="dd-item"><a href="/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-1/">page 1-1-2-1<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-2/" title="page 1-1-2-2" class="dd-item"><a href="/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-2/children-1-1-2-2/">page 1-1-2-2<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-3/" title="page 1-1-3" class="dd-item"><a href="/themeinfo/shortcodes/children/children-1/children-1-1/children-1-1-3/">page 1-1-3<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/themeinfo/shortcodes/children/children-2/" title="page 2" class="dd-item"><a href="/themeinfo/shortcodes/children/children-2/">page 2<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/children/children-3/" title="page 3" class="dd-item"><input type="checkbox" id="section-290d79cee905a3070eb690186d121cd1" class="toggle"/><label for="section-290d79cee905a3070eb690186d121cd1" ></label><a href="/themeinfo/shortcodes/children/children-3/">page 3<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/themeinfo/shortcodes/children/children-3/test3/" title="page 3-1" class="dd-item"><a href="/themeinfo/shortcodes/children/children-3/test3/">page 3-1<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/themeinfo/shortcodes/expand/" title="Expand" class="dd-item"><a href="/themeinfo/shortcodes/expand/">Expand<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/include/" title="Include" class="dd-item"><a href="/themeinfo/shortcodes/include/">Include<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/mermaid/" title="Mermaid" class="dd-item"><a href="/themeinfo/shortcodes/mermaid/">Mermaid<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/notice/" title="Notice" class="dd-item"><a href="/themeinfo/shortcodes/notice/">Notice<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/siteparam/" title="Site param" class="dd-item"><a href="/themeinfo/shortcodes/siteparam/">Site param<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/swagger/" title="Swagger" class="dd-item"><a href="/themeinfo/shortcodes/swagger/">Swagger<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/themeinfo/shortcodes/tabs/" title="Tabbed views" class="dd-item"><a href="/themeinfo/shortcodes/tabs/">Tabbed views<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+        </ul>
+        <div id="shortcuts">
+          <div class="nav-title">More</div>
+          <ul>
+            <li><a class="padding" href="https://github.com/mateenshaikh/"><i class='fab fa-fw fa-github'></i> GitHub repo</a></li>
+            <li><a class="padding" href="/tags/"><i class='fas fa-fw fa-tags'></i> Tags</a></li>
+          </ul>
+        </div>
+        <div class="footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showLangSwitch showVariantSwitch showVisitedLinks showFooter"></div>
+        <hr class="default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showLangSwitch showVariantSwitch showVisitedLinks showFooter"/>
+        <div id="prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showLangSwitch showVariantSwitch showVisitedLinks">
+          <ul>
+            <li id="select-language-container" class="footerLangSwitch showLangSwitch">
+              <a class="padding select-container">
+                <i class="fas fa-language fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <select id="select-language" onchange="location = baseUri + this.value;">
+                    <option id="en" value="/post/2022-04-08-juliatimings/" selected>English</option>
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </a>
+            </li>
+            <li id="select-variant-container" class="footerVariantSwitch showVariantSwitch">
+              <a class="padding select-container">
+                <i class="fas fa-paint-brush fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <select id="select-variant" onchange="variants.changeVariant( this.value );">
+                    <option id="relearn-light" value="relearn-light" selected>Relearn Light</option>
+                    <option id="relearn-dark" value="relearn-dark">Relearn Dark</option>
+                    <option id="learn" value="learn">Learn</option>
+                    <option id="neon" value="neon">Neon</option>
+                    <option id="blue" value="blue">Blue</option>
+                    <option id="green" value="green">Green</option>
+                    <option id="red" value="red">Red</option>
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </a>
+              <script>variants.markSelectedVariant();</script>
+            </li>
+            <li class="footerVisitedLinks showVisitedLinks"><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+          </ul>
+        </div>
+        <div id="footer" class="footerFooter showFooter"><script src="//yihui.org/js/math-code.js"></script>
+<script async
+src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<style>
+            #footer {
+              font-size: 13px;
+              height: 100px;
+              margin-left: auto;
+              margin-right: auto;
+              padding: 2rem 1rem;
+              text-align: center;
+              min-width: 230px;
+              max-width: 300px;
+            }
+            #footer p {
+              margin: 0;
+            }
+          </style>
+
+          <a class="github-button" href="https://github.com/mateenshaikh/onlineresources4" data-icon="octicon-cloud-download" aria-label="Download McShelby/hugo-theme-relearn on GitHub">Site</a>
+          <a class="github-button" href="https://github.com/McShelby/hugo-theme-relearn" data-icon="octicon-repo-template" data-show-count="true" aria-label="Star McShelby/hugo-theme-relearn on GitHub">Theme</a>
+          
+
+          
+          <script async defer src="/js/buttons.js?1649526298"></script>
+        </div>
+      </div>
+    </aside>
+    <script src="/js/clipboard.min.js?1649526298"></script>
+    <script src="/js/perfect-scrollbar.min.js?1649526298"></script>
+    <script src="/js/featherlight.min.js?1649526298"></script>
+    <script src="/js/theme.js?1649526298"></script>
+  </body>
+</html>

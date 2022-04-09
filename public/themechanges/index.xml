@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Theme Changes on Mateen Shaikh</title>
+    <link>https://mateenshaikh.ca/themechanges/</link>
+    <description>Recent content in Theme Changes on Mateen Shaikh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 08 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mateenshaikh.ca/themechanges/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mathjax</title>
+      <link>https://mateenshaikh.ca/themechanges/2022-04-08-fix-mathjax/</link>
+      <pubDate>Fri, 08 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://mateenshaikh.ca/themechanges/2022-04-08-fix-mathjax/</guid>
+      <description>Mathjax The relearn theme doesn&amp;rsquo;t natively support mathjax. One fix that works is to add the script to a file in /layouts/partials/. I added it to /layouts/partials/menu-footer.html.
+HTML  &amp;lt;script src=&amp;#34;//yihui.org/js/math-code.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script async src=&amp;#34;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;#34;&amp;gt; &amp;lt;/script&amp;gt;     </description>
+    </item>
+    <item>
+      <title>Remove old menus</title>
+      <link>https://mateenshaikh.ca/themechanges/2022-04-08-changemenus/</link>
+      <pubDate>Fri, 08 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://mateenshaikh.ca/themechanges/2022-04-08-changemenus/</guid>
+      <description>Moving original content inside of /content/ a new folder is created called themeinfo. Inside of that, a copy of basics, cont, more, and shortcodes is made as well as a new _index.en.md.
+The file /content/_index.en.md needs to be modified so it refers to all the shortcodes now in themeinfo. Do a search replace of
+%relref &amp;#34; to
+%relref &amp;#34;themeinfo/ After that, in each of the folders first mentioned, edit the corresponding _index.</description>
+    </item>
+  </channel>
+</rss>

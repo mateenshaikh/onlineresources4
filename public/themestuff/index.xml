@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Theme Content on Mateen Shaikh</title>
+    <link>https://mateenshaikh.ca/themestuff/</link>
+    <description>Recent content in Theme Content on Mateen Shaikh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://mateenshaikh.ca/themestuff/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Basics</title>
+      <link>https://mateenshaikh.ca/themestuff/basics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mateenshaikh.ca/themestuff/basics/</guid>
+      <description>Chapter 1 Basics Discover what this Hugo theme is all about and the core-concepts behind it.</description>
+    </item>
+    <item>
+      <title>Shortcodes</title>
+      <link>https://mateenshaikh.ca/themestuff/shortcodes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mateenshaikh.ca/themestuff/shortcodes/</guid>
+      <description>Chapter 3 Shortcodes Hugo uses Markdown for its simple content format. However, there are a lot of things that Markdown doesn’t support well. You could use pure HTML to expand possibilities.
+But this happens to be a bad idea. Everyone uses Markdown because it&amp;rsquo;s pure and simple to read even non-rendered. You should avoid HTML to keep it as simple as possible.
+To avoid this limitations, Hugo created shortcodes. A shortcode is a simple snippet inside a page.</description>
+    </item>
+  </channel>
+</rss>
