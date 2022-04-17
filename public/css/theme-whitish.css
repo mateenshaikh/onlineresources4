@@ -1,0 +1,14 @@
+/* my-custom-variant */
+:root {
+  --CODE-BLOCK-BORDER-color: #d8d8d8; /* border color of block code */
+  --CODE-INLINE-BORDER-color: #f8e8c8; /* border color of inline code */
+  --MAIN-LINK-HOVER-color: #134fbf; /* hoverd link color of content */
+  --MENU-HEADER-BG-color: #EEEEEE; /* background color of menu header */
+  --MENU-HEADER-BORDER-color: #7dc903; /* separator color of menu header */
+  --MENU-SEARCH-BG-color: #AAAAAA; /* background color of search box */
+  --MENU-SEARCH-BORDER-color: #e0e0e0; /* border color of search box */
+  --MENU-SEARCH-color: #111111; /* text and icon color of search box */
+  --MENU-SECTIONS-BG-color: #CCCCCC; /* background of the menu; this is NOT just a color value but can be a complete CSS background definition including gradients, etc. */
+  --MENU-SECTIONS-LINK-color: #111111; /* link color of menu topics */
+  --MENU-SECTIONS-LINK-HOVER-color: #ffffff; /* hoverd link color of menu topics */
+}

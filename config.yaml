@@ -17,6 +17,7 @@ params:
   mermaidInitialize: '{ "securityLevel": "loose" }'
   showVisitedLinks: yes
   themeVariant:
+    - whiteish
     - relearn-light
     - relearn-dark
     - learn
